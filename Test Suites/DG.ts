@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>DG</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>451ad1c0-98d5-4ad8-bd15-e28ca6e4e65d</testSuiteGuid>
+   <testCaseLink>
+      <guid>b7f40548-f42e-49db-a29d-95a0567d71fe</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/DG_Material_trazable_liberado</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>df168e50-a912-4998-929f-d56802913d2b</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/DBAutomatizaciones</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId>df168e50-a912-4998-929f-d56802913d2b</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>valor</value>
+         <variableId>642d0d72-a2ab-436c-8d6d-944e5550c088</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>6961cce6-1be1-4765-a180-7e58c0a33619</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>

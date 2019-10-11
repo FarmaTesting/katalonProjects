@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Generación de datos de lotes, ingresos y pedidos de un material trazable liberado</description>
+   <name>DG_Material_trazable_liberado</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>49bc3cdf-3280-43dc-959a-849fa1fa673b</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>642d0d72-a2ab-436c-8d6d-944e5550c088</id>
+      <masked>false</masked>
+      <name>material_lote_trazable</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>6961cce6-1be1-4765-a180-7e58c0a33619</id>
+      <masked>false</masked>
+      <name>variable_0</name>
+   </variable>
+</TestCaseEntity>
