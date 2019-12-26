@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>sap_web_gui</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description>WebGui SAP QAS</description>
+      <initValue>'http://fsapfeq00:8000/sap/bc/gui/sap/its/webgui'</initValue>
+      <name>url</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Sap Web Username</description>
+      <initValue>'tester'</initValue>
+      <name>user</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Sap Web Pass</description>
+      <initValue>'Suma2020'</initValue>
+      <name>pass</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

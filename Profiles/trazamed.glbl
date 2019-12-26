@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>trazamed</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description>Trazamed QAS URLS</description>
+      <initValue>'http://trazamedqa.farmanet.com.ar/Pages/Security/LoginForm.aspx'</initValue>
+      <name>url</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Trazamed QAS User</description>
+      <initValue>'tester'</initValue>
+      <name>user</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Trazamed Password QAs</description>
+      <initValue>'Suma2020'</initValue>
+      <name>pass</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

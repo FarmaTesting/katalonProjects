@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>select_DesarrolloCalidad</name>
+   <name>ddwn_Ambiente</name>
    <tag></tag>
-   <elementGuidId>243b3523-2944-4437-a03d-fd9fc5dba8f3</elementGuidId>
+   <elementGuidId>5e59a9b8-194d-41bc-807a-7170cb399459</elementGuidId>
    <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@name = 'ambienteDrp' and @id = 'ambienteDrp' and (text() = '
+	Desarrollo
+	Calidad
+
+' or . = '
+	Desarrollo
+	Calidad
+
+')]</value>
+      </entry>
       <entry>
          <key>XPATH</key>
          <value>//select[@id='ambienteDrp']</value>
@@ -13,7 +25,7 @@
    <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>sumanet</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description>Sumanet URL</description>
+      <initValue>'https://qa.farmanet.com.ar/sumaqa/'</initValue>
+      <name>url</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Sumanet User</description>
+      <initValue>'tester'</initValue>
+      <name>user</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Sumanet Pass</description>
+      <initValue>'Suma2020'</initValue>
+      <name>pass</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

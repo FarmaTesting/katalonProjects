@@ -12,22 +12,14 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://fsrvtfs00hq/testing/ingreso_mercaderia.aspx')
+WebUI.navigateToUrl(GlobalVariable.url)
 
-WebUI.selectOptionByValue(findTestObject('null'), 'qas', true)
+WebUI.setText(findTestObject('Login/txt_trazamed_user'), GlobalVariable.user)
 
-WebUI.setText(findTestObject('null'), findTestData('DBAutomatizaciones').getValue(
-        1, 1))
+WebUI.setText(findTestObject('Login/txt_trazamed_pass'), GlobalVariable.pass)
 
-WebUI.click(findTestObject('null'))
-
-WebUI.click(findTestObject('null'))
-
-WebUI.click(findTestObject('null'))
-
-WebUI.closeBrowser()
+WebUI.click(findTestObject('Login/btn_trazamed_login'))
 

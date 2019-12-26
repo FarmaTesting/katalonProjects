@@ -17,23 +17,23 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://fsrvtfs00hq/testing/ingreso_mercaderia.aspx')
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/Page_/select_DesarrolloCalidad'), 'qas', true)
+WebUI.selectOptionByValue(findTestObject('null'), 'qas', true)
 
-WebUI.setText(findTestObject('Object Repository/Page_/input_Materiales (Separados por )_materialesTxt'), '1025')
+WebUI.setText(findTestObject('null'), '1025')
 
-WebUI.click(findTestObject('Object Repository/Page_/input_Tipo Material_aceptarBtn'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('Object Repository/Page_/input_Ingresa en cuarentena_cuarentenaChk'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('Object Repository/Page_/input_Clientes_T2032500'))
+WebUI.click(findTestObject('null'))
 
-WebUI.click(findTestObject('Object Repository/Page_/input_Clientes_T5900371'))
+WebUI.click(findTestObject('null'))
 
-WebUI.setText(findTestObject('Object Repository/Page_/input_Cantidad Pedido_cantidadPedidoTxt'), '50')
+WebUI.setText(findTestObject('null'), '50')
 
-WebUI.setText(findTestObject('Object Repository/Page_/input_Cliente distribucin_clienteDistTxt'), '')
+WebUI.setText(findTestObject('null'), '')
 
-WebUI.click(findTestObject('Object Repository/Page_/input_Tipo Material_generarBtn'))
+WebUI.click(findTestObject('null'))
 
 WebUI.closeBrowser()
 
