@@ -13,7 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('PE_Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('null'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.navigateToUrl('http://fsapfeq00:8000/sap/bc/gui/sap/its/webgui?sap-client=200&sap-language=ES')
 

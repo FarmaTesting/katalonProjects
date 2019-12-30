@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Caso de Prueba genérico. Chequea campo por campo, luego compara con la base de datos y si la columna correspondiente tiene información la misma será usada en dicho objeto.</description>
+   <description>Caso de Prueba para crear Pedidos. Crea solamente stock en SAP.</description>
    <name>DG_Creacion_Pedido</name>
    <tag></tag>
    <comment></comment>
@@ -60,13 +60,6 @@
       <id>b78ad057-a7db-422b-ac09-fccacf34a151</id>
       <masked>false</masked>
       <name>generar</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>59dba967-8d2d-4a3c-944d-742cd735a6a3</id>
-      <masked>false</masked>
-      <name>mostrar</name>
    </variable>
    <variable>
       <defaultValue>''</defaultValue>
@@ -134,34 +127,6 @@
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>fa5a79e2-4c71-46dc-9b34-ccb007c5d025</id>
-      <masked>false</masked>
-      <name>n_despacho</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>860f85e2-552e-4b9a-a35b-82fb75966b2e</id>
-      <masked>false</masked>
-      <name>dig_ver_n_despacho</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>aa658e5b-498c-467e-88ce-55dbc9a433b1</id>
-      <masked>false</masked>
-      <name>fecha_despacho_plaza</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>9ea19528-9c65-4018-b835-31c0d88a1c06</id>
-      <masked>false</masked>
-      <name>mostrar_lotes</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
       <id>160fee97-cedf-4381-8ee7-633c91cf0bc3</id>
       <masked>false</masked>
       <name>prioridad</name>
@@ -218,36 +183,120 @@
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>dc86fc25-c35e-4030-a422-89f9fb5704ac</id>
+      <id>253f5fe6-8663-4ec2-ae9c-4acdd677bf0d</id>
       <masked>false</masked>
-      <name>alta_lotes_i105</name>
+      <name>strLote</name>
    </variable>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>da1f4561-030a-4f59-b714-36162c4ca5b0</id>
+      <id>b37f8361-33ca-4364-bbdb-e5548324688c</id>
       <masked>false</masked>
-      <name>rem_elect_i141</name>
+      <name>strFechaActual</name>
    </variable>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>6b1ea367-4edc-4c79-83f3-3e0cc95ea4ce</id>
+      <id>7efc1ce3-765f-4487-b714-71913f5576a4</id>
       <masked>false</masked>
-      <name>pedi_cliente_i089</name>
+      <name>strFechaVencimiento</name>
    </variable>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>ecb782ba-b990-47fa-a035-86430a621587</id>
+      <id>00d3e794-e436-4221-bff8-81e977426522</id>
       <masked>false</masked>
-      <name>ped_dist_i106</name>
+      <name>strNumRemito</name>
    </variable>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>891b1350-090b-404e-8c0f-a7321b8f3276</id>
+      <id>d07574f0-30d0-47a7-a550-64b5bbcb74e6</id>
       <masked>false</masked>
-      <name>ped_comitente_i101</name>
+      <name>strOcComiente</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>d66b3329-a8ff-4dea-9478-b59811771b31</id>
+      <masked>false</masked>
+      <name>strNumDespacho</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>a5ca88e4-a4a5-481c-b3d7-b371515e349b</id>
+      <masked>false</masked>
+      <name>strDigVerNumDespacho</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>d3a3f71b-2320-4012-bb27-1fd952f13973</id>
+      <masked>false</masked>
+      <name>strFechaDespPlaza</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>316c9b17-8ddc-4237-99dd-451cb58991e2</id>
+      <masked>false</masked>
+      <name>strNumPedido</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>04223df3-d643-4cf9-9bac-9b953e2c836b</id>
+      <masked>false</masked>
+      <name>strNumEntrega</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>19779bc8-a30c-4efa-a494-b9cef40ad315</id>
+      <masked>false</masked>
+      <name>strNumFactura</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>fc4426f5-d1e1-4e02-9630-d54f678ea131</id>
+      <masked>false</masked>
+      <name>strNumOrdenCompra</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>79949b39-e81b-48a1-83ec-80b8fcf84897</id>
+      <masked>false</masked>
+      <name>strAltaLoteI105</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>f749c6e3-f37b-4437-b2da-9c53188ef39b</id>
+      <masked>false</masked>
+      <name>strRemElectI141</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>8bc07006-3194-4f0a-904e-2c959c88689d</id>
+      <masked>false</masked>
+      <name>strPedidoClienteI089</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>aa7a82a7-f1ac-4c0d-99d8-72c56ed6fb16</id>
+      <masked>false</masked>
+      <name>strPedidoDistI106</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>9fa581be-d492-4e2e-92cb-248a01fd0dae</id>
+      <masked>false</masked>
+      <name>strPedidoComitenteI101</name>
    </variable>
 </TestCaseEntity>

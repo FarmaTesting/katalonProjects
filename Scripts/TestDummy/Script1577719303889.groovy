@@ -17,49 +17,6 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl(GlobalVariable.url)
 
-if (ambiente != '') {
-    WebUI.selectOptionByLabel(findTestObject('GeneradorDatos_Page/ddwn_ambiente'), ambiente, false)
-}
-
-if (materiales != '') {
-    WebUI.sendKeys(findTestObject('GeneradorDatos_Page/txt_materiales'), materiales, FailureHandling.CONTINUE_ON_FAILURE)
-}
-
-'no requerido'
-if (comitente != '') {
-    WebUI.selectOptionByLabel(findTestObject('GeneradorDatos_Page/ddwn_comitente'), comitente, false)
-}
-
-'no requerido'
-if (trazable != '\'OFF\'') {
-    WebUI.uncheck(findTestObject('GeneradorDatos_Page/chk_solo_trazables'))
-} else if (trazable == 'ON') {
-    WebUI.check(findTestObject('GeneradorDatos_Page/chk_solo_trazables'))
-}
-
-if (crear_pedido == '\'OFF\'') {
-    WebUI.uncheck(findTestObject('GeneradorDatos_Page/chk_crear_pedidos'))
-} else if (crear_pedido == 'ON') {
-    WebUI.check(findTestObject('GeneradorDatos_Page/chk_crear_pedidos'))
-}
-
-'no requerido\r\n'
-if (tipo_material != '') {
-    WebUI.selectOptionByLabel(findTestObject('GeneradorDatos_Page/ddwn_tipo_material'), tipo_material, false)
-}
-
-if (filtrar != 'SI') {
-    WebUI.click(findTestObject('GeneradorDatos_Page/btn_filtrar'))
-}
-
-if (cant_ingresar != '') {
-    WebUI.sendKeys(findTestObject('GeneradorDatos_Page/txt_cantidad_a_ingresar'), cant_ingresar)
-}
-
-if (otros_clientes != '') {
-    WebUI.sendKeys(findTestObject('Object Repository/GeneradorDatos_Page/txt_otros_clientes'), otros_clientes)
-}
-
 strLote = WebUI.getAttribute(findTestObject('GeneradorDatos_Page/txt_lote'), 'Value')
 strFechaActual = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_fecha_actual'), 'Value')
 strFechaVencimiento = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_fecha_vencimiento'), 'Value')
@@ -89,10 +46,4 @@ CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.x
 CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AK', 1, strPedidoClienteI089)
 CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AL', 1, strPedidoDistI106)
 CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AM', 1, strPedidoComitenteI101)
-
-if (generar != 'SI') {
-    WebUI.click(findTestObject('GeneradorDatos_Page/btn_generar'))
-}
-
-WebUI.closeBrowser()
 

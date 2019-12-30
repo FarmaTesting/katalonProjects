@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TestDummy</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b0ae90b7-2087-4b8b-91e2-76ae5000c581</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>e69b2b01-2eff-44af-9ed2-48028d4c34b8</id>
+      <masked>false</masked>
+      <name>strLote</name>
+   </variable>
+</TestCaseEntity>
