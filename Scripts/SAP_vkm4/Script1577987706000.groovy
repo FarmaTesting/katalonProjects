@@ -12,28 +12,5 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-
-WebUI.openBrowser('')
-
-WebUI.navigateToUrl('http://fsrvtfs00hq/testing/ingreso_mercaderia.aspx')
-
-WebUI.selectOptionByValue(findTestObject('null'), 'qas', true)
-
-WebUI.setText(findTestObject('null'), '1025')
-
-WebUI.click(findTestObject('null'))
-
-WebUI.click(findTestObject('null'))
-
-WebUI.click(findTestObject('null'))
-
-WebUI.click(findTestObject('null'))
-
-WebUI.setText(findTestObject('null'), '50')
-
-WebUI.setText(findTestObject('null'), '')
-
-WebUI.click(findTestObject('null'))
-
-WebUI.closeBrowser()
+import org.openqa.selenium.Keys as Keys
 

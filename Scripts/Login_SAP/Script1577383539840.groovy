@@ -21,5 +21,9 @@ WebUI.setText(findTestObject('Login/txt_sap_user'), GlobalVariable.user)
 
 WebUI.setText(findTestObject('Login/txt_sap_pass'), GlobalVariable.pass)
 
+WebUI.click(findTestObject('SAP/ddwn_select_idioma'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('SAP/ddwn_opcion_espanol'))
+
 WebUI.click(findTestObject('Login/btn_sap_login'))
 

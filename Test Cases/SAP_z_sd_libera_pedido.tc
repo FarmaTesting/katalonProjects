@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Transacción SAP que permite verificar dónde hay bloqueo, true = permite ser liberado. False consulta las otros tipos de bloqueos hasta terminar toda la verificación.</description>
+   <name>SAP_z_sd_libera_pedido</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>0aa66198-aeea-4456-9842-33de7b3a1639</testCaseGuid>
+</TestCaseEntity>

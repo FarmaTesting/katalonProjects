@@ -64,9 +64,44 @@
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
+      <id>253f5fe6-8663-4ec2-ae9c-4acdd677bf0d</id>
+      <masked>false</masked>
+      <name>strLote</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>b37f8361-33ca-4364-bbdb-e5548324688c</id>
+      <masked>false</masked>
+      <name>strFechaActual</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>7efc1ce3-765f-4487-b714-71913f5576a4</id>
+      <masked>false</masked>
+      <name>strFechaVencimiento</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>00d3e794-e436-4221-bff8-81e977426522</id>
+      <masked>false</masked>
+      <name>strNumRemito</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
       <id>b592ede4-4630-403c-a6b2-dcfc37b44952</id>
       <masked>false</masked>
       <name>cant_ingresar</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>d07574f0-30d0-47a7-a550-64b5bbcb74e6</id>
+      <masked>false</masked>
+      <name>strOcComiente</name>
    </variable>
    <variable>
       <defaultValue>''</defaultValue>
@@ -127,6 +162,34 @@
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
+      <id>d66b3329-a8ff-4dea-9478-b59811771b31</id>
+      <masked>false</masked>
+      <name>strNumDespacho</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>a5ca88e4-a4a5-481c-b3d7-b371515e349b</id>
+      <masked>false</masked>
+      <name>strDigVerNumDespacho</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>d3a3f71b-2320-4012-bb27-1fd952f13973</id>
+      <masked>false</masked>
+      <name>strFechaDespPlaza</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>316c9b17-8ddc-4237-99dd-451cb58991e2</id>
+      <masked>false</masked>
+      <name>strNumPedido</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
       <id>160fee97-cedf-4381-8ee7-633c91cf0bc3</id>
       <masked>false</masked>
       <name>prioridad</name>
@@ -183,90 +246,6 @@
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>253f5fe6-8663-4ec2-ae9c-4acdd677bf0d</id>
-      <masked>false</masked>
-      <name>strLote</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>b37f8361-33ca-4364-bbdb-e5548324688c</id>
-      <masked>false</masked>
-      <name>strFechaActual</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>7efc1ce3-765f-4487-b714-71913f5576a4</id>
-      <masked>false</masked>
-      <name>strFechaVencimiento</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>00d3e794-e436-4221-bff8-81e977426522</id>
-      <masked>false</masked>
-      <name>strNumRemito</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>d07574f0-30d0-47a7-a550-64b5bbcb74e6</id>
-      <masked>false</masked>
-      <name>strOcComiente</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>d66b3329-a8ff-4dea-9478-b59811771b31</id>
-      <masked>false</masked>
-      <name>strNumDespacho</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>a5ca88e4-a4a5-481c-b3d7-b371515e349b</id>
-      <masked>false</masked>
-      <name>strDigVerNumDespacho</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>d3a3f71b-2320-4012-bb27-1fd952f13973</id>
-      <masked>false</masked>
-      <name>strFechaDespPlaza</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>316c9b17-8ddc-4237-99dd-451cb58991e2</id>
-      <masked>false</masked>
-      <name>strNumPedido</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>04223df3-d643-4cf9-9bac-9b953e2c836b</id>
-      <masked>false</masked>
-      <name>strNumEntrega</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>19779bc8-a30c-4efa-a494-b9cef40ad315</id>
-      <masked>false</masked>
-      <name>strNumFactura</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>fc4426f5-d1e1-4e02-9630-d54f678ea131</id>
-      <masked>false</masked>
-      <name>strNumOrdenCompra</name>
-   </variable>
-   <variable>
-      <defaultValue>''</defaultValue>
-      <description></description>
       <id>79949b39-e81b-48a1-83ec-80b8fcf84897</id>
       <masked>false</masked>
       <name>strAltaLoteI105</name>
@@ -298,5 +277,33 @@
       <id>9fa581be-d492-4e2e-92cb-248a01fd0dae</id>
       <masked>false</masked>
       <name>strPedidoComitenteI101</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>1ca0ead3-003f-451a-a9bb-618f13d988ac</id>
+      <masked>false</masked>
+      <name>strNumPedidoSap</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>04223df3-d643-4cf9-9bac-9b953e2c836b</id>
+      <masked>false</masked>
+      <name>strNumEntrega</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>19779bc8-a30c-4efa-a494-b9cef40ad315</id>
+      <masked>false</masked>
+      <name>strNumFactura</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>fc4426f5-d1e1-4e02-9630-d54f678ea131</id>
+      <masked>false</masked>
+      <name>strNumOrdenCompra</name>
    </variable>
 </TestCaseEntity>

@@ -12,14 +12,5 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-
-WebUI.openBrowser('')
-
-WebUI.navigateToUrl('http://fsapfeq00:8000/sap/bc/gui/sap/its/webgui')
-
-WebUI.setText(findTestObject('Object Repository/Page_Entrada al sistema/input__sap-user'), 'tester')
-
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Entrada al sistema/input__sap-password'), '0LxQhmBWVWGRrdZY3qrsFA==')
-
-WebUI.click(findTestObject('Object Repository/Page_Entrada al sistema/span_Acceder al sistema'))
+import org.openqa.selenium.Keys as Keys
 

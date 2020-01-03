@@ -12,22 +12,14 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('http://fsrvtfs00hq/testing/ingreso_mercaderia.aspx')
+WebUI.waitForElementVisible(findTestObject('SAP/trx-monitor_transacciones'), 0)
 
-WebUI.selectOptionByValue(findTestObject('null'), 'qas', true)
+WebUI.click(findTestObject('SAP/trx-monitor_transacciones'))
 
-WebUI.setText(findTestObject('null'), findTestData('DBAutomatizaciones').getValue(
-        1, 1))
+WebUI.waitForElementVisible(findTestObject('SAP/txt_id_interfaz'), 0)
 
-WebUI.click(findTestObject('null'))
-
-WebUI.click(findTestObject('null'))
-
-WebUI.click(findTestObject('null'))
-
-WebUI.closeBrowser()
+WebUI.sendKeys(findTestObject('SAP/txt_id_interfaz'), Keys.chord(Keys.F8))
 

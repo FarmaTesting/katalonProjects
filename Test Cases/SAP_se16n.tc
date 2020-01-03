@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Transacción de SAP que permite ver el número de Operación según el número de Pedido creado en el Generador de Datos</description>
+   <name>SAP_se16n</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b0fd11b7-3acb-415f-a61c-7622a6b9c901</testCaseGuid>
+</TestCaseEntity>

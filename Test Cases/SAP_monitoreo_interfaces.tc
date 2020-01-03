@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Transacción SAP que permite monitorear todas las interfaces usadad para la comunicación</description>
+   <name>SAP_monitoreo_interfaces</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>66ae2fd9-9a97-4ed7-a077-f6406834a0a7</testCaseGuid>
+</TestCaseEntity>
