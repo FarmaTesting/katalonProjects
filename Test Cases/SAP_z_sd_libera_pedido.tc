@@ -5,4 +5,11 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>0aa66198-aeea-4456-9842-33de7b3a1639</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>7013a53f-5036-490f-a05e-156cb40f8bd5</id>
+      <masked>false</masked>
+      <name>strNumPedidoSap</name>
+   </variable>
 </TestCaseEntity>

@@ -9,6 +9,12 @@
          <key>XPATH</key>
          <value>//textarea[@id='resultadoRE']</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@name = 'resultadoRE' and @id = 'resultadoRE' and (text() = '02000000001081;FNET;FNET;02;ZRET;20200106;;1800000122;20200106;08:00;16:00;20000;Remito electrónico Test;;;1002;14;C/U;LOTE1081;;;;;0000-00001081;1081;20200106;
+' or . = '02000000001081;FNET;FNET;02;ZRET;20200106;;1800000122;20200106;08:00;16:00;20000;Remito electrónico Test;;;1002;14;C/U;LOTE1081;;;;;0000-00001081;1081;20200106;
+')]</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -48,6 +54,14 @@
       <value>resultadoRE</value>
    </webElementProperties>
    <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>02000000001081;FNET;FNET;02;ZRET;20200106;;1800000122;20200106;08:00;16:00;20000;Remito electrónico Test;;;1002;14;C/U;LOTE1081;;;;;0000-00001081;1081;20200106;
+</value>
+   </webElementProperties>
+   <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
@@ -66,7 +80,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//form[@id='form1']/div[3]/table/tbody/tr[18]/td/textarea</value>
+      <value>//form[@id='form1']/div[3]/table/tbody/tr[19]/td/textarea</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -88,6 +102,20 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Pedido de cliente (I089)'])[1]/preceding::textarea[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//tr[19]/td/textarea</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//form[@id='form1']/div[3]/table/tbody/tr[18]/td/textarea</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>txt_pedido_de_cliente_I089</name>
+   <name>txt_pedido_de_distribucion_I106</name>
    <tag></tag>
-   <elementGuidId>5612b1a7-8748-48e8-955a-ed69d6d21324</elementGuidId>
+   <elementGuidId>11a3a9fd-e1b1-47c5-a136-17206ec4406d</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//textarea[@id='resultadoPedidoTxt']</value>
+         <value>//textarea[@id='resultadoPedidoDistTxt']</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>//*[@name = 'resultadoPedidoTxt' and @id = 'resultadoPedidoTxt' and (text() = 'PEDIDO            20200106002C001CLIENTESAPNROOC032202001061002              14           
-' or . = 'PEDIDO            20200106002C001CLIENTESAPNROOC032202001061002              14           
+         <value>//*[@name = 'resultadoPedidoDistTxt' and @id = 'resultadoPedidoDistTxt' and (text() = '202001060002073900PEDIDO                                                                          1002              14       139                         02        03      NUMEROWE 
+' or . = '202001060002073900PEDIDO                                                                          1002              14       139                         02        03      NUMEROWE 
 ')]</value>
       </entry>
    </selectorCollection>
@@ -30,7 +30,7 @@
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>resultadoPedidoTxt</value>
+      <value>resultadoPedidoDistTxt</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -51,14 +51,14 @@
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>resultadoPedidoTxt</value>
+      <value>resultadoPedidoDistTxt</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>PEDIDO            20200106002C001CLIENTESAPNROOC032202001061002              14           
+      <value>202001060002073900PEDIDO                                                                          1002              14       139                         02        03      NUMEROWE 
 </value>
    </webElementProperties>
    <webElementProperties>
@@ -66,69 +66,48 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;resultadoPedidoTxt&quot;)</value>
+      <value>id(&quot;resultadoPedidoDistTxt&quot;)</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//textarea[@id='resultadoPedidoTxt']</value>
+      <value>//textarea[@id='resultadoPedidoDistTxt']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//form[@id='form1']/div[3]/table/tbody/tr[21]/td/textarea</value>
+      <value>//form[@id='form1']/div[3]/table/tbody/tr[23]/td/textarea</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Pedido de cliente (I089)'])[1]/following::textarea[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Pedido de distribución (I106)'])[1]/following::textarea[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Remito Electrónico (I141)'])[1]/following::textarea[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Pedido del comitente (I101)'])[1]/preceding::textarea[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Pedido de distribución (I106)'])[1]/preceding::textarea[1]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Pedido del comitente (I101)'])[1]/preceding::textarea[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Capture object:'])[1]/preceding::textarea[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//tr[21]/td/textarea</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:idRelative</name>
-      <type>Main</type>
-      <value>//form[@id='form1']/div[3]/table/tbody/tr[20]/td/textarea</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:position</name>
-      <type>Main</type>
-      <value>//tr[20]/td/textarea</value>
+      <value>//tr[23]/td/textarea</value>
    </webElementXpaths>
 </WebElementEntity>

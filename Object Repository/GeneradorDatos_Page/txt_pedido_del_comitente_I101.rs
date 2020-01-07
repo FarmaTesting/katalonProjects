@@ -9,6 +9,12 @@
          <key>XPATH</key>
          <value>//textarea[@id='resultadoPedidoComTxt']</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@name = 'resultadoPedidoComTxt' and @id = 'resultadoPedidoComTxt' and (text() = 'VTD02    133198CLIENTESAPC00120200106NROOC1  14     /////ESTE PEDIDO HA SIDO CREADO POR UN PROCESO DE AUTOMATIZACION./////                    1002              14     816 0  
+' or . = 'VTD02    133198CLIENTESAPC00120200106NROOC1  14     /////ESTE PEDIDO HA SIDO CREADO POR UN PROCESO DE AUTOMATIZACION./////                    1002              14     816 0  
+')]</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -48,6 +54,14 @@
       <value>resultadoPedidoComTxt</value>
    </webElementProperties>
    <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>VTD02    133198CLIENTESAPC00120200106NROOC1  14     /////ESTE PEDIDO HA SIDO CREADO POR UN PROCESO DE AUTOMATIZACION./////                    1002              14     816 0  
+</value>
+   </webElementProperties>
+   <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
@@ -66,7 +80,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//form[@id='form1']/div[3]/table/tbody/tr[24]/td/textarea</value>
+      <value>//form[@id='form1']/div[3]/table/tbody/tr[25]/td/textarea</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,6 +109,20 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Alt'])[1]/preceding::textarea[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//tr[25]/td/textarea</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//form[@id='form1']/div[3]/table/tbody/tr[24]/td/textarea</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>

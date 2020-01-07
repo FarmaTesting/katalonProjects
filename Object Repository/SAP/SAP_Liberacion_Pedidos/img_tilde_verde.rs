@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>txt_pedido_de_cliente_I089</name>
+   <name>img_tilde_verde</name>
    <tag></tag>
-   <elementGuidId>5612b1a7-8748-48e8-955a-ed69d6d21324</elementGuidId>
+   <elementGuidId>90ccef6d-145f-4a9d-a418-f84db4c9b532</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//textarea[@id='resultadoPedidoTxt']</value>
-      </entry>
-      <entry>
-         <key>BASIC</key>
-         <value>//*[@name = 'resultadoPedidoTxt' and @id = 'resultadoPedidoTxt' and (text() = 'PEDIDO            20200106002C001CLIENTESAPNROOC032202001061002              14           
-' or . = 'PEDIDO            20200106002C001CLIENTESAPNROOC032202001061002              14           
-')]</value>
+         <value>//img[@id='messageText-img']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,112 +17,97 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>textarea</value>
+      <value>img</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>name</name>
+      <name>src</name>
       <type>Main</type>
-      <value>resultadoPedidoTxt</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>rows</name>
-      <type>Main</type>
-      <value>10</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>cols</name>
-      <type>Main</type>
-      <value>20</value>
+      <value>/sap/public/icmandir/its/ls/themes/sap_tradeshow_plus/common/1x1.gif</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>resultadoPedidoTxt</value>
+      <value>messageText-img</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>text</name>
+      <name>class</name>
       <type>Main</type>
-      <value>PEDIDO            20200106002C001CLIENTESAPNROOC032202001061002              14           
-</value>
+      <value>urMsgBarImgOk</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>role</name>
+      <type>Main</type>
+      <value>img</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;resultadoPedidoTxt&quot;)</value>
+      <value>id(&quot;messageText-img&quot;)</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ref_element</name>
+      <type>Main</type>
+      <value>Object Repository/SAP/SAP_Liberacion_Pedidos/iframe_Copyright19962013SAPAG AllRightsReserved_itsframe1_202001061723252490000</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//textarea[@id='resultadoPedidoTxt']</value>
+      <value>//img[@id='messageText-img']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//form[@id='form1']/div[3]/table/tbody/tr[21]/td/textarea</value>
+      <value>//div[@id='messageText']/table/tbody/tr/td/img</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Pedido de cliente (I089)'])[1]/following::textarea[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Variante de Visualización'])[1]/following::img[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Remito Electrónico (I141)'])[1]/following::textarea[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sólo pedidos prod. especiales'])[1]/following::img[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Pedido de distribución (I106)'])[1]/preceding::textarea[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Datos de entrada GUI erróneos: display - window dimension conflict'])[1]/preceding::img[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Pedido del comitente (I101)'])[1]/preceding::textarea[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='FEQ (200)'])[1]/preceding::img[4]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//tr[21]/td/textarea</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:idRelative</name>
-      <type>Main</type>
-      <value>//form[@id='form1']/div[3]/table/tbody/tr[20]/td/textarea</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:position</name>
-      <type>Main</type>
-      <value>//tr[20]/td/textarea</value>
+      <value>//td/table/tbody/tr/td/div/table/tbody/tr/td/img</value>
    </webElementXpaths>
 </WebElementEntity>
