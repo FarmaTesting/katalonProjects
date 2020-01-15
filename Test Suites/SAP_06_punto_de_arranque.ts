@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Login_Trazamed</name>
+   <name>SAP_06_punto_de_arranque</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,11 +9,11 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>31ecd157-c845-41ec-ab0b-bd6f1bd32e37</testSuiteGuid>
+   <testSuiteGuid>e5c6f532-4634-4fd7-b1fa-54433f8c8d6a</testSuiteGuid>
    <testCaseLink>
-      <guid>f9327cdd-002b-42b8-a38e-fc61fb2c3bde</guid>
+      <guid>808ccfce-c70a-45b7-a13b-1aa6fd0933c3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Login_Trazamed</testCaseId>
+      <testCaseId>Test Cases/SAP_z_sd_punto_arranque</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

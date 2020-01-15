@@ -11,6 +11,8 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
+import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser('')
@@ -18,7 +20,8 @@ WebUI.openBrowser('')
 WebUI.navigateToUrl(GlobalVariable.url)
 
 if (ambiente != '') {
-    WebUI.selectOptionByLabel(findTestObject('GeneradorDatos_Page/ddwn_ambiente'), ambiente, false)
+    //WebUI.selectOptionByLabel(findTestObject('GeneradorDatos_Page/ddwn_ambiente'), ambiente, false)
+    WebUI.selectOptionByLabel(findTestObject('GeneradorDatos_Page/ddwn_ambiente'), findTestData('DGScenarios').getValue(1, 1), false)
 }
 
 if (materiales != '') {
@@ -65,16 +68,16 @@ if (ingresa_cuarentena == '\'OFF\'') {
 }
 
 if (canti_pedido != '') {
-	WebUI.clearText(findTestObject('Object Repository/GeneradorDatos_Page/txt_cantidad_pedido'))
-	
-	WebUI.sendKeys(findTestObject('Object Repository/GeneradorDatos_Page/txt_cantidad_pedido'), canti_pedido, FailureHandling.CONTINUE_ON_FAILURE)
+    WebUI.clearText(findTestObject('Object Repository/GeneradorDatos_Page/txt_cantidad_pedido'))
+
+    WebUI.sendKeys(findTestObject('Object Repository/GeneradorDatos_Page/txt_cantidad_pedido'), canti_pedido, FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 if (otros_clientes != '') {
     WebUI.sendKeys(findTestObject('Object Repository/GeneradorDatos_Page/txt_otros_clientes'), otros_clientes)
 }
 
-if (generar != 'SI') {
+if (generar == 'SI') {
     WebUI.click(findTestObject('GeneradorDatos_Page/btn_generar'))
 }
 
@@ -87,7 +90,8 @@ strFechaVencimiento = WebUI.getAttribute(findTestObject('Object Repository/Gener
 
 strNumRemito = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_n_remito'), 'Value')
 
-strOcComiente = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_oc_comiente'), 'Value')
+//strOcComiente = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_oc_comiente'), 'Value')
+strOcComiente = WebUI.concatenate(['R', WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_oc_comiente'), 'Value')] as String[], FailureHandling.STOP_ON_FAILURE)
 
 strNumDespacho = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_n_despacho'), 'Value')
 
@@ -99,19 +103,15 @@ strFechaDespPlaza = WebUI.getAttribute(findTestObject('Object Repository/Generad
 
 strNumPedido = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_n_pedido'), 'Value')
 
-strAltaLoteI105 = WebUI.getAttribute(findTestObject('GeneradorDatos_Page/txt_alta_de_lotes_I105'), 'textarea')
+strAltaLoteI105 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_alta_de_lotes_I105'))
 
-strRemElectI141 = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_remito_electronico_I141'), 
-    'textarea')
+strRemElectI141 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_remito_electronico_I141'))
 
-strPedidoClienteI089 = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_pedido_de_cliente_I089'), 
-    'textarea')
+strPedidoClienteI089 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_pedido_de_cliente_I089'))
 
-strPedidoDistI106 = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_pedidod_de_distribucion_I106'), 
-    'textarea')
+strPedidoDistI106 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_pedido_de_distribucion_I106'))
 
-strPedidoComitenteI101 = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_pedido_del_comitente_I101'), 
-    'textarea')
+strPedidoComitenteI101 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_pedido_del_comitente_I101'))
 
 CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'I', 1, strLote)
 
@@ -140,3 +140,4 @@ CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.x
 CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AL', 1, strPedidoDistI106)
 
 CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AM', 1, strPedidoComitenteI101)
+

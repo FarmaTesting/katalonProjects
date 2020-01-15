@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>SAP_Liberacion_Pedidos</name>
+   <name>SAP_03_extraer_n_pedido_se16n</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,15 +9,15 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>5406f496-f294-4de6-8ae1-110df3a2c299</testSuiteGuid>
+   <testSuiteGuid>733120ff-bdf6-49af-aabf-ed7891fd37ae</testSuiteGuid>
    <testCaseLink>
-      <guid>fe500ccd-13a2-4931-ba6d-28da309be361</guid>
+      <guid>d28b90ba-e97e-4286-a9d6-6e583a2c7b3b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/SAP_z_sd_libera_pedido</testCaseId>
+      <testCaseId>Test Cases/SAP_se16n</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
-         <id>8dc9cf8e-6e0d-4cb4-b94d-0062a1238670</id>
+         <id>d6c07138-3651-446b-b41c-2f0e81790f5f</id>
          <iterationEntity>
             <iterationType>ALL</iterationType>
             <value></value>
@@ -25,10 +25,16 @@
          <testDataId>Data Files/DGScenarios</testDataId>
       </testDataLink>
       <variableLink>
-         <testDataLinkId>8dc9cf8e-6e0d-4cb4-b94d-0062a1238670</testDataLinkId>
+         <testDataLinkId>d6c07138-3651-446b-b41c-2f0e81790f5f</testDataLinkId>
          <type>DATA_COLUMN</type>
-         <value>out_n_pedido_sap</value>
-         <variableId>7013a53f-5036-490f-a05e-156cb40f8bd5</variableId>
+         <value>out_ref_externa</value>
+         <variableId>fda98028-a58f-4ac3-8d82-bf9b96d0bf4d</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>2b80351a-f1c1-4e75-9228-8c28426d602e</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

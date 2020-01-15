@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Login_SAP</name>
+   <name>SumaNet_01_Login</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,11 +9,11 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>0c617e36-d7af-42be-9975-9387ec4f7a7c</testSuiteGuid>
+   <testSuiteGuid>e56cb135-ca5a-4232-8b29-447d407638d7</testSuiteGuid>
    <testCaseLink>
-      <guid>1fd5757b-eb3e-41c7-a4e4-6bdb6851d6f9</guid>
+      <guid>25cd10b4-6845-42e6-9b69-444afab04a02</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Login_SAP</testCaseId>
+      <testCaseId>Test Cases/Login_Sumanet</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

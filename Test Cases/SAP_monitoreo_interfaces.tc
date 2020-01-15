@@ -12,4 +12,11 @@
       <masked>false</masked>
       <name>strNumPedidoSap</name>
    </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>416b261f-338a-4eeb-9527-719c0c82017f</id>
+      <masked>false</masked>
+      <name>strRefExterna</name>
+   </variable>
 </TestCaseEntity>

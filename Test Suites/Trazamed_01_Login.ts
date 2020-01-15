@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Login_SumaNet</name>
+   <name>Trazamed_01_Login</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,11 +9,11 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>e56cb135-ca5a-4232-8b29-447d407638d7</testSuiteGuid>
+   <testSuiteGuid>31ecd157-c845-41ec-ab0b-bd6f1bd32e37</testSuiteGuid>
    <testCaseLink>
-      <guid>25cd10b4-6845-42e6-9b69-444afab04a02</guid>
+      <guid>f9327cdd-002b-42b8-a38e-fc61fb2c3bde</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Login_Sumanet</testCaseId>
+      <testCaseId>Test Cases/Login_Trazamed</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

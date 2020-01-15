@@ -11,6 +11,8 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
+import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser('')
@@ -26,4 +28,10 @@ WebUI.click(findTestObject('SAP/ddwn_select_idioma'), FailureHandling.STOP_ON_FA
 WebUI.click(findTestObject('SAP/ddwn_opcion_espanol'))
 
 WebUI.click(findTestObject('Login/btn_sap_login'))
+
+if (false) {
+    WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 10)
+
+    WebUI.refresh()
+}
 

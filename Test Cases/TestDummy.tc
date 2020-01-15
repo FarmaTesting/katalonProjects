@@ -8,8 +8,36 @@
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>e69b2b01-2eff-44af-9ed2-48028d4c34b8</id>
+      <id>97ab0202-7e17-44d1-b758-5bded4e7fcde</id>
+      <masked>false</masked>
+      <name>strTotalRows</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>dacdbd9a-b020-402d-95d6-d97a0627bc4d</id>
+      <masked>false</masked>
+      <name>rowNum</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>204a1aab-8b84-4632-bee6-ea1f18c96c66</id>
+      <masked>false</masked>
+      <name>usado</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>9323b437-b672-4b88-9675-9a6b47a3895f</id>
       <masked>false</masked>
       <name>strLote</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>96fdc1e2-70f8-4e82-aa78-7a469a24a44c</id>
+      <masked>false</masked>
+      <name>ambiente</name>
    </variable>
 </TestCaseEntity>

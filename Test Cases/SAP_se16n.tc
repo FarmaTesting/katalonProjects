@@ -5,4 +5,18 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>b0fd11b7-3acb-415f-a61c-7622a6b9c901</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>fda98028-a58f-4ac3-8d82-bf9b96d0bf4d</id>
+      <masked>false</masked>
+      <name>strRefExterna</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>2b80351a-f1c1-4e75-9228-8c28426d602e</id>
+      <masked>false</masked>
+      <name>strNumPedidoSap</name>
+   </variable>
 </TestCaseEntity>

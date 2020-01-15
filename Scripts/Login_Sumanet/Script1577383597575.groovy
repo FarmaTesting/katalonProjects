@@ -11,6 +11,8 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
+import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser('')
