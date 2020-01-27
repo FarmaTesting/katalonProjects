@@ -15,13 +15,13 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.delay(30)
 
-WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 0)
+WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 30)
 
 WebUI.click(findTestObject('SAP/txt_buscador_trx'))
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/nse16n')
+WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/nz_sd_punto_arranque')
 
 WebUI.delay(1)
 
@@ -29,25 +29,35 @@ WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.delay(1)
 
-WebUI.waitForElementVisible(findTestObject('SAP/txt_se16n_buscador_tablas'), 0)
+WebUI.waitForElementVisible(findTestObject('SAP/SAP_punto_de_arranque/txt_nro_doc_comercial_npedidosap'), 30)
 
-WebUI.sendKeys(findTestObject('SAP/txt_se16n_buscador_tablas'), 'vbak')
+def strNumPedidoSap = findTestData('DGScenarios').getValue('out_n_pedido_sap', 1)
 
-WebUI.sendKeys(findTestObject('SAP/txt_se16n_buscador_tablas'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('SAP/SAP_punto_de_arranque/txt_nro_doc_comercial_npedidosap'), strNumPedidoSap)
 
-WebUI.waitForElementVisible(findTestObject('SAP/txt_se16n_1_3_3_tercera_celda_filtro'), 0)
+WebUI.sendKeys(findTestObject('SAP/SAP_punto_de_arranque/txt_nro_doc_comercial_npedidosap'), Keys.chord(Keys.F8))
 
-WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_3_3_tercera_celda_filtro'), '02.01.2020')
+WebUI.waitForElementVisible(findTestObject('SAP/SAP_punto_de_arranque/chk_seleccion_pedido_encontrado'), 30)
 
-WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_3_3_tercera_celda_filtro'), Keys.chord(Keys.CONTROL, 'f'))
+WebUI.click(findTestObject('SAP/SAP_punto_de_arranque/chk_seleccion_pedido_encontrado'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.waitForElementVisible(findTestObject('SAP/txt_se16n_buscar_filtro'), 0)
+WebUI.delay(1, FailureHandling.STOP_ON_FAILURE)
 
-WebUI.sendKeys(findTestObject('SAP/txt_se16n_buscar_filtro'), 'N° Interno')
+WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.SHIFT, Keys.F1))
 
-WebUI.click(findTestObject('SAP/btn_ok'))
+WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'), '12312')
+WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/n')
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F8))
+WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+
+not_run: WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.SHIFT, Keys.F3))
+
+not_run: WebUI.sendKeys(findTestObject('SAP/btn_si'), Keys.chord(Keys.TAB))
+
+not_run: WebUI.sendKeys(findTestObject('SAP/btn_si'), Keys.chord(Keys.TAB))
+
+not_run: WebUI.sendKeys(findTestObject('SAP/btn_si'), Keys.chord(Keys.TAB))
+
+not_run: WebUI.sendKeys(findTestObject('SAP/btn_si'), Keys.chord(Keys.ENTER))
 

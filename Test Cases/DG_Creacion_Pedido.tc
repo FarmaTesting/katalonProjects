@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Caso de Prueba para crear Pedidos. Crea solamente stock en SAP.</description>
+   <description>Script para usar la aplicación &quot;Data Generation&quot;, crea pedidos dependiendo de la cantidad/producto/traceabilidad deseada</description>
    <name>DG_Creacion_Pedido</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>824265a8-58f3-4078-b2cd-e26d2e86e2d4</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>a731483c-e372-4dc6-bed8-face11f7481c</id>
+      <masked>false</masked>
+      <name>rowFound</name>
+   </variable>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>

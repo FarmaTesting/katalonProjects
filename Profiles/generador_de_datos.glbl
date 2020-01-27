@@ -9,4 +9,9 @@
       <initValue>'http://fsrvtfs00hq/testing/ingreso_mercaderia.aspx'</initValue>
       <name>url</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>rowFound</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

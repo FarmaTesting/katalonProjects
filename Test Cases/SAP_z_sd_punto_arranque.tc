@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Trx de SAP confirma el punto de arranque de un pedido</description>
    <name>SAP_z_sd_punto_arranque</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>e6a0af23-6e01-4e94-add9-ac38102c0481</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>b3025694-e176-4994-9a58-e8bdcd9d3bea</id>
+      <masked>false</masked>
+      <name>strNumPedidoSap</name>
+   </variable>
 </TestCaseEntity>

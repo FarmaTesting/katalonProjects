@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Trx SAP monitorea todas las interfaces usadas para la comunicación</description>
+   <name>SAP_z_ca_mon</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>66ae2fd9-9a97-4ed7-a077-f6406834a0a7</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>416b261f-338a-4eeb-9527-719c0c82017f</id>
+      <masked>false</masked>
+      <name>strRefExterna</name>
+   </variable>
+</TestCaseEntity>

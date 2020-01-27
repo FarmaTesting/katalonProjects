@@ -19,4 +19,9 @@
       <initValue>'Suma2020'</initValue>
       <name>pass</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>rowFound</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

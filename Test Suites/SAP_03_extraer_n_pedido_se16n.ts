@@ -11,6 +11,12 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>733120ff-bdf6-49af-aabf-ed7891fd37ae</testSuiteGuid>
    <testCaseLink>
+      <guid>3b4da9c0-5900-43b2-906e-545f14337a5b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Login_SAP</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>d28b90ba-e97e-4286-a9d6-6e583a2c7b3b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -35,6 +41,42 @@
          <type>DEFAULT</type>
          <value></value>
          <variableId>2b80351a-f1c1-4e75-9228-8c28426d602e</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>d6c07138-3651-446b-b41c-2f0e81790f5f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>str_fecha_creado</value>
+         <variableId>0912fdd8-15af-4b7c-8eab-0d8c672cedfd</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>d6c07138-3651-446b-b41c-2f0e81790f5f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>strHoraCreado</value>
+         <variableId>0b7e60a5-6f70-45a1-a720-e474c0a884c7</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>59be12e7-5ed3-4107-9496-5a347f0e3acc</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>b67ab89e-6093-4c40-8b6d-73ef69f5126b</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>d4a69a78-39f1-4e3f-9785-71f9c4f64afd</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>03e0cd81-694a-46de-b4e5-de2bc7b8e20b</variableId>
       </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

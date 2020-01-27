@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Transacción SAP que permite verificar dónde hay bloqueo, true = permite ser liberado. False consulta las otros tipos de bloqueos hasta terminar toda la verificación.</description>
+   <description>Trx SAP verifica dónde hay bloqueo, caso true = libera, caso false consulta otros tipos de bloqueo</description>
    <name>SAP_z_sd_libera_pedido</name>
    <tag></tag>
    <comment></comment>
