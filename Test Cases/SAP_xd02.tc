@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Trx que permite buscar y modificar clientes</description>
+   <name>SAP_xd02</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>cca4bbb0-65a3-4451-b284-48e468a47fe4</testCaseGuid>
+</TestCaseEntity>

@@ -15,6 +15,15 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/DG_Creacion_Pedido</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>0cb134fb-d907-4823-a2df-3e1e5220782d</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/DGScenarios</testDataId>
+      </testDataLink>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>

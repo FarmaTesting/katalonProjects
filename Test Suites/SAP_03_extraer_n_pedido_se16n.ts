@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
-   <description></description>
+   <description>Test Suite para conseguir el N° de Pedido de SAP</description>
    <name>SAP_03_extraer_n_pedido_se16n</name>
    <tag></tag>
    <isRerun>false</isRerun>
@@ -9,21 +9,21 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>733120ff-bdf6-49af-aabf-ed7891fd37ae</testSuiteGuid>
+   <testSuiteGuid>82b2d15d-e119-4fb2-b012-33d35138413b</testSuiteGuid>
    <testCaseLink>
-      <guid>3b4da9c0-5900-43b2-906e-545f14337a5b</guid>
+      <guid>41f63208-c3b4-43d8-ae11-3df1e041580e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Login_SAP</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>d28b90ba-e97e-4286-a9d6-6e583a2c7b3b</guid>
+      <guid>1c72525f-006c-4792-a897-c5d70f1b0629</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SAP_se16n</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
-         <id>d6c07138-3651-446b-b41c-2f0e81790f5f</id>
+         <id>5726e217-0979-4de1-82a8-a3360fda5d6f</id>
          <iterationEntity>
             <iterationType>ALL</iterationType>
             <value></value>
@@ -31,9 +31,9 @@
          <testDataId>Data Files/DGScenarios</testDataId>
       </testDataLink>
       <variableLink>
-         <testDataLinkId>d6c07138-3651-446b-b41c-2f0e81790f5f</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>out_ref_externa</value>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
          <variableId>fda98028-a58f-4ac3-8d82-bf9b96d0bf4d</variableId>
       </variableLink>
       <variableLink>
@@ -43,21 +43,21 @@
          <variableId>2b80351a-f1c1-4e75-9228-8c28426d602e</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>d6c07138-3651-446b-b41c-2f0e81790f5f</testDataLinkId>
+         <testDataLinkId>5726e217-0979-4de1-82a8-a3360fda5d6f</testDataLinkId>
          <type>DATA_COLUMN</type>
-         <value>str_fecha_creado</value>
+         <value>strFechaCreado</value>
          <variableId>0912fdd8-15af-4b7c-8eab-0d8c672cedfd</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId>d6c07138-3651-446b-b41c-2f0e81790f5f</testDataLinkId>
+         <testDataLinkId>5726e217-0979-4de1-82a8-a3360fda5d6f</testDataLinkId>
          <type>DATA_COLUMN</type>
          <value>strHoraCreado</value>
          <variableId>0b7e60a5-6f70-45a1-a720-e474c0a884c7</variableId>
       </variableLink>
       <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
+         <testDataLinkId>5726e217-0979-4de1-82a8-a3360fda5d6f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>param_otros_clientes</value>
          <variableId>59be12e7-5ed3-4107-9496-5a347f0e3acc</variableId>
       </variableLink>
       <variableLink>

@@ -41,7 +41,7 @@
       <name>strSolicitante</name>
    </variable>
    <variable>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'*2'</defaultValue>
       <description></description>
       <id>b67ab89e-6093-4c40-8b6d-73ef69f5126b</id>
       <masked>false</masked>

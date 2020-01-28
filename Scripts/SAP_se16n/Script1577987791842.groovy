@@ -37,11 +37,13 @@ WebUI.sendKeys(findTestObject('SAP/txt_se16n_buscador_tablas'), Keys.chord(Keys.
 
 WebUI.waitForElementVisible(findTestObject('SAP/txt_se16n_1_3_3_segunda_celda_filtro'), 30)
 
-WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_3_3_segunda_celda_filtro'), findTestData('DGScenarios').getValue('AS', 1))
+//WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_3_3_segunda_celda_filtro'), findTestData('DGScenarios').getValue('AS', 1))
+WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_3_3_segunda_celda_filtro'), strFechaCreado)
 
-WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_4_3_tercera_celda_filtro'), findTestData('DGScenarios').getValue('AT', 1))
+//WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_4_3_tercera_celda_filtro'), findTestData('DGScenarios').getValue('AT', 1))
+WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_4_3_tercera_celda_filtro'), strHoraCreado)
 
-WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_4_4_tercera_celda_filtro'), CustomKeywords.'utilities.tools.sumarMinutos'(findTestData('DGScenarios').getValue('strHoraCreado', 1)))
+WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_4_4_tercera_celda_filtro'), CustomKeywords.'utilities.tools.sumarMinutos'(strHoraCreado))
 
 WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_4_3_tercera_celda_filtro'), Keys.chord(Keys.CONTROL, 'f'))
 
@@ -59,7 +61,8 @@ WebUI.sendKeys(findTestObject('SAP/txt_se16n_buscar_filtro'), 'kunnr')
 
 WebUI.click(findTestObject('SAP/btn_ok'))
 
-WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'), findTestData('DGScenarios').getValue('AG', 1))
+//WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'), findTestData('DGScenarios').getValue('AG', 1))
+WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'), strSolicitante)
 
 WebUI.delay(1)
 
@@ -71,7 +74,7 @@ WebUI.sendKeys(findTestObject('SAP/txt_se16n_buscar_filtro'), 'spart')
 
 WebUI.click(findTestObject('SAP/btn_ok'))
 
-WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'), '*2')
+WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'), strSector)
 
 WebUI.delay(1)
 
@@ -83,15 +86,18 @@ WebUI.sendKeys(findTestObject('SAP/txt_se16n_buscar_filtro'), 'zz_observacion_01
 
 WebUI.click(findTestObject('SAP/btn_ok'))
 
-WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'), '*CREADO POR UN PROCESO DE AUTOMATIZACION*')
+WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'), strObservacion)
 
 WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F8))
+
+
+WebUI.delay(5)
 
 //strNumPedidoSap = WebUI.concatenate(((['000', WebUI.getAttribute(findTestObject('SAP/SAP_se16n_vbak/txt_n_pedido_sap'), 'Value')]) as String[]), FailureHandling.STOP_ON_FAILURE)
 
 //strNumPedidoSap = WebUI.concatenate(((['000', 
 
-CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AO', 1, strNumPedidoSap)
+//CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AO', 1, strNumPedidoSap)
 
 //WebUI.delay(2)
 //

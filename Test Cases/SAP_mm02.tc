@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Trx modifica productos</description>
+   <name>SAP_mm02</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3d44a31b-03f2-4d69-abff-5f59fbac5ff7</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>b8ccfa4f-ecbe-4916-8b40-2a45ea86fa57</id>
+      <masked>false</masked>
+      <name>nombreMod</name>
+   </variable>
+</TestCaseEntity>
