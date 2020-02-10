@@ -48,7 +48,7 @@ import com.kms.katalon.core.webui.exception.WebElementNotFoundException
  */
 class tools {
 	/**
-	 * Separa las horas de los minutos y suma 10' mins para buscar como resultado
+	 * Separa las horas de los minutos y suma 08' mins para buscar como resultado
 	 * @param sumarMinutos
 	 * @return
 	 */
@@ -58,6 +58,9 @@ class tools {
 		def String[] splitHours = sumarMinutos.split(':')
 		def splitMinutos = Integer.parseInt(splitHours[1])
 		def splitMinutosTotal = splitMinutos + 10
+		if (splitMinutosTotal >= 60){
+			splitMinutosTotal = 59
+		}
 		def horaHasta = splitHours[0] + ':' + splitMinutosTotal
 		return horaHasta
 	}

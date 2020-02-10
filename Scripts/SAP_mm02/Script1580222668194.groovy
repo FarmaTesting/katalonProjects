@@ -25,7 +25,7 @@ WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.waitForElementVisible(findTestObject('SAP/SAP_mm02_modificar_producto/txt_n_material'), 30)
 
-WebUI.sendKeys(findTestObject('SAP/SAP_mm02_modificar_producto/txt_n_material'), '1540')
+WebUI.sendKeys(findTestObject('SAP/SAP_mm02_modificar_producto/txt_n_material'), '1572')
 
 WebUI.delay(1)
 
@@ -60,7 +60,7 @@ WebUI.delay(1)
 if (nombreMod.contains('.')) {
     nombreMod = nombreMod.replace('.', '')
 } else {
-	nombreMod = nombreMod + '.'
+    nombreMod = (nombreMod + '.')
 }
 
 WebUI.clearText(findTestObject('SAP/SAP_mm02_modificar_producto/txt_nombre_material'))
@@ -86,3 +86,4 @@ WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.SHIFT, Ke
 WebUI.delay(1)
 
 WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+

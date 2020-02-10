@@ -20,7 +20,7 @@
       <guid>7891fafe-ba20-4e37-91b6-d0bb5db930cd</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/SAP_se16n</testCaseId>
+      <testCaseId>Test Cases/SAP_se16n_n_pedidos</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>c108c028-be81-4e30-938f-5b86e0afa59e</id>
@@ -93,12 +93,6 @@
          </iterationEntity>
          <testDataId>Data Files/DGScenarios</testDataId>
       </testDataLink>
-      <variableLink>
-         <testDataLinkId>6616e812-1934-42ae-bad6-ee94a0b0ec45</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>out_n_pedido_sap</value>
-         <variableId>7013a53f-5036-490f-a05e-156cb40f8bd5</variableId>
-      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>050eedc4-5de9-46fb-8f0d-777fe00df1f9</guid>

@@ -9,6 +9,10 @@
          <key>XPATH</key>
          <value>//span[@id='grid#20.117#0,9#cp']</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@title = 'N° Pedido' and (text() = 'N° Pedido' or . = 'N° Pedido')]</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>

@@ -9,8 +9,12 @@
          <key>XPATH</key>
          <value>//iframe[@id='ITSFRAME1']</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id = 'ITSFRAME1']</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -27,7 +31,7 @@
       <value>ITSFRAME1</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
@@ -62,7 +66,7 @@
       <value>0</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>src</name>
       <type>Main</type>

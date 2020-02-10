@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Trx SAP busca con ref externa de sap y se consigue n pedido sap</description>
+   <name>SAP_se16n_n_entrega</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>0c656ee6-accd-4acf-86f9-5ed812e1cfd5</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>5bfc3420-54d2-41fc-892c-e6cfe2ff5dae</id>
+      <masked>false</masked>
+      <name>strRefExterna</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>ce0b9c87-7ec3-45c2-9962-5747dc70d844</id>
+      <masked>false</masked>
+      <name>strNumPedidoSap</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>f5f79455-38b5-4dc1-90f5-eadd98d2a911</id>
+      <masked>false</masked>
+      <name>strFechaCreado</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>09731755-3843-416e-a62c-d6bf7eff6c31</id>
+      <masked>false</masked>
+      <name>strHoraCreado</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>4350ff64-589f-464c-986d-54ac5e12ae85</id>
+      <masked>false</masked>
+      <name>strSolicitante</name>
+   </variable>
+   <variable>
+      <defaultValue>'*2'</defaultValue>
+      <description></description>
+      <id>62f7e75a-aac2-42b9-8d40-d48cb4d959ae</id>
+      <masked>false</masked>
+      <name>strSector</name>
+   </variable>
+   <variable>
+      <defaultValue>'*CREADO POR UN PROCESO DE AUTOMATIZACION*'</defaultValue>
+      <description></description>
+      <id>19a614f5-d4e7-444c-808e-447c4c125b18</id>
+      <masked>false</masked>
+      <name>strObservacion</name>
+   </variable>
+   <variable>
+      <defaultValue>10</defaultValue>
+      <description></description>
+      <id>3d2cd065-c9b2-4b6d-80bc-6ab7aedb262d</id>
+      <masked>false</masked>
+      <name>strAddMins</name>
+   </variable>
+</TestCaseEntity>

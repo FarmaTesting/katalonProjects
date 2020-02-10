@@ -21,19 +21,10 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SAP_vkm4</testCaseId>
-      <testDataLink>
-         <combinationType>ONE</combinationType>
-         <id>13705e84-fbd5-41e3-91b2-bd6c90d4c735</id>
-         <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
-         </iterationEntity>
-         <testDataId>Data Files/DGScenarios</testDataId>
-      </testDataLink>
       <variableLink>
-         <testDataLinkId>13705e84-fbd5-41e3-91b2-bd6c90d4c735</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>out_n_pedido_sap</value>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
          <variableId>4e0a1ba6-6bc7-4132-bc49-3985d2f83d2e</variableId>
       </variableLink>
    </testCaseLink>

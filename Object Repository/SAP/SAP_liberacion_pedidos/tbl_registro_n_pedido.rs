@@ -9,6 +9,10 @@
          <key>XPATH</key>
          <value>//input[@id='grid#20.117#1,9#if']</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[contains(@name,'#1,9#')] </value>
+      </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -48,7 +52,7 @@
       <value>{Change:[{ClientAction:'none'},{type:'INPUTFIELD'}]}</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
@@ -90,7 +94,7 @@
       <value>true</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>value</name>
       <type>Main</type>
@@ -118,11 +122,11 @@
       <value>grid#20.117#1,9#if</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;grid#20.117#1,9#if&quot;)</value>
+      <value>//*[contains(@name,'#1,9#')] </value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

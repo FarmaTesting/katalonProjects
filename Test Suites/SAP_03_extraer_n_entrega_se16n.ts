@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description>Test Suite para conseguir el N° de Pedido de SAP</description>
+   <name>SAP_03_extraer_n_entrega_se16n</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>962c49b3-c3d0-4602-bc13-c39bbf88907a</testSuiteGuid>
+   <testCaseLink>
+      <guid>41f63208-c3b4-43d8-ae11-3df1e041580e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Login_SAP</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>575b0fe2-48f1-4fbd-8450-5fb9551afdb1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SAP_se16n_n_entrega</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>5bfc3420-54d2-41fc-892c-e6cfe2ff5dae</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>ce0b9c87-7ec3-45c2-9962-5747dc70d844</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>f5f79455-38b5-4dc1-90f5-eadd98d2a911</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>09731755-3843-416e-a62c-d6bf7eff6c31</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>4350ff64-589f-464c-986d-54ac5e12ae85</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>62f7e75a-aac2-42b9-8d40-d48cb4d959ae</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>19a614f5-d4e7-444c-808e-447c4c125b18</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>3d2cd065-c9b2-4b6d-80bc-6ab7aedb262d</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>

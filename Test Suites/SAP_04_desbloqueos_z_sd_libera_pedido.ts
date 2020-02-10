@@ -21,20 +21,5 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SAP_z_sd_libera_pedido</testCaseId>
-      <testDataLink>
-         <combinationType>ONE</combinationType>
-         <id>8665e274-55da-47e3-b87b-b6f1096f16cd</id>
-         <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
-         </iterationEntity>
-         <testDataId>Data Files/DGScenarios</testDataId>
-      </testDataLink>
-      <variableLink>
-         <testDataLinkId>8665e274-55da-47e3-b87b-b6f1096f16cd</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>out_n_pedido_sap</value>
-         <variableId>7013a53f-5036-490f-a05e-156cb40f8bd5</variableId>
-      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

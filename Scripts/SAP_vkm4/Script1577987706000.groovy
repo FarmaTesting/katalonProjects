@@ -15,34 +15,51 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.delay(15)
+WebUI.delay(5)
 
-WebUI.click(findTestObject('SAP/txt_buscador_trx'))
+for (int i = 1; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
+    WebUI.click(findTestObject('SAP/txt_buscador_trx'))
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/nvkm4')
+    WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/nvkm4')
 
-WebUI.delay(1)
+    WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+    WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
-WebUI.waitForElementVisible(findTestObject('SAP/SAP_nvkm4/txt_doc_comercial_n_pedido_sap'), 30)
+    WebUI.waitForElementVisible(findTestObject('SAP/SAP_nvkm4/txt_doc_comercial_n_pedido_sap'), 30)
 
-def strNumPedidoSap = findTestData('DGScenarios').getValue('out_n_pedido_sap', 1)
+    for (int c = 41; c <= 43; c++) {
+        def strNumPedidoSap = findTestData('DGScenarios').getValue(c, i)
 
-WebUI.sendKeys(findTestObject('SAP/SAP_nvkm4/txt_doc_comercial_n_pedido_sap'), strNumPedidoSap)
+        WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F8))
+        WebUI.clearText(findTestObject('SAP/SAP_nvkm4/txt_doc_comercial_n_pedido_sap'))
 
-WebUI.waitForElementVisible(findTestObject('SAP/SAP_nvkm4/chk_seleccion_pedido'), 30)
+        WebUI.sendKeys(findTestObject('SAP/SAP_nvkm4/txt_doc_comercial_n_pedido_sap'), strNumPedidoSap)
 
-//WebUI.click(findTestObject('null'))
-WebUI.check(findTestObject('SAP/SAP_nvkm4/chk_seleccion_pedido'))
+        WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F8))
 
-WebUI.waitForElementVisible(findTestObject('SAP/SAP_nvkm4/btn_liberar_pedido'), 30)
+        if (WebUI.verifyElementPresent(findTestObject('SAP/SAP_nvkm4/chk_seleccion_pedido'), 5, FailureHandling.OPTIONAL)) {
+            WebUI.check(findTestObject('SAP/SAP_nvkm4/chk_seleccion_pedido'))
 
-WebUI.click(findTestObject('SAP/SAP_nvkm4/btn_liberar_pedido'))
+            WebUI.delay(1)
 
-WebUI.waitForElementVisible(findTestObject('SAP/SAP_nvkm4/img_liberacion_exito'), 30)
+            WebUI.waitForElementVisible(findTestObject('SAP/SAP_nvkm4/btn_liberar_pedido'), 30)
+
+            WebUI.click(findTestObject('SAP/SAP_nvkm4/btn_liberar_pedido'))
+
+            WebUI.delay(1)
+
+            WebUI.waitForElementVisible(findTestObject('SAP/SAP_nvkm4/img_liberacion_exito'), 30)
+
+            WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F3))
+
+            WebUI.delay(1)
+
+            WebUI.click(findTestObject('Object Repository/SAP/SAP_nvkm4/btn_si_finalizar_lista'))
+        }
+    }
+}
 
 not_run: WebUI.delay(2)
 
@@ -51,4 +68,3 @@ not_run: WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/n')
 not_run: WebUI.delay(2)
 
 not_run: WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
-

@@ -9,6 +9,10 @@
          <key>XPATH</key>
          <value>//div[@id='grid#20.117#0,0-menu']</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@title = 'Menú de selección de tablas']</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>

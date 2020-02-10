@@ -21,19 +21,10 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SAP_z_sd_punto_arranque</testCaseId>
-      <testDataLink>
-         <combinationType>ONE</combinationType>
-         <id>df8a8164-c162-4109-8970-0cbe7cc6f3e6</id>
-         <iterationEntity>
-            <iterationType>ALL</iterationType>
-            <value></value>
-         </iterationEntity>
-         <testDataId>Data Files/DGScenarios</testDataId>
-      </testDataLink>
       <variableLink>
-         <testDataLinkId>df8a8164-c162-4109-8970-0cbe7cc6f3e6</testDataLinkId>
-         <type>DATA_COLUMN</type>
-         <value>out_n_pedido_sap</value>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
          <variableId>b3025694-e176-4994-9a58-e8bdcd9d3bea</variableId>
       </variableLink>
    </testCaseLink>
