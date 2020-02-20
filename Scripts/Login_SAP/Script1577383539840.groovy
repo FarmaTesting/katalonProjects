@@ -15,9 +15,9 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('')
+WebUI.openBrowser(GlobalVariable.url)
 
-WebUI.navigateToUrl(GlobalVariable.url)
+WebUI.maximizeWindow()
 
 WebUI.setText(findTestObject('SAP/txt_sap_user'), GlobalVariable.user)
 

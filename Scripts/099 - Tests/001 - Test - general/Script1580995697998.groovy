@@ -11,17 +11,39 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
+import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('')
+WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 10)
 
-WebUI.navigateToUrl(GlobalVariable.url)
+WebUI.click(findTestObject('SAP/txt_buscador_trx'))
 
-//var = WebUI.verifyElementPresent(findTestObject('SAP/txt_sap_user'), 5, FailureHandling.OPTIONAL)
-//
-//if (WebUI.verifyElementPresent(findTestObject('SAP/txt_sap_user'), 5, FailureHandling.OPTIONAL)) {
-//    WebUI.setText(findTestObject('Login/txt_sap_user'), GlobalVariable.user)
-//} else {
-//    WebUI.setText(findTestObject('Login/txt_sap_pass'), GlobalVariable.pass)
-//}
-//
+WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/nse37')
+
+WebUI.delay(1)
+
+WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+
+WebUI.delay(1)
+
+WebUI.waitForElementVisible(findTestObject('Object Repository/SAP/se37_ws_123/txt_modulo_funciones'), 10)
+
+WebUI.sendKeys(findTestObject('Object Repository/SAP/se37_ws_123/txt_modulo_funciones'), 'z_mm_andr_recepcion')
+
+WebUI.sendKeys(findTestObject('Object Repository/SAP/se37_ws_123/txt_modulo_funciones'), Keys.chord(Keys.F8))
+
+WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se37_ws_123/btn_posicion'), 15, FailureHandling.OPTIONAL)
+
+WebUI.click(findTestObject('Object Repository/SAP/se37_ws_123/btn_posicion'))
+
+WebUI.delay(1)
+
+WebUI.scrollToElement(findTestObject('SAP/se37_ws_123/txt_pos_moti'), 5)
+
+WebUI.delay(1)
+
+WebUI.setText(findTestObject('SAP/se37_ws_123/txt_pos_moti'), '1234', FailureHandling.OPTIONAL)
+
+WebUI.sendKeys(findTestObject('SAP/se37_ws_123/txt_pos_moti'), '5678', FailureHandling.OPTIONAL)
+

@@ -25,15 +25,17 @@ WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.delay(3)
 
-//WebUI.waitForElementVisible(findTestObject('Object Repository/SAP/SAP_xd02_modificacion_deudor/txt_buscador_deudor'), 30)
+//WebUI.waitForElementVisible(findTestObject('SAP/xd02_mod_deudor/txt_buscador_deudor'), 30)
 
-WebUI.sendKeys(findTestObject('Object Repository/SAP/SAP_xd02_modificacion_deudor/txt_buscador_deudor'), '5196903')
+def nClienteModificar = findTestData('Clientes_xd02').getValue('param_cliente', 1)
 
-WebUI.sendKeys(findTestObject('Object Repository/SAP/SAP_xd02_modificacion_deudor/txt_buscador_deudor'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('SAP/xd02_mod_deudor/txt_buscador_deudor'), nClienteModificar)
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/SAP/SAP_xd02_modificacion_deudor/txt_nombre_deudor'), 30)
+WebUI.sendKeys(findTestObject('SAP/xd02_mod_deudor/txt_buscador_deudor'), Keys.chord(Keys.ENTER))
 
-nombreDeudor = WebUI.getAttribute(findTestObject('Object Repository/SAP/SAP_xd02_modificacion_deudor/txt_nombre_deudor'), 'Value')
+WebUI.waitForElementVisible(findTestObject('SAP/xd02_mod_deudor/txt_nombre_deudor'), 30)
+
+nombreDeudor = WebUI.getAttribute(findTestObject('SAP/xd02_mod_deudor/txt_nombre_deudor'), 'Value')
 
 if (nombreDeudor == 'ORIEN S.A. SUCURSAL DAFLO.'){
 	nombreDeudor = 'ORIEN S.A. SUCURSAL DAFLO'
@@ -43,17 +45,17 @@ nombreDeudor = 'ORIEN S.A. SUCURSAL DAFLO.'
 
 WebUI.delay(1)
 
-WebUI.clearText(findTestObject('Object Repository/SAP/SAP_xd02_modificacion_deudor/txt_nombre_deudor'))
+WebUI.clearText(findTestObject('SAP/xd02_mod_deudor/txt_nombre_deudor'))
 
-WebUI.sendKeys(findTestObject('Object Repository/SAP/SAP_xd02_modificacion_deudor/txt_nombre_deudor'), nombreDeudor)
-
-WebUI.delay(1)
-
-WebUI.sendKeys(findTestObject('Object Repository/SAP/SAP_xd02_modificacion_deudor/txt_nombre_deudor'), Keys.chord(Keys.CONTROL, 's'))
+WebUI.sendKeys(findTestObject('SAP/xd02_mod_deudor/txt_nombre_deudor'), nombreDeudor)
 
 WebUI.delay(1)
 
-WebUI.click(findTestObject('Object Repository/SAP/SAP_xd02_modificacion_deudor/btn_cerrar_popup_buscador_deudor'))
+WebUI.sendKeys(findTestObject('SAP/xd02_mod_deudor/txt_nombre_deudor'), Keys.chord(Keys.CONTROL, 's'))
+
+WebUI.delay(1)
+
+WebUI.click(findTestObject('SAP/xd02_mod_deudor/btn_cerrar_popup_buscador_deudor'))
 
 //WebUI.delay(1)
 //

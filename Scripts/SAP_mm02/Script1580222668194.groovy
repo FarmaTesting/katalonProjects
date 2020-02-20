@@ -23,37 +23,39 @@ WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/nmm02')
 
 WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
-WebUI.waitForElementVisible(findTestObject('SAP/SAP_mm02_modificar_producto/txt_n_material'), 30)
+WebUI.waitForElementVisible(findTestObject('SAP/mm02_mod_producto/txt_n_material'), 30)
 
-WebUI.sendKeys(findTestObject('SAP/SAP_mm02_modificar_producto/txt_n_material'), '1572')
+def nMaterialModificar = findTestData('Materiales_mm02').getValue('param_material', 1)
 
-WebUI.delay(1)
-
-WebUI.sendKeys(findTestObject('SAP/SAP_mm02_modificar_producto/txt_n_material'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('SAP/mm02_mod_producto/txt_n_material'), nMaterialModificar)
 
 WebUI.delay(1)
 
-WebUI.waitForElementVisible(findTestObject('SAP/SAP_mm02_modificar_producto/txt_datos_base_1'), 30)
+WebUI.sendKeys(findTestObject('SAP/mm02_mod_producto/txt_n_material'), Keys.chord(Keys.ENTER))
 
 WebUI.delay(1)
 
-WebUI.click(findTestObject('SAP/SAP_mm02_modificar_producto/txt_datos_base_1'))
+WebUI.waitForElementVisible(findTestObject('SAP/mm02_mod_producto/txt_datos_base_1'), 30)
 
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/SAP_mm02_modificar_producto/txt_datos_base_1'), Keys.chord(Keys.LEFT))
-
-WebUI.sendKeys(findTestObject('SAP/SAP_mm02_modificar_producto/btn_datos_base_1'), Keys.chord(Keys.ENTER))
+WebUI.click(findTestObject('SAP/mm02_mod_producto/txt_datos_base_1'))
 
 WebUI.delay(1)
 
-WebUI.waitForElementVisible(findTestObject('SAP/SAP_mm02_modificar_producto/btn_ok'), 30)
+WebUI.sendKeys(findTestObject('SAP/mm02_mod_producto/txt_datos_base_1'), Keys.chord(Keys.LEFT))
 
-WebUI.click(findTestObject('SAP/SAP_mm02_modificar_producto/btn_ok'))
+WebUI.sendKeys(findTestObject('SAP/mm02_mod_producto/btn_datos_base_1'), Keys.chord(Keys.ENTER))
 
-WebUI.waitForElementVisible(findTestObject('SAP/SAP_mm02_modificar_producto/txt_nombre_material'), 30)
+WebUI.delay(1)
 
-nombreMod = WebUI.getAttribute(findTestObject('SAP/SAP_mm02_modificar_producto/txt_nombre_material'), 'Value')
+WebUI.waitForElementVisible(findTestObject('SAP/mm02_mod_producto/btn_ok'), 30)
+
+WebUI.click(findTestObject('SAP/mm02_mod_producto/btn_ok'))
+
+WebUI.waitForElementVisible(findTestObject('SAP/mm02_mod_producto/txt_nombre_material'), 30)
+
+nombreMod = WebUI.getAttribute(findTestObject('SAP/mm02_mod_producto/txt_nombre_material'), 'Value')
 
 WebUI.delay(1)
 
@@ -63,13 +65,13 @@ if (nombreMod.contains('.')) {
     nombreMod = (nombreMod + '.')
 }
 
-WebUI.clearText(findTestObject('SAP/SAP_mm02_modificar_producto/txt_nombre_material'))
+WebUI.clearText(findTestObject('SAP/mm02_mod_producto/txt_nombre_material'))
 
-WebUI.sendKeys(findTestObject('SAP/SAP_mm02_modificar_producto/txt_nombre_material'), nombreMod)
+WebUI.sendKeys(findTestObject('SAP/mm02_mod_producto/txt_nombre_material'), nombreMod)
 
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/SAP_mm02_modificar_producto/txt_nombre_material'), Keys.chord(Keys.CONTROL, 's'))
+WebUI.sendKeys(findTestObject('SAP/mm02_mod_producto/txt_nombre_material'), Keys.chord(Keys.CONTROL, 's'))
 
 WebUI.delay(1)
 
@@ -86,4 +88,3 @@ WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.SHIFT, Ke
 WebUI.delay(1)
 
 WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
-

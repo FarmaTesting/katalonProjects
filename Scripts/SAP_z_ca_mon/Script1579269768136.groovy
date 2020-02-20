@@ -31,15 +31,15 @@ WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F8))
 
 WebUI.delay(5)
 
-WebUI.click(findTestObject('SAP/SAP_monitor_z_ca_mon/Page_Monitor de interfaces Gestin de transacciones/span_Hora ejec'))
+WebUI.click(findTestObject('SAP/monitor_z_ca_mon/Page_Monitor de interfaces Gestin de transacciones/span_Hora ejec'))
 
 WebUI.delay(1)
 
-WebUI.click(findTestObject('SAP/SAP_monitor_z_ca_mon/Page_Monitor de interfaces Gestin de transacciones/img_Transacciones seleccionadas__SORT_DSC14124-img'))
+WebUI.click(findTestObject('SAP/monitor_z_ca_mon/Page_Monitor de interfaces Gestin de transacciones/img_Transacciones seleccionadas__SORT_DSC14124-img'))
 
 WebUI.delay(1)
 
-strRefExterna = WebUI.getAttribute(findTestObject('SAP/SAP_monitor_z_ca_mon/Page_Monitor de interfaces Gestin de transacciones/table_Transacciones seleccionadasID interfazVarianteID ejecNtransEstado'), 
+strRefExterna = WebUI.getAttribute(findTestObject('SAP/monitor_z_ca_mon/Page_Monitor de interfaces Gestin de transacciones/table_Transacciones seleccionadasID interfazVarianteID ejecNtransEstado'), 
     'Value')
 
 CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AN', 1, strRefExterna)

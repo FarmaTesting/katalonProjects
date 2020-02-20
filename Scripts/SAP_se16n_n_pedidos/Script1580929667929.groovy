@@ -15,9 +15,15 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.delay(5)
+WebUI.delay(2)
 
-for (int i = 1; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
+def nRowsEncontradas = findTestData('DGScenarios').getRowNumbers()
+println('Filas encontradas: ' + nRowsEncontradas)
+
+for (int i = 1; i <= nRowsEncontradas; i++) {
+    def nRowEnEjecucion = i
+    println('Ejecutando fila N: ' + nRowEnEjecucion)
+
     WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 30)
 
     WebUI.click(findTestObject('SAP/txt_buscador_trx'))
@@ -38,14 +44,11 @@ for (int i = 1; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
 
     WebUI.waitForElementVisible(findTestObject('SAP/txt_se16n_1_3_3_segunda_celda_filtro'), 30)
 
-    WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_3_3_segunda_celda_filtro'), findTestData('DGScenarios').getValue('strFechaCreado', 
-            i))
+    WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_3_3_segunda_celda_filtro'), findTestData('DGScenarios').getValue('strFechaCreado', nRowEnEjecucion))
 
-    WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_4_3_tercera_celda_filtro'), findTestData('DGScenarios').getValue('strHoraCreado', 
-            i))
+    WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_4_3_tercera_celda_filtro'), findTestData('DGScenarios').getValue('strHoraCreado', nRowEnEjecucion))
 
-    WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_4_4_tercera_celda_filtro'), CustomKeywords.'utilities.tools.sumarMinutos'(
-            findTestData('DGScenarios').getValue('strHoraCreado', i)))
+    WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_4_4_tercera_celda_filtro'), CustomKeywords.'utilities.tools.sumarMinutos'(findTestData('DGScenarios').getValue('strHoraCreado', i)))
 
     WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_4_3_tercera_celda_filtro'), Keys.chord(Keys.CONTROL, 'f'))
 
@@ -60,8 +63,10 @@ for (int i = 1; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
     WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'), '002')
 
     WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F8))
+	
+	WebUI.delay(2)
 
-    CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AO', i, WebUI.concatenate('000',WebUI.getAttribute(findTestObject('Object Repository/SAP/txt_se16n_tabla_1ra_row'), 'value')))
+    CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AO', nRowEnEjecucion, WebUI.concatenate('000', WebUI.getAttribute(findTestObject('Object Repository/SAP/txt_se16n_tabla_1ra_row'), 'value')))
 
     WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F3))
 
@@ -70,8 +75,10 @@ for (int i = 1; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
     WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'), '198')
 
     WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F8))
+	
+	WebUI.delay(2)
 
-    CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AP', i, WebUI.concatenate('000',WebUI.getAttribute(findTestObject('Object Repository/SAP/txt_se16n_tabla_1ra_row'), 'value')))
+    CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AP', nRowEnEjecucion, WebUI.concatenate('000', WebUI.getAttribute(findTestObject('Object Repository/SAP/txt_se16n_tabla_1ra_row'), 'value')))
 
     WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F3))
 
@@ -80,9 +87,18 @@ for (int i = 1; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
     WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'), '139')
 
     WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F8))
+	
+	WebUI.delay(2)
 
-    CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AQ', i, WebUI.concatenate('000',WebUI.getAttribute(findTestObject('Object Repository/SAP/txt_se16n_tabla_1ra_row'), 'value')))
+    CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AQ', i, WebUI.concatenate('000', WebUI.getAttribute(findTestObject('Object Repository/SAP/txt_se16n_tabla_1ra_row'), 'value')))
 
     WebUI.delay(10)
 }
 
+WebUI.delay(1)
+
+WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), '/n')
+
+WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+
+WebUI.closeBrowser()

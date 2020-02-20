@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[contains(@name,'#1,1#')] </value>
+         <value>//*[contains(@type,'text') and contains(@id,'#1,1#')] [count(. | //*[@ref_element = 'Object Repository/SAP/iframe_Copyright19962013SAPAG AllRightsReserved_itsframe1_202001302016316110000']) = count(//*[@ref_element = 'Object Repository/SAP/iframe_Copyright19962013SAPAG AllRightsReserved_itsframe1_202001302016316110000'])]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,7 +17,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[contains(@name,'#1,1#')] </value>
+      <value>//*[contains(@id,'#1,1#') and contains(@type,'text')] </value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

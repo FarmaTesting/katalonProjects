@@ -17,9 +17,9 @@
       <testCaseId>Test Cases/Login_SAP</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>9d17070b-1afa-4d05-bf4d-fd06c41ab42c</guid>
+      <guid>981545b1-be48-44d3-bfcb-55daa2426983</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/099 - Tests/Test - Select Case</testCaseId>
+      <testCaseId>Test Cases/099 - Tests/001 - Test - general</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

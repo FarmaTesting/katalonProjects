@@ -24,4 +24,9 @@
       <initValue>''</initValue>
       <name>rowFound</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://www.google.com/'</initValue>
+      <name>google</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

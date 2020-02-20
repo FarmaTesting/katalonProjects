@@ -40,6 +40,8 @@ import com.kms.katalon.core.mobile.helper.MobileElementCommonHelper
 import com.kms.katalon.core.util.KeywordUtil
 
 import com.kms.katalon.core.webui.exception.WebElementNotFoundException
+import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
+
 
 
 /**
@@ -91,4 +93,26 @@ class tools {
 		}
 		return rowFound
 	}
+
+
+	/**
+	 * Deslogueo de SAP sin importar que pantallaeste usando
+	 */
+	@Keyword
+	def salirDeSap() {
+		if (WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/txt_buscador_trx'), 15)){
+			WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), '/n')
+			WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.Enter))
+			WebUI.click(findTestObject('Object Repository/SAP/btn_salir_del_sistema'))
+			WebUI.click(findTestObject('Object Repository/SAP/btn_salir_sistema_si'))
+			WebUI.closeBrowser()
+		}
+
+
+	}
+
+
+
+
+
 }

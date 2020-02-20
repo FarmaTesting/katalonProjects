@@ -123,6 +123,10 @@ for (int i = 1; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
 	WebUI.clearText(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'))
 }
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/n')
+WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), '/n')
+
+WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+
+WebUI.closeBrowser()

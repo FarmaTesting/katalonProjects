@@ -61,3 +61,11 @@ for (int i = 1; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
     WebUI.delay(5)
 }
 
+WebUI.delay(1)
+
+WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), '/n')
+
+WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+
+WebUI.closeBrowser()
+
