@@ -11,9 +11,23 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
+import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser(GlobalVariable.google)
+WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.waitForPageLoad(10)
+WebUI.delay(1)
+
+WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 10)
+
+WebUI.click(findTestObject('SAP/txt_buscador_trx'))
+
+WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/nZ_SD_CARGA_NC')
+
+WebUI.delay(1)
+
+WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+
+WebUI.delay(1)
 

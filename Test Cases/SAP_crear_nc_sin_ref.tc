@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Script que permite crear Notas de Credito sin referencia de factura</description>
+   <name>SAP_crear_nc_sin_ref</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b95cc737-157e-41d2-9e2b-91ccbad5b75e</testCaseGuid>
+</TestCaseEntity>

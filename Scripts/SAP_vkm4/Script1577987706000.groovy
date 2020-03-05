@@ -15,6 +15,8 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
+
 WebUI.delay(5)
 
 def nRowsEncontradas = findTestData('DGScenarios').getRowNumbers()
@@ -78,3 +80,4 @@ WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), '/n')
 WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.closeBrowser()
+

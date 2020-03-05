@@ -15,7 +15,9 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.delay(2)
+WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.delay(1)
 
 def nRowsEncontradas = findTestData('DGScenarios').getRowNumbers()
 
@@ -36,7 +38,9 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
     for (int c = 41; c <= 42; c++) {
         def nRowEnEjecucion = i
+
         def nColEnEjecucion = c
+
         println((('Ejecutando fila N: ' + nRowEnEjecucion) + ' Ejecutando columna N: ') + nColEnEjecucion)
 
         WebUI.setText(findTestObject('SAP/liberacion_pedidos/txt_bloqueo_buscar'), 'E0002')
@@ -50,9 +54,9 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
         WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F8))
 
-        WebUI.delay(1)
+//        WebUI.delay(1)
 
-        if (WebUI.waitForElementVisible(findTestObject('SAP/liberacion_pedidos/txt_no_encontro_datos'), 5)) {
+        if (WebUI.waitForElementVisible(findTestObject('SAP/liberacion_pedidos/txt_no_encontro_datos'), 10)) {
             WebUI.clearText(findTestObject('SAP/liberacion_pedidos/txt_bloqueo_buscar'))
 
             WebUI.delay(1)
@@ -63,9 +67,9 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
             WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F8))
 
-            WebUI.delay(1)
+//            WebUI.delay(1)
 
-            if (WebUI.verifyElementPresent(findTestObject('SAP/liberacion_pedidos/tbl_registro_n_pedido'), 5, FailureHandling.OPTIONAL)) {
+            if (WebUI.verifyElementPresent(findTestObject('SAP/liberacion_pedidos/tbl_registro_n_pedido'), 10, FailureHandling.OPTIONAL)) {
                 //Click a boton para seleccionar registro
                 WebUI.click(findTestObject('SAP/liberacion_pedidos/btn_liberacion_masiva'))
 
@@ -107,3 +111,4 @@ WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), '/n')
 WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.closeBrowser()
+

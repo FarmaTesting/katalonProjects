@@ -15,6 +15,8 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
+
 WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 30)
 
 WebUI.click(findTestObject('SAP/txt_buscador_trx'))
@@ -26,7 +28,6 @@ WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 WebUI.delay(3)
 
 //WebUI.waitForElementVisible(findTestObject('SAP/xd02_mod_deudor/txt_buscador_deudor'), 30)
-
 def nClienteModificar = findTestData('Clientes_xd02').getValue('param_cliente', 1)
 
 WebUI.sendKeys(findTestObject('SAP/xd02_mod_deudor/txt_buscador_deudor'), nClienteModificar)
@@ -37,10 +38,10 @@ WebUI.waitForElementVisible(findTestObject('SAP/xd02_mod_deudor/txt_nombre_deudo
 
 nombreDeudor = WebUI.getAttribute(findTestObject('SAP/xd02_mod_deudor/txt_nombre_deudor'), 'Value')
 
-if (nombreDeudor == 'ORIEN S.A. SUCURSAL DAFLO.'){
-	nombreDeudor = 'ORIEN S.A. SUCURSAL DAFLO'
-}else{
-nombreDeudor = 'ORIEN S.A. SUCURSAL DAFLO.'
+if (nombreDeudor == 'ORIEN S.A. SUCURSAL DAFLO.') {
+    nombreDeudor = 'ORIEN S.A. SUCURSAL DAFLO'
+} else {
+    nombreDeudor = 'ORIEN S.A. SUCURSAL DAFLO.'
 }
 
 WebUI.delay(1)
@@ -57,14 +58,3 @@ WebUI.delay(1)
 
 WebUI.click(findTestObject('SAP/xd02_mod_deudor/btn_cerrar_popup_buscador_deudor'))
 
-//WebUI.delay(1)
-//
-//WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.SHIFT, Keys.F3))
-//
-//WebUI.delay(1)
-//
-//WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.SHIFT, Keys.TAB))
-//
-//WebUI.delay(1)
-//
-//WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))

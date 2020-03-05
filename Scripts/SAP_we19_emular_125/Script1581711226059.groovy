@@ -15,6 +15,8 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
+
 WebUI.delay(5)
 
 WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 10)
@@ -54,7 +56,7 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
     println('Fue egresada?: ' + mercEgresada)
 
-    if (mercEgresada != 'SI') {
+    if (mercEgresada == 'NO') {
         def nEntrega89 = findTestData('DGScenarios').getValue('out_n_entrega_89', nRowEnEjecucion)
 
         def nEntrega101 = findTestData('DGScenarios').getValue('out_n_entrega_101', nRowEnEjecucion)
@@ -65,7 +67,7 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
         def nMaterial = findTestData('DGScenarios').getValue('param_materiales', nRowEnEjecucion)
 
-        def nCantidad = findTestData('DGScenarios').getValue('param_cant_ingresar', nRowEnEjecucion)
+        def nCantidad = findTestData('DGScenarios').getValue('param_canti_pedido', nRowEnEjecucion)
 
         def nLote = findTestData('DGScenarios').getValue('out_lote', nRowEnEjecucion)
 
@@ -79,7 +81,7 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
         WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok'))
 
-        WebUI.delay(1)
+        WebUI.delay(2)
 
         WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/txt_info_cuerpo'))
 
@@ -103,19 +105,25 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
         WebUI.sendKeys(findTestObject('Object Repository/SAP/se19_ws_125/txt_info_cabecera'), Keys.chord(Keys.F8))
 
-        WebUI.delay(1)
+        WebUI.delay(2)
+
+        WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_procesar'), 25)
 
         WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_procesar'))
 
-        WebUI.delay(10)
+        WebUI.delay(15)
+
+        WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), 25)
 
         WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'))
 
-        WebUI.delay(2)
+        WebUI.delay(3)
+
+        WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/txt_info_cabecera'), 25)
 
         WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/txt_info_cabecera'))
 
-        WebUI.delay(1)
+        WebUI.delay(2)
 
         WebUI.clearText(findTestObject('Object Repository/SAP/se19_ws_125/txt_c_n_entrega'))
 
@@ -125,19 +133,25 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
         WebUI.sendKeys(findTestObject('Object Repository/SAP/se19_ws_125/txt_info_cabecera'), Keys.chord(Keys.F8))
 
-        WebUI.delay(1)
+        WebUI.delay(2)
+
+        WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_procesar'), 25)
 
         WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_procesar'))
 
-        WebUI.delay(10)
+        WebUI.delay(15)
+
+        WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), 25)
 
         WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'))
 
-        WebUI.delay(2)
+        WebUI.delay(3)
+
+        WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/txt_info_cabecera'), 25)
 
         WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/txt_info_cabecera'))
 
-        WebUI.delay(1)
+        WebUI.delay(2)
 
         WebUI.clearText(findTestObject('Object Repository/SAP/se19_ws_125/txt_c_n_entrega'))
 
@@ -147,13 +161,17 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
         WebUI.sendKeys(findTestObject('Object Repository/SAP/se19_ws_125/txt_info_cabecera'), Keys.chord(Keys.F8))
 
-        WebUI.delay(10)
+        WebUI.delay(15)
+
+        WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_procesar'), 25)
 
         WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_procesar'))
 
         WebUI.delay(20)
-		
-		WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'))
+
+        WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), 25)
+
+        WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'))
 
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BA', nRowEnEjecucion, 
             'SI')
@@ -167,3 +185,4 @@ WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), '/n')
 WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.closeBrowser()
+

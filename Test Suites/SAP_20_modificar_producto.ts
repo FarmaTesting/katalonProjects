@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>SAP_20_modificacion_producto</name>
+   <name>SAP_20_modificar_producto</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,12 +10,6 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>73de3042-124d-4e82-bbbf-b25b115731a4</testSuiteGuid>
-   <testCaseLink>
-      <guid>2d5891d2-bddd-4ccf-b2ea-768c89d7bd88</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Login_SAP</testCaseId>
-   </testCaseLink>
    <testCaseLink>
       <guid>add1e8b4-2c0d-488c-ad26-783a053e2353</guid>
       <isReuseDriver>false</isReuseDriver>

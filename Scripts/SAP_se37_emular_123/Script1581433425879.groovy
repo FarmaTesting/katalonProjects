@@ -15,6 +15,8 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
+
 WebUI.delay(1)
 
 WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 10)
@@ -52,8 +54,8 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
         def numOrdenCompra = findTestData('DGScenarios').getValue('out_n_orden_compra', nRowEnEjecucion)
 
         WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se37_ws_123/txt_cabecera'), 10)
-		
-		//Seccion Cabecera a completar
+
+        //Seccion Cabecera a completar
         WebUI.click(findTestObject('Object Repository/SAP/se37_ws_123/btn_cabecera'))
 
         WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se37_ws_123/txt_cab_po_numb_ref'), 15, FailureHandling.OPTIONAL)
@@ -79,8 +81,8 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
         WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F3))
 
         WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se37_ws_123/btn_posicion'), 15, FailureHandling.OPTIONAL)
-		
-		//Seccion Posicion a completar
+
+        //Seccion Posicion a completar
         WebUI.click(findTestObject('Object Repository/SAP/se37_ws_123/btn_posicion'))
 
         WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se37_ws_123/txt_pos_po_num_ref'), 15, FailureHandling.OPTIONAL)
@@ -168,8 +170,8 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
         WebUI.clearText(findTestObject('SAP/se37_ws_123/txt_pos_moti'))
 
         WebUI.sendKeys(findTestObject('SAP/se37_ws_123/txt_pos_moti'), pMoti)
-		
-		WebUI.delay(1)
+
+        WebUI.delay(1)
 
         WebUI.sendKeys(findTestObject('Object Repository/SAP/se37_ws_123/txt_pos_po_item_ref'), Keys.chord(Keys.F3))
 
@@ -177,10 +179,10 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AZ', nRowEnEjecucion, 
             'SI')
-		
-		WebUI.delay(10)
-		
-		WebUI.sendKeys(findTestObject('Object Repository/SAP/se37_ws_123/btn_posicion'), Keys.chord(Keys.F3))
+
+        WebUI.delay(10)
+
+        WebUI.sendKeys(findTestObject('Object Repository/SAP/se37_ws_123/btn_posicion'), Keys.chord(Keys.F3))
     }
 }
 
@@ -191,3 +193,4 @@ WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), '/n')
 WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.closeBrowser()
+

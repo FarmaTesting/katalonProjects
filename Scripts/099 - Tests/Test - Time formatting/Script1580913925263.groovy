@@ -18,3 +18,20 @@ import groovy.time.TimeCategory as TimeCategory
 import java.lang.Integer as Integer
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
+///**
+// * Separa las horas de los minutos y suma 08' mins para buscar como resultado
+// * @param sumarMinutos
+// * @return
+// */
+@Keyword
+def sumarMinutos(String sumarMinutos) {
+	//def sumarMinutos = findTestData('DGScenarios').getValue('strHoraCreado', 1)
+	def String[] splitHours = sumarMinutos.split(':')
+	def splitMinutos = Integer.parseInt(splitHours[1])
+	def splitMinutosTotal = splitMinutos + 10
+	if (splitMinutosTotal >= 60){
+		splitMinutosTotal = 59
+	}
+	def horaHasta = splitHours[0] + ':' + splitMinutosTotal
+	return horaHasta
+}

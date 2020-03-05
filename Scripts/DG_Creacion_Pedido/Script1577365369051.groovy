@@ -88,7 +88,7 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
             WebUI.sendKeys(findTestObject('Object Repository/GeneradorDatos_Page/txt_cantidad_pedido'), canti_pedido, FailureHandling.CONTINUE_ON_FAILURE)
         }
-        
+		
         if ((otros_clientes = findTestData('DGScenarios').getValue('param_otros_clientes', nFilaEnEjecucion)) != '') {
             WebUI.clearText(findTestObject('Object Repository/GeneradorDatos_Page/txt_otros_clientes'))
 
@@ -136,6 +136,12 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
         strPedidoDistI106 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_pedido_de_distribucion_I106'))
 
         strPedidoComitenteI101 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_pedido_del_comitente_I101'))
+		
+		strPedWeb089 = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_ped_web_089'), 'Value')
+		
+		strPedWeb101 = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_ped_web_101'), 'Value')
+		
+		strPedWeb106 = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_ped_web_106'), 'Value')
 
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'I', nFilaEnEjecucion, 
             strLote)
@@ -184,9 +190,19 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BA', nFilaEnEjecucion, 
             'NO')
+		
+		CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BB', nFilaEnEjecucion,
+			strPedWeb089)
+		
+		CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BC', nFilaEnEjecucion,
+			strPedWeb101)
+		
+		CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BD', nFilaEnEjecucion,
+			strPedWeb106)
 
         if (i < nRowsEncontradas) {
-            WebUI.delay(600)
+            WebUI.delay(1)
+			WebUI.refresh()
         }
     }
 }

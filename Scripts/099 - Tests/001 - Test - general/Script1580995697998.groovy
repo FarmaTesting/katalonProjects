@@ -15,6 +15,8 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
+
 WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 10)
 
 WebUI.click(findTestObject('SAP/txt_buscador_trx'))
@@ -43,7 +45,7 @@ WebUI.scrollToElement(findTestObject('SAP/se37_ws_123/txt_pos_moti'), 5)
 
 WebUI.delay(1)
 
-WebUI.setText(findTestObject('SAP/se37_ws_123/txt_pos_moti'), '1234', FailureHandling.OPTIONAL)
-
 WebUI.sendKeys(findTestObject('SAP/se37_ws_123/txt_pos_moti'), '5678', FailureHandling.OPTIONAL)
+
+WebUI.closeBrowser()
 

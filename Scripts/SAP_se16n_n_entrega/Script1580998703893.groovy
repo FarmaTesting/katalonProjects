@@ -15,6 +15,8 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
+
 WebUI.delay(5)
 
 WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 10)
@@ -46,7 +48,6 @@ WebUI.sendKeys(findTestObject('SAP/txt_se16n_buscar_filtro'), 'vgbel')
 WebUI.click(findTestObject('SAP/btn_ok'))
 
 for (int i = 1; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
-
     def nPedido089 = findTestData('DGScenarios').getValue('strNumPedidoSap89', i)
 
     WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'), nPedido089)
@@ -119,8 +120,8 @@ for (int i = 1; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
 
         WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
     }
-	
-	WebUI.clearText(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'))
+    
+    WebUI.clearText(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'))
 }
 
 WebUI.delay(1)
@@ -130,3 +131,4 @@ WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), '/n')
 WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.closeBrowser()
+
