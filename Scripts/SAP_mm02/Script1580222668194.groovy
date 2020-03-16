@@ -17,13 +17,13 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 30)
+WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 30)
 
-WebUI.click(findTestObject('SAP/txt_buscador_trx'))
+WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/nmm02')
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nmm02')
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.waitForElementVisible(findTestObject('SAP/mm02_mod_producto/txt_n_material'), 30)
 
@@ -45,11 +45,11 @@ WebUI.click(findTestObject('SAP/mm02_mod_producto/txt_datos_base_1'))
 
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/mm02_mod_producto/txt_datos_base_1'), Keys.chord(Keys.LEFT))
-
-WebUI.sendKeys(findTestObject('SAP/mm02_mod_producto/btn_datos_base_1'), Keys.chord(Keys.ENTER))
-
-WebUI.delay(1)
+//WebUI.sendKeys(findTestObject('SAP/mm02_mod_producto/txt_datos_base_1'), Keys.chord(Keys.LEFT))
+//
+//WebUI.sendKeys(findTestObject('SAP/mm02_mod_producto/btn_datos_base_1'), Keys.chord(Keys.ENTER))
+//
+//WebUI.delay(1)
 
 WebUI.waitForElementVisible(findTestObject('SAP/mm02_mod_producto/btn_ok'), 30)
 
@@ -77,17 +77,17 @@ WebUI.sendKeys(findTestObject('SAP/mm02_mod_producto/txt_nombre_material'), Keys
 
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F3))
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
 
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.SHIFT, Keys.F3))
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.SHIFT, Keys.F3))
 
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.SHIFT, Keys.TAB))
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.SHIFT, Keys.TAB))
 
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 

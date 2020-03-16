@@ -9,6 +9,10 @@
          <key>XPATH</key>
          <value>//img[@id='__AGIM1:D:6::0-img']</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>id(&quot;__AGIM1:D:6::0-img&quot;)[count(. | //*[@ref_element = 'Object Repository/SAP/general/iframe_popup']) = count(//*[@ref_element = 'Object Repository/SAP/general/iframe_popup'])]</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -27,7 +31,7 @@
       <value>0</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
@@ -55,18 +59,18 @@
       <value>absmiddle</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;__AGIM1:D:6::0-img&quot;)</value>
+      <value>//*[contains(@id,'M1:37::btn[0]-img')]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/SAP/se19_ws_125/iframe_popup_URLSPW-0</value>
+      <value>Object Repository/SAP/general/iframe_popup</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

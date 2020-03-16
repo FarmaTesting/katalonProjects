@@ -11,12 +11,6 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>e5c6f532-4634-4fd7-b1fa-54433f8c8d6a</testSuiteGuid>
    <testCaseLink>
-      <guid>3ae1bd15-750e-4ad4-b123-68009eeee41e</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Login_SAP</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>808ccfce-c70a-45b7-a13b-1aa6fd0933c3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

@@ -9,8 +9,12 @@
          <key>XPATH</key>
          <value>//input[@id='input#__AGIM0:U:2:3::1:8']</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id = 'input#__AGIM0:U:2:3::1:8' and @type = 'text' and @title = 'GLN - International Location Number + Dígito de control' and @name = 'input#__AGIM0:U:2:3::1:8' and @ref_element = 'Object Repository/SAP/general/iframe_contenedor_todo_web']</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -129,7 +133,7 @@
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/SAP/xd02_mod_deudor/iframe_Copyright19962013SAPAG AllRightsReserved_itsframe1_202001281752375590000 (1)</value>
+      <value>Object Repository/SAP/general/iframe_contenedor_todo_web</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

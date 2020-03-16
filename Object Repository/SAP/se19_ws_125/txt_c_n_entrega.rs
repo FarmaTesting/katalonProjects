@@ -9,6 +9,10 @@
          <key>XPATH</key>
          <value>//input[@id='__AGIM1:U:1::0:21']</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>id(&quot;__AGIM1:U:1::0:21&quot;)[count(. | //*[@ref_element = 'Object Repository/SAP/general/iframe_popup']) = count(//*[@ref_element = 'Object Repository/SAP/general/iframe_popup'])]</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -20,7 +24,7 @@
       <value>input</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
@@ -76,7 +80,7 @@
       <value>0</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>title</name>
       <type>Main</type>
@@ -118,18 +122,18 @@
       <value>__AGIM1:U:1::0:21</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;__AGIM1:U:1::0:21&quot;)</value>
+      <value>//*[contains(@id,'M1:46:1::0:21') and contains(@title,'VBELN')]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/SAP/se19_ws_125/iframe_popup_URLSPW-0</value>
+      <value>Object Repository/SAP/general/iframe_popup</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

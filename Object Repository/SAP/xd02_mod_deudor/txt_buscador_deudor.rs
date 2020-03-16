@@ -9,8 +9,12 @@
          <key>XPATH</key>
          <value>//input[@id='__AGIM1:U:::0:24']</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>id(&quot;__AGIM1:U:::0:24&quot;)[count(. | //*[@ref_element = 'Object Repository/SAP/general/iframe_popup']) = count(//*[@ref_element = 'Object Repository/SAP/general/iframe_popup'])]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -20,7 +24,7 @@
       <value>input</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
@@ -48,7 +52,7 @@
       <value>{Change:[{ClientAction:'none'},{type:'INPUTFIELD'}],DoubleClick:[{ClientAction:'submit',PrepareScript:'return\x20its.XControlSubmit\x28\x29\x3b',ResponseData:'delta',TransportMethod:'partial'},{Submit:'X',arrargv:{fkey:'2'},type:'INPUTFIELD'}],Enter:[{ClientAction:'submit',PrepareScript:'return\x20its.XControlSubmit\x28\x29\x3b',ResponseData:'delta',TransportMethod:'partial'},{Submit:'X',type:'INPUTFIELD'}],FieldHelpPress:[{ClientAction:'submit',PrepareScript:'return\x20its.XControlSubmit\x28\x29\x3b',ResponseData:'delta',TransportMethod:'partial'},{Submit:'X',type:'INPUTFIELD'}]}</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
@@ -76,7 +80,7 @@
       <value>0</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>title</name>
       <type>Main</type>
@@ -111,25 +115,25 @@
       <value>off</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
       <value>__AGIM1:U:::0:24</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;__AGIM1:U:::0:24&quot;)</value>
+      <value>//*[contains(@id,'M1:46:::0:24') and contains(@ct,'CBS')]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/SAP/xd02_mod_deudor/iframe_SAPNetWeaver740IntegratedITSWebAS(Kernel741_RELPatch201)_URLSPW-0</value>
+      <value>Object Repository/SAP/general/iframe_popup</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

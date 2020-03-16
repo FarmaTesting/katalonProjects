@@ -6,12 +6,12 @@
    <elementGuidId>6f74aece-b75c-4b91-9ab3-9d3c912ae4f9</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[(text() = 'Borrar' or . = 'Borrar')]</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//a[@id='__AGIM0:D:6::14_btn']/span</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[contains(@id,'M0:37::btn[14]') and contains(@title,'Borrar')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,25 +31,25 @@
       <value>urBtnCntTxt</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
       <value>Borrar</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;__AGIM0:D:6::14_btn&quot;)/span[@class=&quot;urBtnCntTxt&quot;]</value>
+      <value>//*[contains(@id,'M0:37::btn[14]') and contains(@title,'Borrar')]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/SAP/se19_ws_125/iframe_Copyright19962013SAPAG</value>
+      <value>Object Repository/SAP/general/iframe_contenedor_todo_web</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

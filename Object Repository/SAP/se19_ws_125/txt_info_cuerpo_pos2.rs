@@ -6,12 +6,12 @@
    <elementGuidId>14dc8d3a-c3cd-47c3-b3af-1c9f09c25e3d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@id = '__AGIM0:U:::5:8#_ltext']</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//div[@id='__AGIM0:U:::5:8#_ltext']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[contains(@id,'M0:46:::5:8_l')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -38,7 +38,7 @@
       <value>{1:'GROUP_LEVEL1',3:'ZZENTRADA_ENTREGAS_MERC01\x20\x20'}</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
@@ -73,18 +73,18 @@
       <value>ZZENTRADA_ENTREGAS_MERC01  </value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;__AGIM0:U:::5:8#_ltext&quot;)</value>
+      <value>//*[contains(@id,'M0:46:::5:8_l')]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/SAP/se19_ws_125/iframe_Copyright19962013SAPAG</value>
+      <value>Object Repository/SAP/general/iframe_contenedor_todo_web</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

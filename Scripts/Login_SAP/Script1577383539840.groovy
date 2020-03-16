@@ -19,17 +19,17 @@ WebUI.openBrowser(GlobalVariable.url)
 
 WebUI.maximizeWindow()
 
-WebUI.setText(findTestObject('SAP/txt_sap_user'), GlobalVariable.user)
+WebUI.setText(findTestObject('SAP/login/txt_sap_user'), GlobalVariable.user)
 
-WebUI.setText(findTestObject('SAP/txt_sap_pass'), GlobalVariable.pass)
+WebUI.setText(findTestObject('SAP/login/txt_sap_pass'), GlobalVariable.pass)
 
-WebUI.click(findTestObject('SAP/ddwn_select_idioma'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('SAP/login/ddwn_select_idioma'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('SAP/ddwn_opcion_espanol'))
+WebUI.click(findTestObject('SAP/login/ddwn_opcion_espanol'))
 
-WebUI.click(findTestObject('SAP/btn_login'))
+WebUI.click(findTestObject('SAP/login/btn_login'))
 
-if (WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 10) == false) {
+if (WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 10) == false) {
     WebUI.refresh()
 }
 

@@ -17,13 +17,13 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 30)
+WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 30)
 
-WebUI.click(findTestObject('SAP/txt_buscador_trx'))
+WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/nxd02')
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nxd02')
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.delay(3)
 

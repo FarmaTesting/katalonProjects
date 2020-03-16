@@ -9,8 +9,12 @@
          <key>XPATH</key>
          <value>//a[@id='__AGIM0:D:6::28_btn']/span</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[(text() = 'Datos adicionales Farmanet' or . = 'Datos adicionales Farmanet') and @ref_element = 'Object Repository/SAP/general/iframe_contenedor_todo_web']</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -45,7 +49,7 @@
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/SAP/xd02_mod_deudor/iframe_Copyright19962013SAPAG AllRightsReserved_itsframe1_202001281752375590000</value>
+      <value>Object Repository/SAP/general/iframe_contenedor_todo_web</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

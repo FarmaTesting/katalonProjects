@@ -19,116 +19,130 @@ WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILU
 
 WebUI.delay(5)
 
-WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 10)
+WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 10)
 
-WebUI.click(findTestObject('SAP/txt_buscador_trx'))
+WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/nse16n')
-
-WebUI.delay(1)
-
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
-
-WebUI.waitForElementVisible(findTestObject('SAP/txt_se16n_buscador_tablas'), 10)
-
-WebUI.sendKeys(findTestObject('SAP/txt_se16n_buscador_tablas'), 'lips')
-
-WebUI.sendKeys(findTestObject('SAP/txt_se16n_buscador_tablas'), Keys.chord(Keys.ENTER))
-
-WebUI.waitForElementVisible(findTestObject('SAP/txt_se16n_1_3_3_segunda_celda_filtro'), 15)
-
-WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_4_3_tercera_celda_filtro'), Keys.chord(Keys.CONTROL, 'f'))
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nse16n')
 
 WebUI.delay(1)
 
-WebUI.waitForElementVisible(findTestObject('SAP/txt_se16n_buscar_filtro'), 15)
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
-WebUI.sendKeys(findTestObject('SAP/txt_se16n_buscar_filtro'), 'vgbel')
+WebUI.waitForElementVisible(findTestObject('SAP/se16n/txt_se16n_buscador_tablas'), 10)
 
-WebUI.click(findTestObject('SAP/btn_ok'))
+WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_buscador_tablas'), 'lips')
 
-for (int i = 1; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
+WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_buscador_tablas'), Keys.chord(Keys.ENTER))
+
+WebUI.waitForElementVisible(findTestObject('SAP/se16n/txt_se16n_1_3_3_segunda_celda_filtro'), 15)
+
+WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_4_3_tercera_celda_filtro'), Keys.chord(Keys.CONTROL, 'f'))
+
+WebUI.delay(1)
+
+WebUI.waitForElementVisible(findTestObject('SAP/se16n/txt_se16n_buscar_filtro'), 15)
+
+WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_buscar_filtro'), 'vgbel')
+
+WebUI.click(findTestObject('SAP/se16n/btn_ok'))
+
+def nRowsEncontradas = findTestData('DGScenarios').getRowNumbers()
+
+println('Filas encontradas: ' + nRowsEncontradas)
+
+for (int i = 3; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
+	def nRowEnEjecucion = i
+	
+	println('Ejecutando fila N: ' + nRowEnEjecucion)
+	
     def nPedido089 = findTestData('DGScenarios').getValue('strNumPedidoSap89', i)
 
-    WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'), nPedido089)
+    WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'), nPedido089)
 
-    WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F8))
+    WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
 
     WebUI.delay(2)
 
-    if (WebUI.verifyElementPresent(findTestObject('Object Repository/SAP/txt_se16n_tabla_1ra_row'), 5, FailureHandling.OPTIONAL)) {
-        def nEntrega1 = WebUI.getAttribute(findTestObject('Object Repository/SAP/txt_se16n_tabla_1ra_row'), 'value')
+    if (WebUI.verifyElementPresent(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 5, FailureHandling.OPTIONAL)) {
+        def nEntrega1 = WebUI.getAttribute(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 'value')
+		
+		println (nEntrega1)
 
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AR', i, 
             nEntrega1)
 
         WebUI.delay(1)
 
-        WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_se16n_tabla_1ra_row'), Keys.chord(Keys.F3))
+        WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), Keys.chord(Keys.F3))
     } else {
-        WebUI.click(findTestObject('SAP/txt_buscador_trx'))
+        WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
 
-        WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+        WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
     }
     
-    WebUI.clearText(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'))
+    WebUI.clearText(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'))
 
     def nPedido101 = findTestData('DGScenarios').getValue('strNumPedidoSap101', i)
 
-    WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'), nPedido101)
+    WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'), nPedido101)
 
-    WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F8))
+    WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
 
     WebUI.delay(2)
 
-    if (WebUI.verifyElementPresent(findTestObject('Object Repository/SAP/txt_se16n_tabla_1ra_row'), 5, FailureHandling.OPTIONAL)) {
-        def nEntrega2 = WebUI.getAttribute(findTestObject('Object Repository/SAP/txt_se16n_tabla_1ra_row'), 'value')
+    if (WebUI.verifyElementPresent(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 5, FailureHandling.OPTIONAL)) {
+        def nEntrega2 = WebUI.getAttribute(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 'value')
 
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AX', i, 
             nEntrega2)
+		
+		println (nEntrega2)
 
         WebUI.delay(1)
 
-        WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F3))
+        WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
     } else {
-        WebUI.click(findTestObject('SAP/txt_buscador_trx'))
+        WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
 
-        WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+        WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
     }
     
-    WebUI.clearText(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'))
+    WebUI.clearText(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'))
 
     def nPedido106 = findTestData('DGScenarios').getValue('strNumPedidoSap106', i)
 
-    WebUI.sendKeys(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'), nPedido106)
+    WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'), nPedido106)
 
-    WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F8))
+    WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
 
     WebUI.delay(2)
 
-    if (WebUI.verifyElementPresent(findTestObject('Object Repository/SAP/txt_se16n_tabla_1ra_row'), 5, FailureHandling.OPTIONAL)) {
-        def nEntrega3 = WebUI.getAttribute(findTestObject('Object Repository/SAP/txt_se16n_tabla_1ra_row'), 'value')
+    if (WebUI.verifyElementPresent(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 5, FailureHandling.OPTIONAL)) {
+        def nEntrega3 = WebUI.getAttribute(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 'value')
 
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AY', i, 
             nEntrega3)
+		
+		println (nEntrega3)
 
         WebUI.delay(1)
 
-        WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F3))
+        WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
     } else {
-        WebUI.click(findTestObject('SAP/txt_buscador_trx'))
+        WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
 
-        WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+        WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
     }
     
-    WebUI.clearText(findTestObject('SAP/txt_se16n_1_1_3_primer_celda_filtro'))
+    WebUI.clearText(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'))
 }
 
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), '/n')
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
 
-WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.closeBrowser()
 

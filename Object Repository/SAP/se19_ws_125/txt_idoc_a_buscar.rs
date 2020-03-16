@@ -6,6 +6,10 @@
    <elementGuidId>e199a087-abce-4839-82fc-7aeafba04558</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>BASIC</key>
+         <value>//*[contains(@id,'M0:46:::1:23') and contains(@ct,'CBS')][count(. | //*[@ref_element = 'Object Repository/SAP/general/iframe_contenedor_todo_web']) = count(//*[@ref_element = 'Object Repository/SAP/general/iframe_contenedor_todo_web'])]</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
          <value>//input[@id='__AGIM0:U:::1:23']</value>
       </entry>
@@ -20,7 +24,7 @@
       <value>input</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
@@ -48,7 +52,7 @@
       <value>{Change:[{ClientAction:'none'},{type:'INPUTFIELD'}],DoubleClick:[{ClientAction:'submit',PrepareScript:'return\x20its.XControlSubmit\x28\x29\x3b',ResponseData:'delta',TransportMethod:'partial'},{Submit:'X',arrargv:{fkey:'2'},type:'INPUTFIELD'}],Enter:[{ClientAction:'submit',PrepareScript:'return\x20its.XControlSubmit\x28\x29\x3b',ResponseData:'delta',TransportMethod:'partial'},{Submit:'X',type:'INPUTFIELD'}],FieldHelpPress:[{ClientAction:'submit',PrepareScript:'return\x20its.XControlSubmit\x28\x29\x3b',ResponseData:'delta',TransportMethod:'partial'},{Submit:'X',type:'INPUTFIELD'}]}</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
@@ -104,25 +108,25 @@
       <value>off</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>__AGIM0:U:::1:23</value>
+      <value>//*[contains(@id,'M0:46:::1:23') and contains(@title,'IDOC')]</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;__AGIM0:U:::1:23&quot;)</value>
+      <value>//*[contains(@id,'M0:46:::1:23') and contains(@ct,'CBS')]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/SAP/se19_ws_125/iframe_Copyright19962013SAPAG</value>
+      <value>Object Repository/SAP/general/iframe_contenedor_todo_web</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

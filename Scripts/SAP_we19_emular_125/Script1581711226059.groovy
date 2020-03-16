@@ -19,15 +19,15 @@ WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILU
 
 WebUI.delay(5)
 
-WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 10)
+WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 10)
 
-WebUI.click(findTestObject('SAP/txt_buscador_trx'))
+WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/nwe19')
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nwe19')
 
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.delay(1)
 
@@ -107,9 +107,9 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
         WebUI.delay(2)
 
-        WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_procesar'), 25)
+        WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok'), 25)
 
-        WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_procesar'))
+        WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok'))
 
         WebUI.delay(15)
 
@@ -135,9 +135,9 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
         WebUI.delay(2)
 
-        WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_procesar'), 25)
+        WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok'), 25)
 
-        WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_procesar'))
+        WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok'))
 
         WebUI.delay(15)
 
@@ -163,11 +163,11 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
         WebUI.delay(15)
 
-        WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_procesar'), 25)
+        WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok'), 25)
 
-        WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_procesar'))
+        WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok'))
 
-        WebUI.delay(20)
+        WebUI.delay(25)
 
         WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), 25)
 
@@ -180,9 +180,9 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), '/n')
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
 
-WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.closeBrowser()
 

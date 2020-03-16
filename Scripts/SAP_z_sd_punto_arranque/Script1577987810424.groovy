@@ -15,6 +15,8 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
+
 WebUI.delay(2)
 
 def nRowsEncontradas = findTestData('DGScenarios').getRowNumbers()
@@ -22,19 +24,19 @@ def nRowsEncontradas = findTestData('DGScenarios').getRowNumbers()
 println('Filas encontradas: ' + nRowsEncontradas)
 
 for (int i = 1; i <= nRowsEncontradas; i++) {
-    WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 30)
+    WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 30)
 
-    WebUI.click(findTestObject('SAP/txt_buscador_trx'))
+    WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
 
-    WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/nz_sd_punto_arranque')
-
-    WebUI.delay(1)
-
-    WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+    WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nz_sd_punto_arranque')
 
     WebUI.delay(1)
 
-    WebUI.waitForElementVisible(findTestObject('SAP/punto_de_arranque/txt_nro_doc_comercial_n_pedidosap'), 30)
+    WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+
+    WebUI.delay(1)
+
+    WebUI.waitForElementVisible(findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_pedidosap'), 30)
 
     for (int c = 41; c <= 42; c++) {
         def nRowEnEjecucion = i
@@ -45,41 +47,40 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
         def strNumPedidoSap = findTestData('DGScenarios').getValue(nColEnEjecucion, nRowEnEjecucion)
 
-        WebUI.clearText(findTestObject('SAP/punto_de_arranque/txt_nro_doc_comercial_n_pedidosap'))
+        WebUI.clearText(findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_pedidosap'))
 
-        WebUI.sendKeys(findTestObject('SAP/punto_de_arranque/txt_nro_doc_comercial_n_pedidosap'), strNumPedidoSap)
+        WebUI.sendKeys(findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_pedidosap'), strNumPedidoSap)
 
-        WebUI.sendKeys(findTestObject('SAP/punto_de_arranque/txt_nro_doc_comercial_n_pedidosap'), Keys.chord(Keys.F8))
+        WebUI.sendKeys(findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_pedidosap'), Keys.chord(Keys.F8))
 
-        WebUI.delay(2)
+        WebUI.delay(5)
 
-        if (WebUI.verifyElementPresent(findTestObject('SAP/punto_de_arranque/btn_marcar_todo'), 15, FailureHandling.OPTIONAL)) {
-            WebUI.click(findTestObject('SAP/punto_de_arranque/btn_marcar_todo'))
-			
-			WebUI.delay(5)
-
-            WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.SHIFT, Keys.F1))
-			
-			WebUI.delay(5)
-
-            WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F3))
-
+        if (WebUI.verifyElementPresent(findTestObject('Object Repository/SAP/general/iframe_popup'), 15, FailureHandling.OPTIONAL)) {
             WebUI.delay(1)
+
+            WebUI.verifyElementPresent(findTestObject('Object Repository/SAP/general/iframe_popup'), 15, FailureHandling.OPTIONAL)
+
+            WebUI.sendKeys(findTestObject('Object Repository/SAP/general/iframe_popup'), Keys.chord(Keys.ENTER))
         } else {
-            WebUI.delay(1)
-			
-			WebUI.verifyElementPresent(findTestObject('SAP/punto_de_arranque/iframe_popup'), 15, FailureHandling.OPTIONAL)
+            WebUI.click(findTestObject('SAP/z_sd_punto_arranque/btn_marcar_todo'))
 
-            WebUI.sendKeys(findTestObject('SAP/punto_de_arranque/iframe_popup'), Keys.chord(Keys.ENTER))
+            WebUI.delay(5)
+
+            WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.SHIFT, Keys.F1))
+
+            WebUI.delay(5)
+
+            WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
+
+            WebUI.delay(1)
         }
     }
 }
 
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), '/n')
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
 
-WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.closeBrowser()
-

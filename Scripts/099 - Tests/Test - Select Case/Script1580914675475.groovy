@@ -18,13 +18,13 @@ import internal.GlobalVariable as GlobalVariable
 WebUI.delay(2)
 
 for (int i = 1; i <= 1; i) {
-	WebUI.click(findTestObject('SAP/txt_buscador_trx'))
+	WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
 	
-	WebUI.waitForElementVisible(WebUI.click(findTestObject('SAP/txt_buscador_trx')), 10, FailureHandling.STOP_ON_FAILURE)
+	WebUI.waitForElementVisible(WebUI.click(findTestObject('SAP/general/txt_buscador_trx')), 10, FailureHandling.STOP_ON_FAILURE)
 
-	WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/nz_sd_libera_pedidos')
+	WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nz_sd_libera_pedidos')
 
-	WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+	WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 	def testNumPedidio = '1128769'
 	

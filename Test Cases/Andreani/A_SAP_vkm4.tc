@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Trx SAP libera pedidos desbloqueados</description>
+   <name>A_SAP_vkm4</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>090fe3c3-e5de-4b86-9fa8-209a10d4347d</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>d521b227-bd73-4df8-8ed6-29e2486dd37a</id>
+      <masked>false</masked>
+      <name>strNumPedidoSap</name>
+   </variable>
+</TestCaseEntity>

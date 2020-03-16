@@ -24,17 +24,17 @@ def nRowsEncontradas = findTestData('DGScenarios').getRowNumbers()
 println('Filas encontradas: ' + nRowsEncontradas)
 
 for (int i = 1; i <= nRowsEncontradas; i++) {
-    WebUI.click(findTestObject('SAP/txt_buscador_trx'))
+    WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
 
-    WebUI.delay(1)
+    WebUI.delay(2)
 
-    WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/nz_sd_libera_pedidos')
+    WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nz_sd_libera_pedidos')
 
-    WebUI.delay(1)
+    WebUI.delay(2)
 
-    WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+    WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
-    WebUI.delay(1)
+    WebUI.delay(2)
 
     for (int c = 41; c <= 42; c++) {
         def nRowEnEjecucion = i
@@ -42,73 +42,75 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
         def nColEnEjecucion = c
 
         println((('Ejecutando fila N: ' + nRowEnEjecucion) + ' Ejecutando columna N: ') + nColEnEjecucion)
+		
+		WebUI.delay(5)
 
-        WebUI.setText(findTestObject('SAP/liberacion_pedidos/txt_bloqueo_buscar'), 'E0002')
+        WebUI.setText(findTestObject('SAP/z_sd_libera_pedidos/txt_bloqueo_buscar'), 'E0002')
 
-        WebUI.delay(1)
+        WebUI.delay(2)
 
-        WebUI.setText(findTestObject('SAP/liberacion_pedidos/txt_n_pedido_a_buscar'), findTestData('DGScenarios').getValue(
+        WebUI.setText(findTestObject('SAP/z_sd_libera_pedidos/txt_n_pedido_a_buscar'), findTestData('DGScenarios').getValue(
                 nColEnEjecucion, nRowEnEjecucion))
 
-        WebUI.delay(1)
+        WebUI.delay(2)
 
-        WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F8))
+        WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
 
 //        WebUI.delay(1)
 
-        if (WebUI.waitForElementVisible(findTestObject('SAP/liberacion_pedidos/txt_no_encontro_datos'), 10)) {
-            WebUI.clearText(findTestObject('SAP/liberacion_pedidos/txt_bloqueo_buscar'))
+        if (WebUI.waitForElementVisible(findTestObject('SAP/z_sd_libera_pedidos/txt_no_encontro_datos'), 10)) {
+            WebUI.clearText(findTestObject('SAP/z_sd_libera_pedidos/txt_bloqueo_buscar'))
 
-            WebUI.delay(1)
+            WebUI.delay(5)
 
-            WebUI.setText(findTestObject('SAP/liberacion_pedidos/txt_bloqueo_buscar'), 'E0030')
+            WebUI.setText(findTestObject('SAP/z_sd_libera_pedidos/txt_bloqueo_buscar'), 'E0030')
 
-            WebUI.delay(1)
+            WebUI.delay(2)
 
-            WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F8))
+            WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
 
 //            WebUI.delay(1)
 
-            if (WebUI.verifyElementPresent(findTestObject('SAP/liberacion_pedidos/tbl_registro_n_pedido'), 10, FailureHandling.OPTIONAL)) {
+            if (WebUI.verifyElementPresent(findTestObject('SAP/z_sd_libera_pedidos/tbl_registro_n_pedido'), 10, FailureHandling.OPTIONAL)) {
                 //Click a boton para seleccionar registro
-                WebUI.click(findTestObject('SAP/liberacion_pedidos/btn_liberacion_masiva'))
+                WebUI.click(findTestObject('SAP/z_sd_libera_pedidos/btn_liberacion_masiva'))
 
                 //Click a opcion dropdown para seleccionar registro encontrado\r\n
-                WebUI.click(findTestObject('SAP/liberacion_pedidos/btn_opcion_selec_todos'))
+                WebUI.click(findTestObject('SAP/z_sd_libera_pedidos/btn_opcion_selec_todos'))
+
+                WebUI.delay(2)
+
+                WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.SHIFT, Keys.F8))
+
+                WebUI.delay(5)
+
+                WebUI.waitForElementVisible(findTestObject('SAP/z_sd_libera_pedidos/txt_E0032'), 30)
+
+                WebUI.click(findTestObject('SAP/z_sd_libera_pedidos/txt_E0032'))
+
+                WebUI.delay(2)
+				
+                WebUI.click(findTestObject('Object Repository/SAP/z_sd_libera_pedidos/img_tomar'))
 
                 WebUI.delay(1)
 
-                WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.SHIFT, Keys.F8))
+                WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
+
+                WebUI.delay(2)
+
+                WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
 
                 WebUI.delay(3)
-
-                WebUI.waitForElementVisible(findTestObject('SAP/liberacion_pedidos/Page_1579111655813/txt_E0032'), 30)
-
-                WebUI.click(findTestObject('SAP/liberacion_pedidos/Page_1579111655813/txt_E0032'))
-
-                WebUI.delay(1)
-
-                WebUI.click(findTestObject('SAP/liberacion_pedidos/Page_Liberacin Masiva de Pedidos de Venta/img_tilde_verde'))
-
-                WebUI.delay(1)
-
-                WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F3))
-
-                WebUI.delay(1)
-
-                WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F3))
-
-                WebUI.delay(1)
             }
         }
     }
 }
 
-WebUI.delay(1)
+WebUI.delay(2)
 
-WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), '/n')
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
 
-WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.closeBrowser()
 

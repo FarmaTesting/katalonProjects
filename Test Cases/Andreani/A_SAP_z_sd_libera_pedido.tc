@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Trx SAP verifica dónde hay bloqueo, caso true = libera, caso false consulta otros tipos de bloqueo</description>
+   <name>A_SAP_z_sd_libera_pedido</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>4575175c-89ef-486f-b90d-f694091ddd37</testCaseGuid>
+</TestCaseEntity>

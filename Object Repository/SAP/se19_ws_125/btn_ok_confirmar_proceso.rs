@@ -6,18 +6,18 @@
    <elementGuidId>5334acb6-5d0f-46fe-8ef7-0d429784fcc7</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@id = '__AGIM2:D:6::0-img']</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//img[@id='__AGIM2:D:6::0-img']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[contains(@id,'M2:37::btn[0]-img')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
@@ -26,9 +26,16 @@
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[contains(@id,'M2:37::btn[0]-img')]</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/SAP/se19_ws_125/iframe_popup_URLSPW-1</value>
+      <value>Object Repository/SAP/se19_ws_125/iframe-popup2</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

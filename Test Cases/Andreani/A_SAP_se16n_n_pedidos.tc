@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Trx SAP busca con ref externa de sap y se consigue n pedido sap</description>
+   <name>A_SAP_se16n_n_pedidos</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ec543a7b-2f36-4cfc-aa99-b862f87b9d86</testCaseGuid>
+</TestCaseEntity>

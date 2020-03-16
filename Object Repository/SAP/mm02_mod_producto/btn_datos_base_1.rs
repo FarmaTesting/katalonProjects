@@ -9,8 +9,12 @@
          <key>XPATH</key>
          <value>//td[@id='__AGIM1:U:1-rowselector-1']/div/div</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[(text() = ' ' or . = ' ')]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -59,7 +63,7 @@
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/SAP/mm02_mod_producto/iframe_SAPNetWeaver740IntegratedITSWebAS(Kernel741_RELPatch201)_URLSPW-0</value>
+      <value>Object Repository/SAP/general/iframe_popup</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

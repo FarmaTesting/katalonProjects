@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Script para usar la aplicación &quot;Data Generation&quot;, crea pedidos dependiendo de la cantidad/producto/traceabilidad deseada</description>
+   <name>A_DG_Creacion_Pedido</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>1c0bc90e-5023-4878-af11-69ba245a792c</testCaseGuid>
+</TestCaseEntity>

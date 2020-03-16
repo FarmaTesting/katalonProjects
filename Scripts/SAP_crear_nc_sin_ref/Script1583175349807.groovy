@@ -19,15 +19,15 @@ WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILU
 
 WebUI.delay(1)
 
-WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 10)
+WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 10)
 
-WebUI.click(findTestObject('SAP/txt_buscador_trx'))
+WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/nZ_SD_CARGA_NC')
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nZ_SD_CARGA_NC')
 
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.delay(1)
 

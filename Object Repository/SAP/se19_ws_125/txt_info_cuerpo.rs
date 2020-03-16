@@ -6,12 +6,12 @@
    <elementGuidId>3491850d-a47f-41ca-b00e-618e7d01c1ee</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@id = '__AGIM0:U:::4:36#_ltext' and @ref_element = 'Object Repository/SAP/se19_ws_125/Page_Herramienta de test para el proceso IDOC/iframe_Copyright19962013SAPAG']</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//div[@id='__AGIM0:U:::4:36#_ltext']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[contains(@id,'M0:46:::4:36_l')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -38,7 +38,7 @@
       <value>{2:true,3:'10\x20\x20\x20\x201001\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2010.00000\x20\x20\x20\x20\x20LOTE387\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'}</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
@@ -73,18 +73,18 @@
       <value>10    1001              10.00000     LOTE387                               </value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;__AGIM0:U:::4:36#_ltext&quot;)</value>
+      <value>//*[contains(@id,'M0:46:::4:36_l')]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/SAP/se19_ws_125/iframe_Copyright19962013SAPAG</value>
+      <value>Object Repository/SAP/general/iframe_contenedor_todo_web</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

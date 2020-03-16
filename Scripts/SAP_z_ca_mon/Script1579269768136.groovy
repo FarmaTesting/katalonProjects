@@ -19,17 +19,17 @@ WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILU
 
 WebUI.delay(5)
 
-WebUI.waitForElementVisible(findTestObject('SAP/txt_buscador_trx'), 30)
+WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 30)
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), '/nz_ca_mon')
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nz_ca_mon')
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
-WebUI.waitForElementVisible(findTestObject('SAP/txt_id_interfaz'), 30)
+WebUI.waitForElementVisible(findTestObject('SAP/general/txt_id_interfaz'), 30)
 
-WebUI.sendKeys(findTestObject('SAP/txt_id_interfaz'), 'WB-000089')
+WebUI.sendKeys(findTestObject('SAP/general/txt_id_interfaz'), 'WB-000089')
 
-WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.F8))
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
 
 WebUI.delay(5)
 

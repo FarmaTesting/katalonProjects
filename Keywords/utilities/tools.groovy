@@ -100,11 +100,11 @@ class tools {
 	 */
 	@Keyword
 	def salirDeSap() {
-		if (WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/txt_buscador_trx'), 15)){
-			WebUI.sendKeys(findTestObject('Object Repository/SAP/txt_buscador_trx'), '/n')
-			WebUI.sendKeys(findTestObject('SAP/txt_buscador_trx'), Keys.chord(Keys.Enter))
-			WebUI.click(findTestObject('Object Repository/SAP/btn_salir_del_sistema'))
-			WebUI.click(findTestObject('Object Repository/SAP/btn_salir_sistema_si'))
+		if (WebUI.waitForElementPresent(findTestObject('SAP/general/txt_buscador_trx'), 15)){
+			WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
+			WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.Enter))
+			WebUI.click(findTestObject('SAP/general/btn_salir_del_sistema'))
+			WebUI.click(findTestObject('SAP/general/btn_salir_sistema_si'))
 			WebUI.closeBrowser()
 		}
 

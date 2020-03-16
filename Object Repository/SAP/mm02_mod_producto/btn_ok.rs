@@ -9,8 +9,12 @@
          <key>XPATH</key>
          <value>//img[@id='__AGIM1:D:6::0-img']</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>id(&quot;__AGIM1:D:6::0-img&quot;)[count(. | //*[@ref_element = 'Object Repository/SAP/general/iframe_popup']) = count(//*[@ref_element = 'Object Repository/SAP/general/iframe_popup'])]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -27,7 +31,7 @@
       <value>0</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
@@ -41,7 +45,7 @@
       <value>urImgBtn</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>src</name>
       <type>Main</type>
@@ -55,18 +59,18 @@
       <value>absmiddle</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;__AGIM1:D:6::0-img&quot;)</value>
+      <value>//*[contains(@id,'M1:37::btn[0]') and contains(@ct,'B')]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/SAP/mm02_mod_producto/iframe_SAPNetWeaver740IntegratedITSWebAS(Kernel741_RELPatch201)_URLSPW-0</value>
+      <value>Object Repository/SAP/general/iframe_popup</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
