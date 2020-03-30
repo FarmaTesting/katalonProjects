@@ -19,14 +19,4 @@
       <initValue>'Suma2020'</initValue>
       <name>pass</name>
    </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
-      <name>rowFound</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'https://www.google.com/'</initValue>
-      <name>google</name>
-   </GlobalVariableEntity>
 </GlobalVariableEntities>

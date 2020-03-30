@@ -65,6 +65,8 @@ for (int i = 1; i <= findTestData('DG_Andreani').getRowNumbers(); i++) {
     def refExternaRemito = WebUI.concatenate(findTestData('DG_Andreani').getValue('param_comitente', nRowEnEjecucion), '00000000', findTestData(
             'DG_Andreani').getValue('out_n_remito', nRowEnEjecucion))
 	
+	WebUI.delay(3)
+	
 	CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios_Andreani.xlsx', 'generador_datos', 'AW', nRowEnEjecucion, refExternaRemito)
 
     WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'), refExternaRemito)
@@ -78,7 +80,7 @@ for (int i = 1; i <= findTestData('DG_Andreani').getRowNumbers(); i++) {
     CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios_Andreani.xlsx', 'generador_datos', 'AT', nRowEnEjecucion, WebUI.getAttribute(
             findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 'value'))
 
-    WebUI.delay(3)
+    WebUI.delay(5)
 	}
 }
 

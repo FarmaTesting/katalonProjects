@@ -23,7 +23,7 @@ def nRowsEncontradas = findTestData('DG_Andreani').getRowNumbers()
 
 println('Filas encontradas: ' + nRowsEncontradas)
 
-for (int i = 3; i <= nRowsEncontradas; i++) {
+for (int i = 1; i <= nRowsEncontradas; i++) {
     WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
 
     WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nvkm4')
@@ -51,7 +51,13 @@ for (int i = 3; i <= nRowsEncontradas; i++) {
 
         WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
 
-        if (WebUI.verifyElementPresent(findTestObject('SAP/vkm4/chk_seleccion_pedido'), 5, FailureHandling.OPTIONAL)) {
+        if (WebUI.verifyElementPresent(findTestObject('Object Repository/SAP/vkm4/txt_no_encontro_registro'), 5, FailureHandling.OPTIONAL)) {
+			
+			WebUI.waitForElementVisible(findTestObject('Object Repository/SAP/vkm4/txt_no_encontro_registro'), 30)
+			
+			println('No se encontro pedido para liberar')
+			
+        } else if (WebUI.verifyElementPresent(findTestObject('SAP/vkm4/chk_seleccion_pedido'), 5, FailureHandling.OPTIONAL)) {
             WebUI.click(findTestObject('SAP/vkm4/chk_seleccion_pedido'))
 
             WebUI.delay(1)
@@ -80,4 +86,3 @@ WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
 WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.closeBrowser()
-

@@ -15,19 +15,19 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
+CustomKeywords.'utilities.Sikuli.dclick'('iconoescritorio')
 
-WebUI.delay(1)
+CustomKeywords.'utilities.Sikuli.dclick'('ambienteqasinsso')
 
-WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 10)
+not_run: CustomKeywords.'utilities.Sikuli.click'('user')
 
-WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
+CustomKeywords.'utilities.Sikuli.waitImage'('user', 5, 5)
 
-WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nZ_SD_CARGA_NC')
+CustomKeywords.'utilities.Sikuli.type'('tester')
 
-WebUI.delay(1)
+CustomKeywords.'utilities.Sikuli.click'('clave')
 
-WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+CustomKeywords.'utilities.Sikuli.type'('Suma2020')
 
-WebUI.delay(1)
+CustomKeywords.'utilities.Sikuli.click'('btnok')
 

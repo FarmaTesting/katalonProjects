@@ -19,6 +19,10 @@ WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILU
 
 WebUI.delay(5)
 
+def nRowsEncontradas = findTestData('DG_Andreani').getRowNumbers()
+
+println('Filas encontradas: ' + nRowsEncontradas)
+
 WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 10)
 
 WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
@@ -47,11 +51,8 @@ WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_buscar_filtro'), 'vgbel')
 
 WebUI.click(findTestObject('SAP/se16n/btn_ok'))
 
-def nRowsEncontradas = findTestData('DGScenarios').getRowNumbers()
-
-println('Filas encontradas: ' + nRowsEncontradas)
-
-for (int i = 3; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
+for (int i = 1; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
+	
 	def nRowEnEjecucion = i
 	
 	println('Ejecutando fila N: ' + nRowEnEjecucion)
@@ -67,7 +68,7 @@ for (int i = 3; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
     if (WebUI.verifyElementPresent(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 5, FailureHandling.OPTIONAL)) {
         def nEntrega1 = WebUI.getAttribute(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 'value')
 		
-		println (nEntrega1)
+		println('Num entrega 089: ' + nEntrega1)
 
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AR', i, 
             nEntrega1)
@@ -97,7 +98,7 @@ for (int i = 3; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AX', i, 
             nEntrega2)
 		
-		println (nEntrega2)
+		println('Num entrega 101: ' + nEntrega2)
 
         WebUI.delay(1)
 
@@ -124,7 +125,7 @@ for (int i = 3; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AY', i, 
             nEntrega3)
 		
-		println (nEntrega3)
+		println('Num entrega 106: ' + nEntrega3)
 
         WebUI.delay(1)
 

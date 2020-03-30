@@ -100,7 +100,7 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
         }
         
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AU', nFilaEnEjecucion, 
-            CustomKeywords.'utilities.tools.dateSap'())
+            CustomKeywords.'utilities.Tools.dateSap'())
 
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AV', nFilaEnEjecucion, 
             new Date().format('HH:mm'))

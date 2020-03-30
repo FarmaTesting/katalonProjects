@@ -64,7 +64,7 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
     //    WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_4_3_tercera_celda_filtro'), findTestData('DG_Andreani').getValue('strHoraCreado', 
     //            nRowEnEjecucion))
     //	
-    //    WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_4_4_tercera_celda_filtro'), WebUI.concatenate(CustomKeywords.'utilities.tools.sumarMinutos'(
+    //    WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_4_4_tercera_celda_filtro'), WebUI.concatenate(CustomKeywords.'utilities.Tools.sumarMinutos'(
     //                findTestData('DG_Andreani').getValue('strHoraCreado', i)), ':59'))
 	
     WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_4_3_tercera_celda_filtro'), Keys.chord(Keys.CONTROL, 'f'))

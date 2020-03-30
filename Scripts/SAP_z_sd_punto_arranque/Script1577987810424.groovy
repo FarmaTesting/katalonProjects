@@ -38,7 +38,7 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
     WebUI.waitForElementVisible(findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_pedidosap'), 30)
 
-    for (int c = 41; c <= 42; c++) {
+    for (int c = 41; c <= 43; c++) {
         def nRowEnEjecucion = i
 
         def nColEnEjecucion = c
@@ -56,23 +56,23 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
         WebUI.delay(5)
 
         if (WebUI.verifyElementPresent(findTestObject('Object Repository/SAP/general/iframe_popup'), 15, FailureHandling.OPTIONAL)) {
-            WebUI.delay(1)
+            WebUI.delay(3)
 
             WebUI.verifyElementPresent(findTestObject('Object Repository/SAP/general/iframe_popup'), 15, FailureHandling.OPTIONAL)
 
-            WebUI.sendKeys(findTestObject('Object Repository/SAP/general/iframe_popup'), Keys.chord(Keys.ENTER))
-        } else {
-            WebUI.click(findTestObject('SAP/z_sd_punto_arranque/btn_marcar_todo'))
+            WebUI.sendKeys(findTestObject('Object Repository/SAP/general/iframe_popup'), Keys.chord(Keys.ENTER), FailureHandling.OPTIONAL)
+			
+            WebUI.click(findTestObject('SAP/z_sd_punto_arranque/btn_marcar_todo'), FailureHandling.OPTIONAL)
 
             WebUI.delay(5)
 
-            WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.SHIFT, Keys.F1))
+            WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.SHIFT, Keys.F1), FailureHandling.OPTIONAL)
 
             WebUI.delay(5)
 
-            WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
+            WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3), FailureHandling.OPTIONAL)
 
-            WebUI.delay(1)
+            WebUI.delay(3)
         }
     }
 }
