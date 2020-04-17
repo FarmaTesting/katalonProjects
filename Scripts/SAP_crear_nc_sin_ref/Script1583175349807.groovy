@@ -12,22 +12,30 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
-import org.openqa.selenium.Keys as Keys
+import org.sikuli.script.Key as Key
 import internal.GlobalVariable as GlobalVariable
 
-CustomKeywords.'utilities.Sikuli.dclick'('iconoescritorio')
+CustomKeywords.'utilities.Tools.espera'(5000)
 
-CustomKeywords.'utilities.Sikuli.dclick'('ambienteqasinsso')
+sap_logon = CustomKeywords.'utilities.Sap.Open_SAP_Logon'()
 
-not_run: CustomKeywords.'utilities.Sikuli.click'('user')
+CustomKeywords.'utilities.Tools.espera'(7000)
 
-CustomKeywords.'utilities.Sikuli.waitImage'('user', 5, 5)
+if (sap_logon) {
+    for (def index : (1..4)) {
+        CustomKeywords.'utilities.Sap.typeDown'()
 
-CustomKeywords.'utilities.Sikuli.type'('tester')
+        CustomKeywords.'utilities.Tools.espera'(500)
+    }
+}
 
-CustomKeywords.'utilities.Sikuli.click'('clave')
+CustomKeywords.'utilities.Tools.espera'(2000)
 
-CustomKeywords.'utilities.Sikuli.type'('Suma2020')
+CustomKeywords.'utilities.Sap.typeEnter'()
 
-CustomKeywords.'utilities.Sikuli.click'('btnok')
+WebUI.callTestCase(findTestCase('100 _SAP/Login_Sap'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('100 _SAP/Z_SD_CARGA_NC'), [('programa') : 'Z_SD_CARGA_NC'], FailureHandling.STOP_ON_FAILURE)
+
+CustomKeywords.'utilities.Sap.Close_SAP'()
 

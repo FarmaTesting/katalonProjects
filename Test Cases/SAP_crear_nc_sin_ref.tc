@@ -5,4 +5,11 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>b95cc737-157e-41d2-9e2b-91ccbad5b75e</testCaseGuid>
+   <variable>
+      <defaultValue>false</defaultValue>
+      <description></description>
+      <id>41652f8e-91d0-44e7-a176-71cb199bbf1d</id>
+      <masked>false</masked>
+      <name>sap_logon</name>
+   </variable>
 </TestCaseEntity>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>01_Buscador_Trx</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>63b060f6-bd8a-4008-9d7c-defc4613765b</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>18af65ae-7531-4203-8a6f-d5aad3b7be55</id>
+      <masked>false</masked>
+      <name>trx</name>
+   </variable>
+</TestCaseEntity>

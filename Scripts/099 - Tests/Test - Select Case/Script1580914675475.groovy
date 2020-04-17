@@ -14,19 +14,12 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.util.KeywordUtil
 
-WebUI.delay(2)
+CustomKeywords.'utilities.Tools.espera'(3000)
 
-for (int i = 1; i <= 1; i) {
-	WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
-	
-	WebUI.waitForElementVisible(WebUI.click(findTestObject('SAP/general/txt_buscador_trx')), 10, FailureHandling.STOP_ON_FAILURE)
+//CustomKeywords.'utilities.Sikuli.type'('C:\\FarmaTesting\\katalonProjects\\Resources\\NC_ROMAN_QAS.csv')
 
-	WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nz_sd_libera_pedidos')
+//CustomKeywords.'utilities.Sikuli.type'('C\\a')
 
-	WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
-
-	def testNumPedidio = '1128769'
-	
-
-}
+CustomKeywords.'utilities.Sikuli.paste'('C:\\FarmaTesting\\katalonProjects\\Resources\\NC_ROMAN_QAS.csv')

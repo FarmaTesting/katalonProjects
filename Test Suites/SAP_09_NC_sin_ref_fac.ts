@@ -15,5 +15,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SAP_crear_nc_sin_ref</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>41652f8e-91d0-44e7-a176-71cb199bbf1d</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

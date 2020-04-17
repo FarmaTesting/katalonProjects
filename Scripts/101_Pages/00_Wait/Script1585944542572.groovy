@@ -11,30 +11,28 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
-import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser(GlobalVariable.url)
+hasAttribute = WebUI.verifyElementHasAttribute(toObject, attributeName, timeOut)
 
-WebUI.waitForPageLoad(10)
+if (hasAttribute) {
 
-WebUI.maximizeWindow()
+    CustomKeywords.'utilities.Tools.log'('Objeto encontrado', hasAttribute)
+} else {
+    count = 0
 
-WebUI.setText(findTestObject('SAP/login/txt_sap_user'), GlobalVariable.user)
+    while (!(hasAttribute)) {
+        count++
 
-WebUI.setText(findTestObject('SAP/login/txt_sap_pass'), GlobalVariable.pass)
+        if (!(hasAttribute)) {
+            WebUI.waitForElementHasAttribute(toObject, attributeName, timeOut)
 
-WebUI.click(findTestObject('SAP/login/ddwn_select_idioma'), FailureHandling.STOP_ON_FAILURE)
+            hasAttribute = WebUI.verifyElementHasAttribute(toObject, attributeName, timeOut)
 
-WebUI.click(findTestObject('SAP/login/ddwn_opcion_espanol'))
-
-WebUI.click(findTestObject('SAP/login/btn_login'))
-
-WebUI.callTestCase(findTestCase('101_Pages/00_Wait'), [('attributeName') : 'name', ('toObject') : findTestObject('SAP/general/txt_buscador_trx'), ('timeOut') : 5], 
-    FailureHandling.STOP_ON_FAILURE)
-
-if (WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 10) == false) {
-    WebUI.refresh()
+            if (count == 3) {
+                hasAttribute = true
+            }
+        }
+    }
 }
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>00_Wait</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>75091a09-9fea-4351-84ff-9cdc2d6f5974</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>6b59234e-b607-4ddb-b767-5992a5b68e15</id>
+      <masked>false</masked>
+      <name>attributeName</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject(null)</defaultValue>
+      <description></description>
+      <id>71f6fb4a-1671-485b-a8ee-601f7468c6da</id>
+      <masked>false</masked>
+      <name>toObject</name>
+   </variable>
+   <variable>
+      <defaultValue>5</defaultValue>
+      <description></description>
+      <id>a411383b-bbc0-40cb-a38d-8b1fe2ce3329</id>
+      <masked>false</masked>
+      <name>timeOut</name>
+   </variable>
+</TestCaseEntity>

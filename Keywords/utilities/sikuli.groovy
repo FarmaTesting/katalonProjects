@@ -217,6 +217,11 @@ public class Sikuli {
 	def void typeCtrl(int ctrl) {
 		type(ctrl)
 	}
+	
+	@Keyword
+	def paste(String txt) {
+		r.paste(txt)
+	}
 
 
 	def void clickandtype(String nombreimagen, String txt) throws FindFailed {

@@ -11,30 +11,22 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
-import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser(GlobalVariable.url)
+CustomKeywords.'utilities.Tools.espera'(5000)
 
-WebUI.waitForPageLoad(10)
+CustomKeywords.'utilities.Sikuli.type'(GlobalVariable.user)
 
-WebUI.maximizeWindow()
+CustomKeywords.'utilities.Tools.espera'(2000)
 
-WebUI.setText(findTestObject('SAP/login/txt_sap_user'), GlobalVariable.user)
+CustomKeywords.'utilities.Sap.typeTab'()
 
-WebUI.setText(findTestObject('SAP/login/txt_sap_pass'), GlobalVariable.pass)
+CustomKeywords.'utilities.Tools.espera'(2000)
 
-WebUI.click(findTestObject('SAP/login/ddwn_select_idioma'), FailureHandling.STOP_ON_FAILURE)
+CustomKeywords.'utilities.Sikuli.type'(GlobalVariable.pass)
 
-WebUI.click(findTestObject('SAP/login/ddwn_opcion_espanol'))
+CustomKeywords.'utilities.Tools.espera'(2000)
 
-WebUI.click(findTestObject('SAP/login/btn_login'))
+CustomKeywords.'utilities.Sap.typeEnter'()
 
-WebUI.callTestCase(findTestCase('101_Pages/00_Wait'), [('attributeName') : 'name', ('toObject') : findTestObject('SAP/general/txt_buscador_trx'), ('timeOut') : 5], 
-    FailureHandling.STOP_ON_FAILURE)
-
-if (WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 10) == false) {
-    WebUI.refresh()
-}
-
+CustomKeywords.'utilities.Tools.espera'(6000)

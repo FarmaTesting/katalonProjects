@@ -17,35 +17,5 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 10)
-
-WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
-
-WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nse37')
-
-WebUI.delay(1)
-
-WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
-
-WebUI.delay(1)
-
-WebUI.waitForElementVisible(findTestObject('SAP/se37_ws_123/txt_modulo_funciones'), 10)
-
-WebUI.sendKeys(findTestObject('SAP/se37_ws_123/txt_modulo_funciones'), 'z_mm_andr_recepcion')
-
-WebUI.sendKeys(findTestObject('SAP/se37_ws_123/txt_modulo_funciones'), Keys.chord(Keys.F8))
-
-WebUI.waitForElementPresent(findTestObject('SAP/se37_ws_123/btn_posicion'), 15, FailureHandling.OPTIONAL)
-
-WebUI.click(findTestObject('SAP/se37_ws_123/btn_posicion'))
-
-WebUI.delay(1)
-
-WebUI.scrollToElement(findTestObject('SAP/se37_ws_123/txt_pos_moti'), 5)
-
-WebUI.delay(1)
-
-WebUI.sendKeys(findTestObject('SAP/se37_ws_123/txt_pos_moti'), '5678', FailureHandling.OPTIONAL)
-
-WebUI.closeBrowser()
+WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : '/nz_sd_libera_'], FailureHandling.STOP_ON_FAILURE)
 

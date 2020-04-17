@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[contains(text(),'No existen') and contains(@id,'M1:46:::0:5-ovfl')]</value>
+         <value>//*[@class='urPWInnerBorder' and contains(@id,'PopupWindow')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,7 +17,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[contains(text(),'No existen') and contains(@id,'M1:46:::0:5-ovfl')]</value>
+      <value>//*[@class='urPWInnerBorder' and contains(@id,'PopupWindow')]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

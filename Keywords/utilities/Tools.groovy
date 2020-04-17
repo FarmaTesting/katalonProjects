@@ -110,6 +110,11 @@ class Tools {
 			WebUI.closeBrowser()
 		}
 	}
+	
+	@Keyword
+	def atrasF3() {
+		Keys.chord(Keys.F3)
+	}
 
 	/**
 	 * Metodo que duerme la ejecución
@@ -123,6 +128,12 @@ class Tools {
 		catch (InterruptedException e) {
 			e.printStackTrace()
 		}
+	}
+
+	@Keyword
+	def void log (String title, boolean var){
+		KeywordUtil.logInfo(title + " " + var)
+
 	}
 
 

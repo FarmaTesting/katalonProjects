@@ -24,19 +24,22 @@ def nRowsEncontradas = findTestData('DGScenarios').getRowNumbers()
 println('Filas encontradas: ' + nRowsEncontradas)
 
 for (int i = 1; i <= nRowsEncontradas; i++) {
-    WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 30)
+	
+	WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : '/nz_sd_punto_arranque'], FailureHandling.STOP_ON_FAILURE)
+	
+    //WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 30)
 
-    WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
+    //WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
 
-    WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nz_sd_punto_arranque')
+    //WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nz_sd_punto_arranque')
 
-    WebUI.delay(1)
+    //WebUI.delay(1)
 
-    WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+    //WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
-    WebUI.delay(1)
+    WebUI.delay(2)
 
-    WebUI.waitForElementVisible(findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_pedidosap'), 30)
+    //WebUI.waitForElementVisible(findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_pedidosap'), 30)
 
     for (int c = 41; c <= 43; c++) {
         def nRowEnEjecucion = i
@@ -47,22 +50,26 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
         def strNumPedidoSap = findTestData('DGScenarios').getValue(nColEnEjecucion, nRowEnEjecucion)
 
+        WebUI.delay(3)
+
         WebUI.clearText(findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_pedidosap'))
+
+        WebUI.delay(1)
+
+        println('****** NumPedidoSap: ' + strNumPedidoSap)
 
         WebUI.sendKeys(findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_pedidosap'), strNumPedidoSap)
 
+        WebUI.delay(1)
+
         WebUI.sendKeys(findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_pedidosap'), Keys.chord(Keys.F8))
 
-        WebUI.delay(5)
+        WebUI.delay(7)
 
-        if (WebUI.verifyElementPresent(findTestObject('Object Repository/SAP/general/iframe_popup'), 15, FailureHandling.OPTIONAL)) {
-            WebUI.delay(3)
+        if (!(WebUI.verifyElementVisible(findTestObject('SAP/z_sd_punto_arranque/txt_no_existen_ped_pend'), FailureHandling.OPTIONAL))) {
+            WebUI.delay(1)
 
-            WebUI.verifyElementPresent(findTestObject('Object Repository/SAP/general/iframe_popup'), 15, FailureHandling.OPTIONAL)
-
-            WebUI.sendKeys(findTestObject('Object Repository/SAP/general/iframe_popup'), Keys.chord(Keys.ENTER), FailureHandling.OPTIONAL)
-			
-            WebUI.click(findTestObject('SAP/z_sd_punto_arranque/btn_marcar_todo'), FailureHandling.OPTIONAL)
+            WebUI.click(findTestObject('SAP/z_sd_punto_arranque/btn_marcar_todo'), FailureHandling.STOP_ON_FAILURE)
 
             WebUI.delay(5)
 
@@ -72,7 +79,12 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 
             WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3), FailureHandling.OPTIONAL)
 
-            WebUI.delay(3)
+            WebUI.delay(5 //WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nz_sd_punto_arranque', 15, FailureHandling.OPTIONAL)
+                )
+        } else {
+            WebUI.delay(1)
+
+            WebUI.sendKeys(findTestObject('SAP/general/iframe_popup'), Keys.chord(Keys.ENTER), FailureHandling.OPTIONAL)
         }
     }
 }
@@ -81,6 +93,9 @@ WebUI.delay(1)
 
 WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
 
+WebUI.delay(1)
+
 WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.closeBrowser()
+

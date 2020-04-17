@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Z_SD_CARGA_NC</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>af1b1350-b0a2-43f7-98b4-67b35acab45d</testCaseGuid>
+   <variable>
+      <defaultValue>'Z_SD_CARGA_NC'</defaultValue>
+      <description></description>
+      <id>ad25fda0-17cc-48dd-8774-e8dbf5de3eae</id>
+      <masked>false</masked>
+      <name>programa</name>
+   </variable>
+</TestCaseEntity>

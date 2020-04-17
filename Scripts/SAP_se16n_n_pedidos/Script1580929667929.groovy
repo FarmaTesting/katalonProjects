@@ -35,6 +35,8 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
     strPedWeb101 = findTestData('DGScenarios').getValue('strPedWeb101', nRowEnEjecucion)
 
     strPedWeb106 = findTestData('DGScenarios').getValue('strPedWeb106', nRowEnEjecucion)
+	
+	println('*********** ' + strPedWeb089 + ' ** ' + strPedWeb101 + ' ** ' + strPedWeb106)
 
     WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 30)
 
@@ -72,6 +74,8 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
 	WebUI.delay(4)
 
     WebUI.waitForElementVisible(findTestObject('SAP/se16n/txt_se16n_buscar_filtro'), 30)
+	
+	WebUI.delay(4)
 
     WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_buscar_filtro'), 'zz_interfaz_nro')
 
@@ -90,11 +94,15 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
     WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'), strPedWeb089)
 	
     WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
+	
+	WebUI.delay(4)
 
     if (WebUI.waitForElementPresent(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 10, FailureHandling.OPTIONAL)) {
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AO', nRowEnEjecucion, 
             WebUI.concatenate('000', WebUI.getAttribute(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 'value')))
     }
+	
+	WebUI.delay(4)
     
     WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
 	
@@ -113,6 +121,8 @@ for (int i = 1; i <= nRowsEncontradas; i++) {
     WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'), strPedWeb101)
 	
     WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
+	
+	WebUI.delay(4)
 
     if (WebUI.waitForElementPresent(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 10, FailureHandling.OPTIONAL)) {
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AP', nRowEnEjecucion, 

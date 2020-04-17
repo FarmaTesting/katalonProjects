@@ -27,16 +27,22 @@ for (int i = 1; i <= findTestData('DG_Andreani').getRowNumbers(); i++) {
 	def nRowEnEjecucion = i
 	
 	println('Ejecutando fila N: ' + nRowEnEjecucion)
+	
+	WebUI.delay(1)
 		
     WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 10)
 
     WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
+	
+	WebUI.delay(1)
 
     WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nse16n')
 
     WebUI.delay(1)
 
     WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+	
+	WebUI.delay(1)
 
     WebUI.waitForElementVisible(findTestObject('SAP/se16n/txt_se16n_buscador_tablas'), 10)
 	
@@ -49,42 +55,50 @@ for (int i = 1; i <= findTestData('DG_Andreani').getRowNumbers(); i++) {
 			
 		WebUI.waitForElementVisible(findTestObject('SAP/se16n/txt_se16n_1_3_3_segunda_celda_filtro'), 30)
 	}
+	
+	WebUI.delay(3)
 
     WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_4_3_tercera_celda_filtro'), Keys.chord(Keys.CONTROL, 'f'))
 
-    WebUI.delay(7)
+    WebUI.delay(8)
 
     WebUI.waitForElementVisible(findTestObject('SAP/se16n/txt_se16n_buscar_filtro'), 30)
 	
-	WebUI.delay(7)
+	WebUI.delay(8)
 
     WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_buscar_filtro'), 'zzpedweb')
+	
+	WebUI.delay(2)
 
     WebUI.click(findTestObject('SAP/se16n/btn_ok'))
+	
+	WebUI.delay(1)
 
     def refExternaRemito = WebUI.concatenate(findTestData('DG_Andreani').getValue('param_comitente', nRowEnEjecucion), '00000000', findTestData(
             'DG_Andreani').getValue('out_n_remito', nRowEnEjecucion))
 	
-	WebUI.delay(3)
+	WebUI.delay(4)
 	
 	CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios_Andreani.xlsx', 'generador_datos', 'AW', nRowEnEjecucion, refExternaRemito)
+	
+	WebUI.delay(1)
 
     WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'), refExternaRemito)
 
     WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
 
-    WebUI.delay(3)
+    WebUI.delay(4)
 	
 	if (WebUI.waitForElementPresent(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 10, FailureHandling.OPTIONAL)){
 
     CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios_Andreani.xlsx', 'generador_datos', 'AT', nRowEnEjecucion, WebUI.getAttribute(
             findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 'value'))
 
-    WebUI.delay(5)
+    WebUI.delay(6)
 	}
 }
 
-WebUI.delay(1)
+WebUI.delay(2)
 
 WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
 
