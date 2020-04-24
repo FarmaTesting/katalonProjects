@@ -19,58 +19,75 @@ WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILU
 
 WebUI.delay(5)
 
-def nRowsEncontradas = findTestData('DGScenarios').getRowNumbers()
+//def nRowsEncontradas = findTestData('DGScenarios').getRowNumbers()
+//cantidad de registros
+row_control = findTestData('control_jobs').getRowNumbers()
 
-println('Filas encontradas: ' + nRowsEncontradas)
+//println('Filas encontradas: ' + nRowsEncontradas)
+println('******** Filas encontradas a ejecutar: ' + row_control)
 
-for (int i = 1; i <= nRowsEncontradas; i++) {
-    WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
+//for (int i = 1; i <= nRowsEncontradas; i++)
+for (int i = 1; i <= row_control; i++) {
+    SAP_03_vkm4_liberar_pedido = findTestData('control_jobs').getValue('SAP_03_vkm4_liberar_pedido', i)
 
-    WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nvkm4')
+    println(((('<<<<<<<<<< IF SAP_03_vkm4_liberar_pedido: ' + SAP_03_vkm4_liberar_pedido) + ' registro: ') + i) + ' >>>>>>>>>>')
 
-    WebUI.delay(1)
+    if (SAP_03_vkm4_liberar_pedido == 'false') {
+        WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
 
-    WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
-
-    WebUI.waitForElementVisible(findTestObject('SAP/vkm4/txt_doc_comercial_n_pedido_sap'), 30)
-
-    for (int c = 41; c <= 42; c++) {
-        def nRowEnEjecucion = i
-
-        def nColEnEjecucion = c
-
-        println((('Ejecutando fila N: ' + nRowEnEjecucion) + ' Ejecutando columna N: ') + nColEnEjecucion)
-
-        def strNumPedidoSap = findTestData('DGScenarios').getValue(nColEnEjecucion, nRowEnEjecucion)
+        WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nvkm4')
 
         WebUI.delay(1)
 
-        WebUI.clearText(findTestObject('SAP/vkm4/txt_doc_comercial_n_pedido_sap'))
+        WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
-        WebUI.sendKeys(findTestObject('SAP/vkm4/txt_doc_comercial_n_pedido_sap'), strNumPedidoSap)
+        WebUI.waitForElementVisible(findTestObject('SAP/vkm4/txt_doc_comercial_n_pedido_sap'), 30)
 
-        WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
+        for (int c = 41; c <= 42; c++) {
+            def nRowEnEjecucion = i
 
-        if (WebUI.verifyElementPresent(findTestObject('SAP/vkm4/chk_seleccion_pedido'), 5, FailureHandling.OPTIONAL)) {
-            WebUI.click(findTestObject('SAP/vkm4/chk_seleccion_pedido'))
+            def nColEnEjecucion = c
 
-            WebUI.delay(1)
+            println((('Ejecutando fila N: ' + nRowEnEjecucion) + ' Ejecutando columna N: ') + nColEnEjecucion)
 
-            WebUI.waitForElementVisible(findTestObject('SAP/vkm4/btn_liberar_pedido'), 30)
-
-            WebUI.click(findTestObject('SAP/vkm4/btn_liberar_pedido'))
+            def strNumPedidoSap = findTestData('DGScenarios').getValue(nColEnEjecucion, nRowEnEjecucion)
 
             WebUI.delay(1)
 
-            WebUI.waitForElementVisible(findTestObject('SAP/vkm4/img_liberacion_exito'), 30)
+            WebUI.clearText(findTestObject('SAP/vkm4/txt_doc_comercial_n_pedido_sap'))
 
-            WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
+            WebUI.sendKeys(findTestObject('SAP/vkm4/txt_doc_comercial_n_pedido_sap'), strNumPedidoSap)
 
-            WebUI.delay(1)
+            WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
 
-            WebUI.click(findTestObject('SAP/vkm4/btn_si_finalizar_lista'))
+            if (WebUI.verifyElementPresent(findTestObject('SAP/vkm4/chk_seleccion_pedido'), 5, FailureHandling.OPTIONAL)) {
+                WebUI.click(findTestObject('SAP/vkm4/chk_seleccion_pedido'))
+
+                WebUI.delay(1)
+
+                WebUI.waitForElementVisible(findTestObject('SAP/vkm4/btn_liberar_pedido'), 30)
+
+                WebUI.click(findTestObject('SAP/vkm4/btn_liberar_pedido'))
+
+                WebUI.delay(1)
+
+                WebUI.waitForElementVisible(findTestObject('SAP/vkm4/img_liberacion_exito'), 30)
+
+                WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
+
+                WebUI.delay(1)
+
+                WebUI.click(findTestObject('SAP/vkm4/btn_si_finalizar_lista'))
+            }
         }
-    }
+        
+        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'G', i, 'true')
+
+        break
+    } else if ((SAP_03_vkm4_liberar_pedido == 'true') && (i == row_control)) {
+		assert true
+		println('<<<<<<<<<<<<<< FIN >>>>>>>>>>>>>>>')
+	}
 }
 
 WebUI.delay(1)
@@ -80,4 +97,3 @@ WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
 WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.closeBrowser()
-

@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>//*[contains(@name,'M0:46:::9:34')][count(. | //*[@ref_element = 'Object Repository/SAP/general/iframe_contenedor_todo_web']) = count(//*[@ref_element = 'Object Repository/SAP/general/iframe_contenedor_todo_web'])]</value>
+         <value>//*[contains(@name,'M0:46:::9:34')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -33,48 +33,6 @@
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>ct</name>
-      <type>Main</type>
-      <value>I</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>lsdata</name>
-      <type>Main</type>
-      <value>{0:'input\x23__AGIM0\x3aU\x3a\x3a\x3a9\x3a34',1:'N\xfamero\x20de\x20documento\x20comercial',4:10,9:true,13:'100\x25',18:true,19:true,23:true,26:true,29:true,41:false}</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>lsevents</name>
-      <type>Main</type>
-      <value>{Change:[{ClientAction:'none'},{type:'INPUTFIELD'}],DoubleClick:[{ClientAction:'submit',PrepareScript:'return\x20its.XControlSubmit\x28\x29\x3b',ResponseData:'delta',TransportMethod:'partial'},{Submit:'X',arrargv:{fkey:'2'},type:'INPUTFIELD'}],Enter:[{ClientAction:'submit',PrepareScript:'return\x20its.XControlSubmit\x28\x29\x3b',ResponseData:'delta',TransportMethod:'partial'},{Submit:'X',type:'INPUTFIELD'}],FieldHelpPress:[{ClientAction:'submit',PrepareScript:'return\x20its.XControlSubmit\x28\x29\x3b',ResponseData:'delta',TransportMethod:'partial'},{Submit:'X',type:'INPUTFIELD'}]}</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>type</name>
-      <type>Main</type>
-      <value>text</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>maxlength</name>
-      <type>Main</type>
-      <value>10</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>tabindex</name>
-      <type>Main</type>
-      <value>0</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>ti</name>
       <type>Main</type>
       <value>0</value>
@@ -85,27 +43,6 @@
       <name>title</name>
       <type>Main</type>
       <value>Número de documento comercial</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>class</name>
-      <type>Main</type>
-      <value>urEdf2TxtRadius urEdf2TxtEnbl urEdf2TxtMono urEdf2TxtHv</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>autocomplete</name>
-      <type>Main</type>
-      <value>on</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>autocorrect</name>
-      <type>Main</type>
-      <value>off</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FolderEntity>
    <description>folder</description>
-   <name>099 - Tests</name>
+   <name>001_pipeline_dg_sen16n_pedido_oc</name>
    <tag></tag>
    <folderType>TESTSUITE</folderType>
 </FolderEntity>

@@ -19,4 +19,9 @@
       <initValue>'Suma2020'</initValue>
       <name>pass</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>webGeneradorDeDatos</description>
+      <initValue>'http://fsrvtfs00hq/testing/ingreso_mercaderia.aspx'</initValue>
+      <name>url_gd</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

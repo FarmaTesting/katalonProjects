@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>05_vkm4_101</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>532d5218-edd8-4152-b559-092100e3dd9b</testCaseGuid>
+   <variable>
+      <defaultValue>'/nvkm4'</defaultValue>
+      <description></description>
+      <id>b635385f-d843-451c-b129-2adba2932330</id>
+      <masked>false</masked>
+      <name>trx</name>
+   </variable>
+   <variable>
+      <defaultValue>42</defaultValue>
+      <description></description>
+      <id>b31c1a5c-e498-459d-9065-eeeeb5eaddc7</id>
+      <masked>false</masked>
+      <name>strNumPedidoSap</name>
+   </variable>
+</TestCaseEntity>

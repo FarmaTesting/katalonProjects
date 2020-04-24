@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Trx SAP verifica dónde hay bloqueo, caso true = libera, caso false consulta otros tipos de bloqueo</description>
+   <name>03_Libera_Pedido_89</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>75a834a2-5ee9-4f8c-b0ed-49436e082631</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>e0c02c68-80b2-4b40-953a-b64c7ee3107b</id>
+      <masked>false</masked>
+      <name>trx</name>
+   </variable>
+</TestCaseEntity>

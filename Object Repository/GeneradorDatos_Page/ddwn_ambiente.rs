@@ -6,33 +6,25 @@
    <elementGuidId>5e59a9b8-194d-41bc-807a-7170cb399459</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>BASIC</key>
+         <value>//select[@id = 'ambienteDrp']</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
          <value>//select[@id='ambienteDrp']</value>
       </entry>
-      <entry>
-         <key>BASIC</key>
-         <value>//*[@name = 'ambienteDrp' and @id = 'ambienteDrp' and (text() = '
-	Desarrollo
-	Calidad
-
-' or . = '
-	Desarrollo
-	Calidad
-
-')]</value>
-      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>select</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
@@ -46,7 +38,7 @@
       <value>ambienteDrp</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>

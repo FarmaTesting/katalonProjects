@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>06_punto_arranque_101</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3a5e2946-ba46-4274-aa82-4420d97aee2d</testCaseGuid>
+   <variable>
+      <defaultValue>'/nz_sd_punto_arranque'</defaultValue>
+      <description></description>
+      <id>baf21e21-1b06-4dd1-8017-da593890eaf5</id>
+      <masked>false</masked>
+      <name>trx</name>
+   </variable>
+   <variable>
+      <defaultValue>42</defaultValue>
+      <description></description>
+      <id>efc6fafe-bb48-4232-a2cc-02e24d8cb103</id>
+      <masked>false</masked>
+      <name>strNumPedidoSap</name>
+   </variable>
+</TestCaseEntity>

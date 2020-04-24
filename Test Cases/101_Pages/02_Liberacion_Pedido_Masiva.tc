@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>02_Liberacion_Pedido_Masiva</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>2eeb5022-6b00-4110-8a13-a58b7da3e589</testCaseGuid>
+   <variable>
+      <defaultValue>0</defaultValue>
+      <description></description>
+      <id>870c6195-ebe7-4c0d-a046-c1c5e69864e3</id>
+      <masked>false</masked>
+      <name>strNumPedidoSap</name>
+   </variable>
+</TestCaseEntity>

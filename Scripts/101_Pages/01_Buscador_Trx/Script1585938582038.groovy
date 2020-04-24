@@ -15,9 +15,11 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.delay(2)
+WebUI.delay(1)
 
 WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
+
+WebUI.delay(1)
 
 WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), trx)
 
@@ -33,22 +35,49 @@ switch (trx) {
 
         WebUI.callTestCase(findTestCase('101_Pages/00_Wait'), [('attributeName') : 'name', ('toObject') : findTestObject(
                     'SAP/se16n/txt_se16n_buscador_tablas'), ('timeOut') : 5], FailureHandling.STOP_ON_FAILURE)
-
+		WebUI.delay(1)
         break
+		
+	case '/nse37':
+		KeywordUtil.logInfo('/nse37')
+
+		WebUI.callTestCase(findTestCase('101_Pages/00_Wait'), [('attributeName') : 'name', ('toObject') : findTestObject(
+					'SAP/se37_ws_123/txt_modulo_funciones'), ('timeOut') : 5], FailureHandling.STOP_ON_FAILURE)
+		WebUI.delay(1)
+		break
+		
+	case '/nwe19':
+		KeywordUtil.logInfo('/nwe19')
+
+		WebUI.callTestCase(findTestCase('101_Pages/00_Wait'), [('attributeName') : 'id', ('toObject') : findTestObject(
+					'SAP/se19_ws_125/txt_idoc_a_buscar'), ('timeOut') : 5], FailureHandling.STOP_ON_FAILURE)
+		WebUI.delay(1)
+		break
+		
+	case '/nvkm4':
+		KeywordUtil.logInfo('/nvkm4')
+
+		WebUI.callTestCase(findTestCase('101_Pages/00_Wait'), [('attributeName') : 'name', ('toObject') : findTestObject('SAP/vkm4/txt_doc_comercial_n_pedido_sap')
+				, ('timeOut') : 5], FailureHandling.STOP_ON_FAILURE)
+		WebUI.delay(1)
+		break
+		
     case '/nz_sd_libera_pedidos':
         KeywordUtil.logInfo('/nz_sd_libera_pedidos')
 
         WebUI.callTestCase(findTestCase('101_Pages/00_Wait'), [('attributeName') : 'id', ('toObject') : findTestObject('SAP/z_sd_libera_pedidos/txt_bloqueo_buscar')
                 , ('timeOut') : 5], FailureHandling.STOP_ON_FAILURE)
-
+		WebUI.delay(1)
         break
+		
     case '/nz_sd_punto_arranque':
         KeywordUtil.logInfo('/nz_sd_punto_arranque')
 
         WebUI.callTestCase(findTestCase('101_Pages/00_Wait'), [('attributeName') : 'id', ('toObject') : findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_pedidosap')
                 , ('timeOut') : 5], FailureHandling.STOP_ON_FAILURE)
-
+		WebUI.delay(1)
         break
+		
     default:
         KeywordUtil.logInfo('trx desconocido')
 

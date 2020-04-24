@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TestSuiteDummy</name>
+   <name>ts_01_buscar_pedidos</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
-   <numberOfRerun>0</numberOfRerun>
+   <numberOfRerun>1</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
-   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>4d36176b-6b93-40fd-9df3-3cdf074a917b</testSuiteGuid>
+   <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
+   <testSuiteGuid>d2de86ec-b825-41c9-9e76-ba74004413cd</testSuiteGuid>
    <testCaseLink>
-      <guid>2b1954ae-82b6-4ed2-95c2-459ecbcd3a6c</guid>
+      <guid>a26c8d5b-4573-4ed4-b289-3a0a1f277a6b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/099 - Tests/001 - Test - general</testCaseId>
+      <testCaseId>Test Cases/102_pipeline_masivo/ts_01_se16n_buscar_pedidos</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

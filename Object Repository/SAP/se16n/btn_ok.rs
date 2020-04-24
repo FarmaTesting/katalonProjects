@@ -6,12 +6,12 @@
    <elementGuidId>3f95f02b-8a80-4ebc-bc98-36281bb36ac5</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[contains(@id,'btn[0]')][count(. | //*[@ref_element = 'Object Repository/SAP/iframe_popup']) = count(//*[@ref_element = 'Object Repository/SAP/iframe_popup'])]</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//a[@id='__AGIM1:D:6::0']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[contains(@id,'btn[0]')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -26,13 +26,6 @@
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>ondragstart</name>
-      <type>Main</type>
-      <value>var e=window.event;e.cancelBubble=true;e.returnValue=false;return false;</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
       <value>__AGIM1:D:6::0</value>
@@ -40,65 +33,9 @@
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>ct</name>
-      <type>Main</type>
-      <value>B</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>lsdata</name>
-      <type>Main</type>
-      <value>{2:'100\x25',3:'Continuar',9:true,11:'\x2fsap\x2fpublic\x2ficmandir\x2fits\x2flsgui\x2fimages\x2ficons\x2fltr\x2fs_b_okay.gif',17:'ENTER',19:true,24:'TOGGLE'}</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>lsevents</name>
-      <type>Main</type>
-      <value>{Press:[{ClientAction:'submit',PrepareScript:'return\x20its.XControlSubmit\x28\x29\x3b',ResponseData:'delta',TransportMethod:'partial'},{Submit:'X',arrargv:{'\x7efkey':'F0','\x7eokcode':'\x2f0'},type:'BUTTON'}]}</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>role</name>
-      <type>Main</type>
-      <value>button</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>title</name>
       <type>Main</type>
       <value>Continuar</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>tabindex</name>
-      <type>Main</type>
-      <value>0</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ti</name>
-      <type>Main</type>
-      <value>0</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>class</name>
-      <type>Main</type>
-      <value>urNoUserSelect urBtnRadius  urBtnStdWithImg  urBtnStdMnuOnlyImg  urBtnImgBgColor urBtnTglStd urBtnStd </value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>text</name>
-      <type>Main</type>
-      <value> </value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

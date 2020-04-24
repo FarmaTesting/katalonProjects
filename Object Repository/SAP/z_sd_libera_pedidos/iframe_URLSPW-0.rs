@@ -6,29 +6,22 @@
    <elementGuidId>a9818b1d-f5c2-44f8-8807-31c9114dd98c</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//iframe[@id='URLSPW-0']</value>
+         <key>BASIC</key>
+         <value>//iframe[@id = 'URLSPW-0']</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@id = 'URLSPW-0']</value>
+         <key>XPATH</key>
+         <value>//iframe[@id='URLSPW-0']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>iframe</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>frameborder</name>
-      <type>Main</type>
-      <value>no</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -36,69 +29,6 @@
       <name>id</name>
       <type>Main</type>
       <value>URLSPW-0</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>name</name>
-      <type>Main</type>
-      <value>URLSPW-0</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>tabindex</name>
-      <type>Main</type>
-      <value>-1</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>inuse</name>
-      <type>Main</type>
-      <value>true</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>lspopup</name>
-      <type>Main</type>
-      <value>true</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>src</name>
-      <type>Main</type>
-      <value>http://fsapfeq00:8000/sap(cz1TSUQlM2FBTk9OJTNhRlNBUEZFUTAwX0ZFUV8wMCUzYTdaQWJVUDUtcTV0QWUzZUhZbkhjWVZJTFdseTNsMVdxU2hhSzF6TTYtQVRU)/bc/gui/sap/its/webgui/?~modal_no=1&amp;~SEC_SESSTOKEN=4CD40ADC7CF68E5C</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>pwid</name>
-      <type>Main</type>
-      <value>lsguiPopupWindow1</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>scrolling</name>
-      <type>Main</type>
-      <value>no</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>class</name>
-      <type>Main</type>
-      <value>lsPWShadowStd</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath</name>
-      <type>Main</type>
-      <value>id(&quot;URLSPW-0&quot;)</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

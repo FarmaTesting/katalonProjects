@@ -16,31 +16,9 @@ import com.kms.katalon.core.testdata.InternalData as InternalData
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-for (int i = 1; i <= findTestData('DGScenarios').getRowNumbers(); i++) {
-	println(i)
+for (def index : (1..36)) {
+	println(index)
 	
-    fechacorrido = findTestData('DGScenarios').getValue('strFechaCreado', i)
-	println(fechacorrido)
-	
-    actualDate = new Date().format('dd.MM.yyyy')
-
-    if (fechacorrido != actualDate) {
-        rowFound = i
-		
-		
-		
-		def cant_ingresar = findTestData('DGScenarios').getValue('param_cant_ingresar', rowFound)
-		println(cant_ingresar)
-		
-//		if (cant_ingresar != '') {
-//			WebUI.clearText(findTestObject('GeneradorDatos_Page/txt_cantidad_a_ingresar'))
-//		
-//			WebUI.sendKeys(findTestObject('GeneradorDatos_Page/txt_cantidad_a_ingresar'), cant_ingresar)
-//		}		
-		
-		break
-    }
-    
     
 }
 

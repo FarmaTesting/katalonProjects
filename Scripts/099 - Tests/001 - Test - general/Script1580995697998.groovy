@@ -15,7 +15,43 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
+nRows = findTestData('DGScenarios').getRowNumbers()
 
-WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : '/nz_sd_libera_'], FailureHandling.STOP_ON_FAILURE)
+
+def listPedidoSap89_101_106 = []
+def sortListPedidoSap89_101_106 = []
+
+def highSortListPedidoSap89_101_106 = []
+def lowSortListPedidoSap89_101_106 = []
+
+for (int i = 1; i <= nRows; i++) {
+
+	listPedidoSap89_101_106.add(findTestData('DGScenarios').getValue(41, i))
+
+}
+
+for (int i = 1; i <= nRows; i++) {
+	
+	listPedidoSap89_101_106.add(findTestData('DGScenarios').getValue(42, i))
+}
+
+/*for (int i = 1; i <= nRows; i++) {
+	
+	listPedidoSap89_101_106.add(findTestData('DGScenarios').getValue(43, i))
+}*/
+
+println(listPedidoSap89_101_106.size())
+
+sortListPedidoSap89_101_106 = listPedidoSap89_101_106.sort()
+
+println(sortListPedidoSap89_101_106)
+
+highSortListPedidoSap89_101_106 = sortListPedidoSap89_101_106.get(0)
+
+println(highSortListPedidoSap89_101_106)
+
+lowSortListPedidoSap89_101_106 = sortListPedidoSap89_101_106.get(71)
+
+println(lowSortListPedidoSap89_101_106)
+
 

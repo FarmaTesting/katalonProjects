@@ -16,196 +16,227 @@ import com.kms.katalon.core.testdata.InternalData as InternalData
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser(GlobalVariable.url)
+row_control = findTestData('control_jobs').getRowNumbers()
 
-WebUI.maximizeWindow()
+println(('***************** CANTIDAD DE REGISTROS: ' + row_control) + ' *****************')
 
-def nRowsEncontradas = findTestData('DGScenarios').getRowNumbers()
+for (int i = 1; i <= row_control; i++) {
+    DG_Generacion_Pedido = findTestData('control_jobs').getValue('DG_Generacion_Pedido', i)
 
-println('Filas encontradas a ejecutar: ' + nRowsEncontradas)
+    println(('********************** REGISTRO N: ' + i) + ' **********************')
 
-for (int i = 1; i <= nRowsEncontradas; i++) {
-    def nFilaEnEjecucion = i
+    if (DG_Generacion_Pedido == 'false') {
+        WebUI.openBrowser(GlobalVariable.url_gd)
 
-    fechacorrido = findTestData('DGScenarios').getValue('strFechaCreado', nFilaEnEjecucion)
+        WebUI.waitForPageLoad(10)
 
-    actualDate = new Date().format('dd.MM.yyyy')
+        WebUI.maximizeWindow()
 
-    if (fechacorrido != actualDate) {
-        println('Fila en ejecucion: ' + nFilaEnEjecucion)
+        WebUI.callTestCase(findTestCase('101_Pages/00_Wait'), [('attributeName') : 'id', ('toObject') : findTestObject('GeneradorDatos_Page/ddwn_ambiente')
+                , ('timeOut') : 5], FailureHandling.STOP_ON_FAILURE)
 
-        if ((ambiente = findTestData('DGScenarios').getValue('param_ambiente', nFilaEnEjecucion)) != '') {
-            WebUI.selectOptionByLabel(findTestObject('GeneradorDatos_Page/ddwn_ambiente'), ambiente, false)
+        WebUI.delay(1)
+
+        //def nRowsEncontradas = findTestData('DGScenarios').getRowNumbers()
+        //cantidad de registros
+        //println('Filas encontradas a ejecutar: ' + nRowsEncontradas)
+        //for (int i = 1; i <= nRowsEncontradas; i++)
+        def nFilaEnEjecucion = i
+
+        fechacorrido = findTestData('DGScenarios').getValue('strFechaCreado', nFilaEnEjecucion)
+
+        actualDate = new Date().format('dd.MM.yyyy')
+
+        if (fechacorrido != actualDate) {
+            println('Fila en ejecucion: ' + nFilaEnEjecucion)
+
+            if ((ambiente = findTestData('DGScenarios').getValue('param_ambiente', nFilaEnEjecucion)) != '') {
+                WebUI.selectOptionByLabel(findTestObject('GeneradorDatos_Page/ddwn_ambiente'), ambiente, false)
+            }
+            
+            if ((materiales = findTestData('DGScenarios').getValue('param_materiales', nFilaEnEjecucion)) != '') {
+                WebUI.clearText(findTestObject('GeneradorDatos_Page/txt_materiales'))
+
+                WebUI.sendKeys(findTestObject('GeneradorDatos_Page/txt_materiales'), materiales, FailureHandling.CONTINUE_ON_FAILURE)
+            }
+            
+            //		no requerido
+            //		if ((comitente = findTestData('DGScenarios').getValue('param_comitente', rowFound)) != '') {
+            //			WebUI.selectOptionByLabel(findTestObject('GeneradorDatos_Page/ddwn_comitente'), comitente, false)
+            //		}
+            'no requerido'
+            if ((trazable = findTestData('DGScenarios').getValue('param_trazable', nFilaEnEjecucion)) != '\'OFF\'') {
+                WebUI.uncheck(findTestObject('GeneradorDatos_Page/chk_solo_trazables'))
+            } else if (trazable == 'ON') {
+                WebUI.check(findTestObject('GeneradorDatos_Page/chk_solo_trazables'))
+            }
+            
+            if ((crear_pedido = findTestData('DGScenarios').getValue('param_crear_pedido', nFilaEnEjecucion)) == '\'OFF\'') {
+                WebUI.uncheck(findTestObject('GeneradorDatos_Page/chk_crear_pedidos'))
+            } else if (crear_pedido == 'ON') {
+                WebUI.check(findTestObject('GeneradorDatos_Page/chk_crear_pedidos'))
+            }
+            
+            'no requerido\r\n'
+            if ((tipo_material = findTestData('DGScenarios').getValue('param_tipo_material', nFilaEnEjecucion)) != '') {
+                WebUI.selectOptionByLabel(findTestObject('GeneradorDatos_Page/ddwn_tipo_material'), tipo_material, false)
+            }
+            
+            if ((filtrar = findTestData('DGScenarios').getValue('filtrar', nFilaEnEjecucion)) == 'SI') {
+                WebUI.click(findTestObject('GeneradorDatos_Page/btn_filtrar'))
+            }
+            
+            if ((cant_ingresar = findTestData('DGScenarios').getValue('param_cant_ingresar', nFilaEnEjecucion)) != '') {
+                WebUI.clearText(findTestObject('GeneradorDatos_Page/txt_cantidad_a_ingresar'))
+
+                WebUI.sendKeys(findTestObject('GeneradorDatos_Page/txt_cantidad_a_ingresar'), cant_ingresar)
+            }
+            
+            if ((ingresa_cuarentena = findTestData('DGScenarios').getValue('param_ingresa_cuarentena', nFilaEnEjecucion)) == 
+            '\'OFF\'') {
+                WebUI.uncheck(findTestObject('Object Repository/GeneradorDatos_Page/chk_ingresa_a_cuarentena'))
+            } else if (ingresa_cuarentena == 'ON') {
+                WebUI.check(findTestObject('Object Repository/GeneradorDatos_Page/chk_ingresa_a_cuarentena'))
+            }
+            
+            if ((canti_pedido = findTestData('DGScenarios').getValue('param_canti_pedido', nFilaEnEjecucion)) != '') {
+                WebUI.clearText(findTestObject('Object Repository/GeneradorDatos_Page/txt_cantidad_pedido'))
+
+                WebUI.sendKeys(findTestObject('Object Repository/GeneradorDatos_Page/txt_cantidad_pedido'), canti_pedido, 
+                    FailureHandling.CONTINUE_ON_FAILURE)
+            }
+            
+            if ((otros_clientes = findTestData('DGScenarios').getValue('param_otros_clientes', nFilaEnEjecucion)) != '') {
+                WebUI.clearText(findTestObject('Object Repository/GeneradorDatos_Page/txt_otros_clientes'))
+
+                WebUI.sendKeys(findTestObject('Object Repository/GeneradorDatos_Page/txt_otros_clientes'), otros_clientes)
+            }
+            
+            if ((generar = findTestData('DGScenarios').getValue('generar', nFilaEnEjecucion)) == 'SI') {
+                WebUI.click(findTestObject('GeneradorDatos_Page/btn_generar'))
+            }
+            
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AU', 
+                nFilaEnEjecucion, CustomKeywords.'utilities.Tools.dateSap'())
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AV', 
+                nFilaEnEjecucion, new Date().format('HH:mm'))
+
+            strLote = WebUI.getAttribute(findTestObject('GeneradorDatos_Page/txt_lote'), 'Value')
+
+            strFechaActual = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_fecha_actual'), 
+                'Value')
+
+            strFechaVencimiento = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_fecha_vencimiento'), 
+                'Value')
+
+            strNumRemito = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_n_remito'), 'Value')
+
+            //strOcComiente = WebUI.concatenate(((['R', WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_oc_comiente'), 'Value')]) as String[]), FailureHandling.STOP_ON_FAILURE)
+            strOcComiente = WebUI.concatenate(((['0000', 'R', '0000', strNumRemito]) as String[]), FailureHandling.STOP_ON_FAILURE)
+
+            strNumDespacho = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_n_despacho'), 
+                'Value')
+
+            strDigVerNumDespacho = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_dig_ver_n_despacho'), 
+                'Value')
+
+            strFechaDespPlaza = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_fecha_despacho_plaza'), 
+                'Value')
+
+            strNumPedido = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_n_pedido'), 'Value')
+
+            strAltaLoteI105 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_alta_de_lotes_I105'))
+
+            strRemElectI141 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_remito_electronico_I141'))
+
+            strPedidoClienteI089 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_pedido_de_cliente_I089'))
+
+            strPedidoDistI106 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_pedido_de_distribucion_I106'))
+
+            strPedidoComitenteI101 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_pedido_del_comitente_I101'))
+
+            strPedWeb089 = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_ped_web_089'), 'Value')
+
+            strPedWeb101 = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_ped_web_101'), 'Value')
+
+            strPedWeb106 = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_ped_web_106'), 'Value')
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'I', 
+                nFilaEnEjecucion, strLote)
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'J', 
+                nFilaEnEjecucion, strFechaActual)
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'K', 
+                nFilaEnEjecucion, strFechaVencimiento)
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'L', 
+                nFilaEnEjecucion, strNumRemito)
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'N', 
+                nFilaEnEjecucion, strOcComiente)
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'W', 
+                nFilaEnEjecucion, strNumDespacho)
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'X', 
+                nFilaEnEjecucion, strDigVerNumDespacho)
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'Y', 
+                nFilaEnEjecucion, strFechaDespPlaza)
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'Z', 
+                nFilaEnEjecucion, strNumPedido)
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AI', 
+                nFilaEnEjecucion, strAltaLoteI105)
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AJ', 
+                nFilaEnEjecucion, strRemElectI141)
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AK', 
+                nFilaEnEjecucion, strPedidoClienteI089)
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AL', 
+                nFilaEnEjecucion, strPedidoDistI106)
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AM', 
+                nFilaEnEjecucion, strPedidoComitenteI101)
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AZ', 
+                nFilaEnEjecucion, 'NO')
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BA', 
+                nFilaEnEjecucion, 'NO')
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BB', 
+                nFilaEnEjecucion, strPedWeb089)
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BC', 
+                nFilaEnEjecucion, strPedWeb101)
+
+            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BD', 
+                nFilaEnEjecucion, strPedWeb106)
+
+            if (i < row_control) {
+                WebUI.delay(3)
+
+                WebUI.refresh()
+            }
         }
         
-        if ((materiales = findTestData('DGScenarios').getValue('param_materiales', nFilaEnEjecucion)) != '') {
-            WebUI.clearText(findTestObject('GeneradorDatos_Page/txt_materiales'))
+        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'B', i, 'true' //break
+            )
+    } else if ((DG_Generacion_Pedido == 'true') && (i == row_control)) {
+        println('<<<<<<<<<<<<<< FIN >>>>>>>>>>>>>>>')
 
-            WebUI.sendKeys(findTestObject('GeneradorDatos_Page/txt_materiales'), materiales, FailureHandling.CONTINUE_ON_FAILURE)
-        }
-        
-        //		no requerido
-        //		if ((comitente = findTestData('DGScenarios').getValue('param_comitente', rowFound)) != '') {
-        //			WebUI.selectOptionByLabel(findTestObject('GeneradorDatos_Page/ddwn_comitente'), comitente, false)
-        //		}
-        'no requerido'
-        if ((trazable = findTestData('DGScenarios').getValue('param_trazable', nFilaEnEjecucion)) != '\'OFF\'') {
-            WebUI.uncheck(findTestObject('GeneradorDatos_Page/chk_solo_trazables'))
-        } else if (trazable == 'ON') {
-            WebUI.check(findTestObject('GeneradorDatos_Page/chk_solo_trazables'))
-        }
-        
-        if ((crear_pedido = findTestData('DGScenarios').getValue('param_crear_pedido', nFilaEnEjecucion)) == '\'OFF\'') {
-            WebUI.uncheck(findTestObject('GeneradorDatos_Page/chk_crear_pedidos'))
-        } else if (crear_pedido == 'ON') {
-            WebUI.check(findTestObject('GeneradorDatos_Page/chk_crear_pedidos'))
-        }
-        
-        'no requerido\r\n'
-        if ((tipo_material = findTestData('DGScenarios').getValue('param_tipo_material', nFilaEnEjecucion)) != '') {
-            WebUI.selectOptionByLabel(findTestObject('GeneradorDatos_Page/ddwn_tipo_material'), tipo_material, false)
-        }
-        
-        if ((filtrar = findTestData('DGScenarios').getValue('filtrar', nFilaEnEjecucion)) == 'SI') {
-            WebUI.click(findTestObject('GeneradorDatos_Page/btn_filtrar'))
-        }
-        
-        if ((cant_ingresar = findTestData('DGScenarios').getValue('param_cant_ingresar', nFilaEnEjecucion)) != '') {
-            WebUI.clearText(findTestObject('GeneradorDatos_Page/txt_cantidad_a_ingresar'))
+        assert true
 
-            WebUI.sendKeys(findTestObject('GeneradorDatos_Page/txt_cantidad_a_ingresar'), cant_ingresar)
-        }
-        
-        if ((ingresa_cuarentena = findTestData('DGScenarios').getValue('param_ingresa_cuarentena', nFilaEnEjecucion)) == 
-        '\'OFF\'') {
-            WebUI.uncheck(findTestObject('Object Repository/GeneradorDatos_Page/chk_ingresa_a_cuarentena'))
-        } else if (ingresa_cuarentena == 'ON') {
-            WebUI.check(findTestObject('Object Repository/GeneradorDatos_Page/chk_ingresa_a_cuarentena'))
-        }
-        
-        if ((canti_pedido = findTestData('DGScenarios').getValue('param_canti_pedido', nFilaEnEjecucion)) != '') {
-            WebUI.clearText(findTestObject('Object Repository/GeneradorDatos_Page/txt_cantidad_pedido'))
-
-            WebUI.sendKeys(findTestObject('Object Repository/GeneradorDatos_Page/txt_cantidad_pedido'), canti_pedido, FailureHandling.CONTINUE_ON_FAILURE)
-        }
-		
-        if ((otros_clientes = findTestData('DGScenarios').getValue('param_otros_clientes', nFilaEnEjecucion)) != '') {
-            WebUI.clearText(findTestObject('Object Repository/GeneradorDatos_Page/txt_otros_clientes'))
-
-            WebUI.sendKeys(findTestObject('Object Repository/GeneradorDatos_Page/txt_otros_clientes'), otros_clientes)
-        }
-        
-        if ((generar = findTestData('DGScenarios').getValue('generar', nFilaEnEjecucion)) == 'SI') {
-            WebUI.click(findTestObject('GeneradorDatos_Page/btn_generar'))
-        }
-        
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AU', nFilaEnEjecucion, 
-            CustomKeywords.'utilities.Tools.dateSap'())
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AV', nFilaEnEjecucion, 
-            new Date().format('HH:mm'))
-
-        strLote = WebUI.getAttribute(findTestObject('GeneradorDatos_Page/txt_lote'), 'Value')
-
-        strFechaActual = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_fecha_actual'), 'Value')
-
-        strFechaVencimiento = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_fecha_vencimiento'), 
-            'Value')
-
-        strNumRemito = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_n_remito'), 'Value')
-
-        //strOcComiente = WebUI.concatenate(((['R', WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_oc_comiente'), 'Value')]) as String[]), FailureHandling.STOP_ON_FAILURE)
-        strOcComiente = WebUI.concatenate(((['0000', 'R', '0000', strNumRemito]) as String[]), FailureHandling.STOP_ON_FAILURE)
-
-        strNumDespacho = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_n_despacho'), 'Value')
-
-        strDigVerNumDespacho = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_dig_ver_n_despacho'), 
-            'Value')
-
-        strFechaDespPlaza = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_fecha_despacho_plaza'), 
-            'Value')
-
-        strNumPedido = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_n_pedido'), 'Value')
-
-        strAltaLoteI105 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_alta_de_lotes_I105'))
-
-        strRemElectI141 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_remito_electronico_I141'))
-
-        strPedidoClienteI089 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_pedido_de_cliente_I089'))
-
-        strPedidoDistI106 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_pedido_de_distribucion_I106'))
-
-        strPedidoComitenteI101 = WebUI.getText(findTestObject('GeneradorDatos_Page/txt_pedido_del_comitente_I101'))
-		
-		strPedWeb089 = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_ped_web_089'), 'Value')
-		
-		strPedWeb101 = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_ped_web_101'), 'Value')
-		
-		strPedWeb106 = WebUI.getAttribute(findTestObject('Object Repository/GeneradorDatos_Page/txt_ped_web_106'), 'Value')
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'I', nFilaEnEjecucion, 
-            strLote)
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'J', nFilaEnEjecucion, 
-            strFechaActual)
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'K', nFilaEnEjecucion, 
-            strFechaVencimiento)
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'L', nFilaEnEjecucion, 
-            strNumRemito)
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'N', nFilaEnEjecucion, 
-            strOcComiente)
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'W', nFilaEnEjecucion, 
-            strNumDespacho)
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'X', nFilaEnEjecucion, 
-            strDigVerNumDespacho)
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'Y', nFilaEnEjecucion, 
-            strFechaDespPlaza)
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'Z', nFilaEnEjecucion, 
-            strNumPedido)
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AI', nFilaEnEjecucion, 
-            strAltaLoteI105)
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AJ', nFilaEnEjecucion, 
-            strRemElectI141)
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AK', nFilaEnEjecucion, 
-            strPedidoClienteI089)
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AL', nFilaEnEjecucion, 
-            strPedidoDistI106)
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AM', nFilaEnEjecucion, 
-            strPedidoComitenteI101)
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AZ', nFilaEnEjecucion, 
-            'NO')
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BA', nFilaEnEjecucion, 
-            'NO')
-		
-		CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BB', nFilaEnEjecucion,
-			strPedWeb089)
-		
-		CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BC', nFilaEnEjecucion,
-			strPedWeb101)
-		
-		CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BD', nFilaEnEjecucion,
-			strPedWeb106)
-
-        if (i < nRowsEncontradas) {
-            WebUI.delay(1)
-			WebUI.refresh()
-        }
+        break
     }
 }
 
-WebUI.closeBrowser()
+WebUI.delay(3)
 
+WebUI.closeBrowser()

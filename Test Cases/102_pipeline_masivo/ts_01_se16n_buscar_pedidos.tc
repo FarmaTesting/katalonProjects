@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ts_01_se16n_buscar_pedidos</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d8cd2cb1-b918-40ab-9341-4ac7d7d76c25</testCaseGuid>
+</TestCaseEntity>
