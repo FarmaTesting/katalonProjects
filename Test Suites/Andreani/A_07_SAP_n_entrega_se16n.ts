@@ -5,63 +5,15 @@
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
-   <numberOfRerun>0</numberOfRerun>
+   <numberOfRerun>1</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
-   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
    <testSuiteGuid>d3232889-c79b-4c4c-b624-b1545f0c8c74</testSuiteGuid>
    <testCaseLink>
-      <guid>cc08d71f-b1f8-4fe6-a15e-a26cb6175c64</guid>
+      <guid>d3dcf2a4-c700-45ee-81af-b9d8cba02ccc</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Andreani/A_SAP_se16n_n_entrega</testCaseId>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>2fd1200f-8a59-4569-a103-cf180672b9fc</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>b1520187-9ab5-4866-b512-fe1c2fbeb70b</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>b158f821-5b54-4883-b12e-301e2e92ba28</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>ed95ac3e-2cb2-4e94-b403-74f84544d0e2</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>42007649-1486-47bd-b336-0938540dcdd0</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>ca26718e-5123-47ec-aa31-cac4cbbb4f3f</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>f1166568-efd5-41b6-9908-9a2bc4588d1f</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>8aba38cd-213a-4082-a58b-b5e09de80d17</variableId>
-      </variableLink>
+      <testCaseId>Test Cases/Andreani/A_ts_06_se16n_entrega</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

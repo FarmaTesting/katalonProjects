@@ -13,17 +13,9 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-row_control = findTestData('control_jobs').getRowNumbers()
+for (def index : (1..6)) {
+    WebUI.callTestCase(findTestCase('Andreani/A_SAP_se16n_n_pedidos'), [:], FailureHandling.STOP_ON_FAILURE)
 
-for (int i = 1; i <= row_control; i++) {
-	
-	a = i.toString()
-	
-	CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'A', i, a)
-	CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'B', i, 'false')
-	CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'C', i, 'false')
-	CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'D', i, 'false')
-	CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'F', i, 'false')
-	CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'I', i, 'false')
-	CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'J', i, 'false')
+    WebUI.delay(2)
 }
+

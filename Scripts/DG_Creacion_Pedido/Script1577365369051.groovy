@@ -20,12 +20,19 @@ row_control = findTestData('control_jobs').getRowNumbers()
 
 println(('***************** CANTIDAD DE REGISTROS: ' + row_control) + ' *****************')
 
+/*WebUI.openBrowser(GlobalVariable.url_gd)
+WebUI.waitForPageLoad(10)
+WebUI.maximizeWindow()*/
+/*WebUI.callTestCase(findTestCase('101_Pages/00_Wait'), [('attributeName') : 'id', ('toObject') : findTestObject('GeneradorDatos_Page/ddwn_ambiente')
+        , ('timeOut') : 5], FailureHandling.STOP_ON_FAILURE)*/
 for (int i = 1; i <= row_control; i++) {
     DG_Generacion_Pedido = findTestData('control_jobs').getValue('DG_Generacion_Pedido', i)
 
     println(('********************** REGISTRO N: ' + i) + ' **********************')
 
     if (DG_Generacion_Pedido == 'false') {
+        WebUI.delay(1)
+
         WebUI.openBrowser(GlobalVariable.url_gd)
 
         WebUI.waitForPageLoad(10)
@@ -34,8 +41,6 @@ for (int i = 1; i <= row_control; i++) {
 
         WebUI.callTestCase(findTestCase('101_Pages/00_Wait'), [('attributeName') : 'id', ('toObject') : findTestObject('GeneradorDatos_Page/ddwn_ambiente')
                 , ('timeOut') : 5], FailureHandling.STOP_ON_FAILURE)
-
-        WebUI.delay(1)
 
         //def nRowsEncontradas = findTestData('DGScenarios').getRowNumbers()
         //cantidad de registros
@@ -217,17 +222,18 @@ for (int i = 1; i <= row_control; i++) {
                 nFilaEnEjecucion, strPedWeb101)
 
             CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BD', 
-                nFilaEnEjecucion, strPedWeb106)
-
-            if (i < row_control) {
-                WebUI.delay(3)
+                nFilaEnEjecucion, strPedWeb106) /*if (i < row_control) {
+                WebUI.delay(2)
 
                 WebUI.refresh()
-            }
+            }*/
         }
         
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'B', i, 'true' //break
-            )
+        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'B', i, 'true')
+
+        WebUI.delay(2)
+
+        WebUI.closeBrowser()
     } else if ((DG_Generacion_Pedido == 'true') && (i == row_control)) {
         println('<<<<<<<<<<<<<< FIN >>>>>>>>>>>>>>>')
 
@@ -236,7 +242,3 @@ for (int i = 1; i <= row_control; i++) {
         break
     }
 }
-
-WebUI.delay(3)
-
-WebUI.closeBrowser()

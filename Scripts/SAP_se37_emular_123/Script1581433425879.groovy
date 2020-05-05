@@ -304,6 +304,8 @@ for (int i = 1; i <= row_control; i++) {
         }
         
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'F', i, 'true')
+		
+		WebUI.callTestCase(findTestCase('101_Pages/00_CloseSap'), [:], FailureHandling.STOP_ON_FAILURE)
 
         break
     } else if ((SAP_05_se37_WS_123 == 'true') && (i == row_control)) {
@@ -315,7 +317,7 @@ for (int i = 1; i <= row_control; i++) {
     }
 }
 
-WebUI.delay(2)
+/*WebUI.delay(2)
 
 WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
 
@@ -323,6 +325,6 @@ WebUI.delay(1)
 
 WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
-WebUI.delay(2)
+WebUI.delay(2)*/
 
 WebUI.closeBrowser()

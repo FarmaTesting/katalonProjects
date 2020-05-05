@@ -53,6 +53,8 @@ WebUI.delay(1)
 //ingresar el pedido con numero alto
 WebUI.setText(findTestObject('SAP/z_sd_libera_pedidos/txt_n_pedido_a_buscar_to'), sortListPedidoSap89_101.get(71))
 
+WebUI.delay(1)
+
 //WebUI.verifyElementVisible(findTestObject('SAP/z_sd_libera_pedidos/iframe_URLSPW-0'))
 
 

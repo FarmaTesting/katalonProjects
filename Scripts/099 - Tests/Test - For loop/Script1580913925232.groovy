@@ -16,9 +16,40 @@ import com.kms.katalon.core.testdata.InternalData as InternalData
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-for (def index : (1..36)) {
-	println(index)
-	
-    
+row_control = findTestData('control_jobs').getRowNumbers()
+
+println(('***************** CANTIDAD DE REGISTROS: ' + row_control) + ' *****************')
+
+WebUI.openBrowser(GlobalVariable.url_gd)
+
+WebUI.waitForPageLoad(10)
+
+for (int i = 1; i <= row_control; i++) {
+    DG_Generacion_Pedido = findTestData('control_jobs').getValue('DG_Generacion_Pedido', i)
+
+    println(('********************** REGISTRO N: ' + i) + ' **********************')
+
+    if (DG_Generacion_Pedido == 'false') {
+        materiales = findTestData('DGScenarios').getValue('param_materiales', i)
+
+        println('proceso un registro: ' + materiales)
+
+        if (i < row_control) {
+            WebUI.delay(1)
+
+            WebUI.refresh()
+        }
+        
+        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'B', i, 'true')
+    } else if ((DG_Generacion_Pedido == 'true') && (i == row_control)) {
+        println('<<<<<<<<<<<<<< FIN >>>>>>>>>>>>>>>')
+
+        assert true
+
+        break
+    }
 }
 
+WebUI.delay(2)
+
+WebUI.closeBrowser()
