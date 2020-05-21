@@ -13,5 +13,5 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('SAP_zsd_libera_pedido_masivo'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('101_Pages/03_Libera_Pedido_89'), [('trx') : '/nz_sd_libera_pedidos'], FailureHandling.STOP_ON_FAILURE)
 

@@ -13,11 +13,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-for (def index : (1..36)) {
-	WebUI.callTestCase(findTestCase('SAP_se37_emular_123'), [:], FailureHandling.STOP_ON_FAILURE)
-	
-	WebUI.delay(2)
-}
 
+WebUI.callTestCase(findTestCase('SAP_se37_emular_123'), [:], FailureHandling.STOP_ON_FAILURE)
 
 

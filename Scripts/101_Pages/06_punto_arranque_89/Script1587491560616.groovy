@@ -59,10 +59,11 @@ sortListPedidoSap89_101_106 = listPedidoSap89_101_106.sort()
 WebUI.sendKeys(findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_pedidosap'), sortListPedidoSap89_101_106.get(
         0))
 
+mayor = sortListPedidoSap89_101_106.size() - 1
+
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_pedidosap_to'), sortListPedidoSap89_101_106.get(
-        107))
+WebUI.sendKeys(findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_pedidosap_to'), sortListPedidoSap89_101_106.get(mayor))
 
 WebUI.delay(1)
 

@@ -22,10 +22,7 @@ WebUI.delay(1)
 
 //*****************Hace click en selección multiple*********************//
 //WebUI.click(findTestObject('SAP/vkm4/btn_seleccion_multiple'))
-
-
 //WebUI.verifyElementVisible(findTestObject('SAP/vkm4/iframe_URLSPW-0'))
-
 //**********************************************************************//
 //******************Completar seleccion *******************************//
 nRows = findTestData('DGScenarios').getRowNumbers()
@@ -40,65 +37,77 @@ nRows = findTestData('DGScenarios').getRowNumbers()
 	WebUI.delay(2)
 }*/
 //WebUI.sendKeys(findTestObject('SAP/vkm4/txt_ppup_selec_mult_celda'), Keys.chord(Keys.F8))
-
 def listPedidoSap89_101 = []
 
 def sortListPedidoSap89_101 = []
 
 for (int i = 1; i <= nRows; i++) {
-	
-		listPedidoSap89_101.add(findTestData('DGScenarios').getValue(41, i))
-	
-	}
-	
+    listPedidoSap89_101.add(findTestData('DGScenarios').getValue(41, i))
+}
+
 for (int i = 1; i <= nRows; i++) {
-		
-		listPedidoSap89_101.add(findTestData('DGScenarios').getValue(42, i))
-	}
+    listPedidoSap89_101.add(findTestData('DGScenarios').getValue(42, i))
+}
 
 sortListPedidoSap89_101 = listPedidoSap89_101.sort()
 
-WebUI.delay(1)
-
 WebUI.sendKeys(findTestObject('SAP/vkm4/txt_doc_comercial_n_pedido_sap'), sortListPedidoSap89_101.get(0))
 
+mayor = sortListPedidoSap89_101.size() - 1
+
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/vkm4/txt_doc_comercial_n_pedido_sap_to'), sortListPedidoSap89_101.get(71))
+WebUI.sendKeys(findTestObject('SAP/vkm4/txt_doc_comercial_n_pedido_sap_to'), sortListPedidoSap89_101.get(mayor))
 
 //**********************************************************************//
-
 WebUI.delay(1)
 
 WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
 
 WebUI.delay(2)
 
+def msj_no_registro = WebUI.verifyElementVisible(findTestObject('SAP/vkm4/txt_no_encontro_registro'), FailureHandling.OPTIONAL)
 
-if (!WebUI.verifyElementPresent(findTestObject('SAP/vkm4/txt_no_encontro_registro'), 10, FailureHandling.OPTIONAL)) {
+if (msj_no_registro) {
 	
-	WebUI.waitForElementVisible(findTestObject('SAP/vkm4/chk_seleccion_pedido'), 20)
+	println('***************** No hay pedido para liberar *****************')
 	
-	WebUI.click(findTestObject('SAP/vkm4/chk_seleccion_pedido'))
+    WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
 
-	WebUI.delay(1)
+    WebUI.delay(1)
 
-	WebUI.waitForElementVisible(findTestObject('SAP/vkm4/btn_liberar_pedido'), 20)
+    WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
-	WebUI.click(findTestObject('SAP/vkm4/btn_liberar_pedido'))
+    WebUI.delay(2)
 
-	WebUI.delay(1)
+    WebUI.closeBrowser()
+} else {
+    WebUI.delay(1)
 
-	WebUI.waitForElementVisible(findTestObject('SAP/vkm4/img_liberacion_exito'), 30)
+    WebUI.waitForElementVisible(findTestObject('SAP/vkm4/chk_seleccion_pedido'), 10)
 
-	WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
+    //WebUI.click(findTestObject('SAP/vkm4/chk_seleccion_pedido'))
+	
+	WebUI.click(findTestObject('SAP/vkm4/btn_marcar_todo'))
 
-	WebUI.delay(1)
+    WebUI.delay(1)
 
-	WebUI.click(findTestObject('SAP/vkm4/btn_si_finalizar_lista'))
+    WebUI.waitForElementVisible(findTestObject('SAP/vkm4/btn_liberar_pedido'), 10)
+
+    WebUI.click(findTestObject('SAP/vkm4/btn_liberar_pedido'))
+
+    WebUI.delay(1)
+
+    WebUI.waitForElementVisible(findTestObject('SAP/vkm4/img_liberacion_exito'), 10)
+
+    WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
+
+    WebUI.delay(1)
+
+    WebUI.click(findTestObject('SAP/vkm4/btn_si_finalizar_lista'))
+	
+	WebUI.delay(2)
 }
-
-WebUI.delay(2)
 
 WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
 

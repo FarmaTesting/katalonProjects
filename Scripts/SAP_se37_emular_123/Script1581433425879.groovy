@@ -15,7 +15,7 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-row_control = findTestData('control_jobs').getRowNumbers()
+row_control = findTestData('DGScenarios').getRowNumbers()
 
 println(('***************** CANTIDAD DE REGISTROS: ' + row_control) + ' *****************')
 
@@ -24,19 +24,10 @@ for (int i = 1; i <= row_control; i++) {
 
     println(('***************** REGISTRO N: ' + i) + ' *****************')
 
-    if (SAP_05_se37_WS_123 == 'false') {
+    if (SAP_05_se37_WS_123 == '') {
         WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
 
         WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : '/nse37'], FailureHandling.STOP_ON_FAILURE)
-
-        //WebUI.delay(1)
-        //WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 10)
-        //WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
-        //WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nse37')
-        //WebUI.delay(1)
-        //WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
-        //WebUI.waitForElementVisible(findTestObject('SAP/se37_ws_123/txt_modulo_funciones'), 10)
-        WebUI.delay(1)
 
         WebUI.sendKeys(findTestObject('SAP/se37_ws_123/txt_modulo_funciones'), 'z_mm_andr_recepcion')
 
@@ -46,17 +37,9 @@ for (int i = 1; i <= row_control; i++) {
 
         WebUI.delay(1)
 
-        //def nRowsEncontradas = findTestData('DGScenarios').getRowNumbers()
-        //cantidad de registros
-        //println('Filas encontradas: ' + nRowsEncontradas)
-        //for (int i = 1; i <= nRowsEncontradas; i++)
         def nRowEnEjecucion = i
 
-        println('Ejecutando fila N: ' + nRowEnEjecucion)
-
         def mercIngresada = findTestData('DGScenarios').getValue('ingreso_123', nRowEnEjecucion)
-
-        println('Fue ingresada?: ' + mercIngresada)
 
         if (mercIngresada != 'SI') {
             def numOrdenCompra = findTestData('DGScenarios').getValue('out_n_orden_compra', nRowEnEjecucion)
@@ -106,7 +89,7 @@ for (int i = 1; i <= row_control; i++) {
 
             WebUI.delay(1)
 
-            WebUI.waitForElementPresent(findTestObject('SAP/se37_ws_123/btn_posicion'), 15, FailureHandling.OPTIONAL)
+            WebUI.waitForElementPresent(findTestObject('SAP/se37_ws_123/btn_posicion'), 10, FailureHandling.OPTIONAL)
 
             //Seccion Posicion a completar
             WebUI.delay(1)
@@ -115,7 +98,7 @@ for (int i = 1; i <= row_control; i++) {
 
             WebUI.delay(1)
 
-            WebUI.waitForElementPresent(findTestObject('SAP/se37_ws_123/txt_pos_po_num_ref'), 15, FailureHandling.OPTIONAL)
+            WebUI.waitForElementPresent(findTestObject('SAP/se37_ws_123/txt_pos_po_num_ref'), 10, FailureHandling.OPTIONAL)
 
             def pPoNumbRef = WebUI.concatenate('900000', findTestData('DGScenarios').getValue('out_n_remito', nRowEnEjecucion))
 
@@ -250,21 +233,14 @@ for (int i = 1; i <= row_control; i++) {
             WebUI.sendKeys(findTestObject('SAP/se37_ws_123/txt_pos_item_text'), pItemText)
 
             //		WebUI.click(findTestObject('SAP/se37_ws_123/btn_despl_derecha'))
-            //		
-            //		WebUI.click(findTestObject('SAP/se37_ws_123/btn_despl_derecha'))
-            //		
-            //		WebUI.click(findTestObject('SAP/se37_ws_123/btn_despl_derecha'))
-            //		
-            //		WebUI.click(findTestObject('SAP/se37_ws_123/btn_despl_derecha'))
-            //		
-            //		WebUI.click(findTestObject('SAP/se37_ws_123/btn_despl_derecha'))
+
             def pMoti = '1019'
 
             WebUI.delay(2)
 
             WebUI.click(findTestObject('SAP/se37_ws_123/btn_entrada_individual'))
 
-            WebUI.delay(5)
+            WebUI.delay(3)
 
             WebUI.click(findTestObject('SAP/se37_ws_123/txt_moti_entr_ind'))
 
@@ -272,7 +248,7 @@ for (int i = 1; i <= row_control; i++) {
 
             WebUI.clearText(findTestObject('SAP/se37_ws_123/txt_moti_entr_ind'))
 
-            WebUI.delay(2)
+            WebUI.delay(1)
 
             WebUI.sendKeys(findTestObject('SAP/se37_ws_123/txt_moti_entr_ind'), pMoti)
 
@@ -291,12 +267,10 @@ for (int i = 1; i <= row_control; i++) {
 
             WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
 
-            WebUI.delay(2)
-
             CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AZ', 
                 nRowEnEjecucion, 'SI')
 
-            WebUI.delay(10)
+            WebUI.delay(3)
 
             WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
 
@@ -307,7 +281,6 @@ for (int i = 1; i <= row_control; i++) {
 		
 		WebUI.callTestCase(findTestCase('101_Pages/00_CloseSap'), [:], FailureHandling.STOP_ON_FAILURE)
 
-        break
     } else if ((SAP_05_se37_WS_123 == 'true') && (i == row_control)) {
         println('<<<<<<<<<<<<<< FIN >>>>>>>>>>>>>>>')
 
@@ -316,15 +289,3 @@ for (int i = 1; i <= row_control; i++) {
         break
     }
 }
-
-/*WebUI.delay(2)
-
-WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
-
-WebUI.delay(1)
-
-WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
-
-WebUI.delay(2)*/
-
-WebUI.closeBrowser()

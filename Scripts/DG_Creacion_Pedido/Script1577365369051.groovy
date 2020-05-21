@@ -16,7 +16,7 @@ import com.kms.katalon.core.testdata.InternalData as InternalData
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-row_control = findTestData('control_jobs').getRowNumbers()
+row_control = findTestData('DGScenarios').getRowNumbers()
 
 println(('***************** CANTIDAD DE REGISTROS: ' + row_control) + ' *****************')
 
@@ -30,7 +30,7 @@ for (int i = 1; i <= row_control; i++) {
 
     println(('********************** REGISTRO N: ' + i) + ' **********************')
 
-    if (DG_Generacion_Pedido == 'false') {
+    if (DG_Generacion_Pedido == '') {
         WebUI.delay(1)
 
         WebUI.openBrowser(GlobalVariable.url_gd)

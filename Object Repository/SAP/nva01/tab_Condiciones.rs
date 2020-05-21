@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>tab_Condiciones</name>
+   <tag></tag>
+   <elementGuidId>31a5d870-771f-4123-a959-a4209b166589</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[@class='lsTbsOvfl']/div/span[contains(@id,'M0:46:2::0:4-focus')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//div[@class='lsTbsOvfl']/div/span[contains(@id,'M0:46:2::0:4-focus')]</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ref_element</name>
+      <type>Main</type>
+      <value>Object Repository/SAP/general/iframe_contenedor_todo_web</value>
+   </webElementProperties>
+</WebElementEntity>

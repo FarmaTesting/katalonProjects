@@ -110,10 +110,15 @@ class Tools {
 			WebUI.closeBrowser()
 		}
 	}
-	
+
 	@Keyword
 	def atrasF3() {
 		Keys.chord(Keys.F3)
+	}
+	
+	@Keyword
+	def enter (){
+		Keys.chord(Keys.ENTER)
 	}
 
 	/**

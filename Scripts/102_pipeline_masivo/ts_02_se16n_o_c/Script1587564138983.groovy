@@ -13,13 +13,12 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-for (def index : (1..36)) {
+
 	WebUI.callTestCase(findTestCase('SAP_se16n_orden_compras'), [('strRefExterna') : '', ('strNumPedidoSap') : '', ('strFechaCreado') : ''
 		, ('strHoraCreado') : '', ('strSolicitante') : '', ('strSector') : '*2', ('strObservacion') : '*CREADO POR UN PROCESO DE AUTOMATIZACION*'
 		, ('strAddMins') : 10], FailureHandling.STOP_ON_FAILURE)
 	
-	WebUI.delay(2)
-}
+
 
 
 

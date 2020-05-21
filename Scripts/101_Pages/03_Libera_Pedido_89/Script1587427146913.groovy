@@ -25,7 +25,6 @@ WebUI.delay(1)
 
 //*****************Hace click en selección multiple*********************//
 //WebUI.click(findTestObject('SAP/z_sd_libera_pedidos/btn_seleccion_multiple'))
-
 nRows = findTestData('DGScenarios').getRowNumbers()
 
 def listPedidoSap89_101 = []
@@ -33,38 +32,32 @@ def listPedidoSap89_101 = []
 def sortListPedidoSap89_101 = []
 
 for (int i = 1; i <= nRows; i++) {
-	
-		listPedidoSap89_101.add(findTestData('DGScenarios').getValue(41, i))
-	
-	}
-	
+    listPedidoSap89_101.add(findTestData('DGScenarios').getValue(41, i))
+}
+
 for (int i = 1; i <= nRows; i++) {
-		
-		listPedidoSap89_101.add(findTestData('DGScenarios').getValue(42, i))
-	}
+    listPedidoSap89_101.add(findTestData('DGScenarios').getValue(42, i))
+}
 
 sortListPedidoSap89_101 = listPedidoSap89_101.sort()
 
 //ingresar el pedido con numero bajo
 WebUI.setText(findTestObject('SAP/z_sd_libera_pedidos/txt_n_pedido_a_buscar'), sortListPedidoSap89_101.get(0))
 
+mayor = (sortListPedidoSap89_101.size() - 1)
+
 WebUI.delay(1)
 
 //ingresar el pedido con numero alto
-WebUI.setText(findTestObject('SAP/z_sd_libera_pedidos/txt_n_pedido_a_buscar_to'), sortListPedidoSap89_101.get(71))
+WebUI.setText(findTestObject('SAP/z_sd_libera_pedidos/txt_n_pedido_a_buscar_to'), sortListPedidoSap89_101.get(mayor))
 
 WebUI.delay(1)
 
 //WebUI.verifyElementVisible(findTestObject('SAP/z_sd_libera_pedidos/iframe_URLSPW-0'))
-
-
 //******************Completar seleccion *******************************//
 //WebUI.callTestCase(findTestCase('101_Pages/02_Liberacion_Pedido_Masiva'), [('strNumPedidoSap') : 41], FailureHandling.STOP_ON_FAILURE)
-
 //WebUI.sendKeys(findTestObject('SAP/z_sd_libera_pedidos/txt_ppup_selec_mult_celda'), Keys.chord(Keys.F8))
-
 //WebUI.delay(1)
-
 //************* Completar seleccion ************************//
 WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
 
@@ -114,7 +107,7 @@ if (WebUI.waitForElementVisible(findTestObject('SAP/z_sd_libera_pedidos/txt_no_e
 
         WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
 
-        WebUI.delay(3)
+        WebUI.delay(2)
     }
 }
 
@@ -129,4 +122,3 @@ WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.E
 WebUI.delay(2)
 
 WebUI.closeBrowser()
-

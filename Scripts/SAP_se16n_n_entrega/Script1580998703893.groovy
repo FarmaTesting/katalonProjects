@@ -15,7 +15,7 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-row_control = findTestData('control_jobs').getRowNumbers()
+row_control = findTestData('DGScenarios').getRowNumbers()
 
 println(('******************* CANTIDAD DE REGISTROS: ' + row_control) + ' ********************')
 
@@ -24,18 +24,10 @@ for (int i = 1; i <= row_control; i++) {
 
     println(('****************** REGISTRO N: ' + i) + ' ********************')
 
-    if (SAP_01_se16n_obtener_n_entrega == 'false') {
+    if (SAP_01_se16n_obtener_n_entrega == '') {
         WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
 
         WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : '/nse16n'], FailureHandling.STOP_ON_FAILURE)
-
-        //def nRowsEncontradas = findTestData('DG_Andreani').getRowNumbers()
-        //println('Filas encontradas: ' + nRowsEncontradas)
-        //WebUI.waitForElementVisible(findTestObject('SAP/general/txt_buscador_trx'), 10)
-        //WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
-        //WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/nse16n')
-        //WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
-        WebUI.delay(1)
 
         //WebUI.waitForElementVisible(findTestObject('SAP/se16n/txt_se16n_buscador_tablas'), 10)
         WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_buscador_tablas'), 'lips')
@@ -46,13 +38,13 @@ for (int i = 1; i <= row_control; i++) {
 
         WebUI.delay(1)
 
-        WebUI.waitForElementVisible(findTestObject('SAP/se16n/txt_se16n_1_3_3_segunda_celda_filtro'), 15)
+        WebUI.waitForElementVisible(findTestObject('SAP/se16n/txt_se16n_1_3_3_segunda_celda_filtro'), 10)
 
         WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_4_3_tercera_celda_filtro'), Keys.chord(Keys.CONTROL, 'f'))
 
         WebUI.delay(2)
 
-        WebUI.waitForElementVisible(findTestObject('SAP/se16n/txt_se16n_buscar_filtro'), 15)
+        WebUI.waitForElementVisible(findTestObject('SAP/se16n/txt_se16n_buscar_filtro'), 10)
 
         WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_buscar_filtro'), 'vgbel')
 
@@ -61,11 +53,9 @@ for (int i = 1; i <= row_control; i++) {
         //posible enter
         WebUI.click(findTestObject('SAP/se16n/btn_ok'))
 
-        WebUI.delay(1)
+        WebUI.delay(2)
 
         def nRowEnEjecucion = i
-
-        println('Ejecutando fila N: ' + nRowEnEjecucion)
 
         //********************************Busca el entrega 89 *******************************//
         def nPedido089 = findTestData('DGScenarios').getValue('strNumPedidoSap89', i)
@@ -80,8 +70,6 @@ for (int i = 1; i <= row_control; i++) {
 
         if (WebUI.verifyElementPresent(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 5, FailureHandling.OPTIONAL)) {
             def nEntrega1 = WebUI.getAttribute(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 'value')
-
-            println('Num entrega 089: ' + nEntrega1)
 
             CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AR', 
                 i, nEntrega1)
@@ -121,8 +109,6 @@ for (int i = 1; i <= row_control; i++) {
             CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AX', 
                 i, nEntrega2)
 
-            println('Num entrega 101: ' + nEntrega2)
-
             WebUI.delay(1)
 
             WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
@@ -158,8 +144,6 @@ for (int i = 1; i <= row_control; i++) {
             CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AY', 
                 i, nEntrega3)
 
-            println('Num entrega 106: ' + nEntrega3)
-
             WebUI.delay(1)
 
             WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
@@ -173,13 +157,12 @@ for (int i = 1; i <= row_control; i++) {
         
         WebUI.clearText(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'))
 
-        WebUI.delay(1)
+        WebUI.delay(2)
 
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'I', i, 'true')
 		
 		WebUI.callTestCase(findTestCase('101_Pages/00_CloseSap'), [:], FailureHandling.STOP_ON_FAILURE)
 
-        break
     } else if ((SAP_01_se16n_obtener_n_entrega == 'true') && (i == row_control)) {
         println('<<<<<<<<<<<<<< FIN >>>>>>>>>>>>>>>')
 
@@ -188,15 +171,3 @@ for (int i = 1; i <= row_control; i++) {
         break
     }
 }
-
-/*WebUI.delay(2)
-
-WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
-
-WebUI.delay(1)
-
-WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
-
-WebUI.delay(2)
-
-WebUI.closeBrowser()*/
