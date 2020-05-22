@@ -18,8 +18,6 @@ WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILU
 
 WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : trx], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.delay(1)
-
 //*****************Hace click en selección multiple*********************//
 //WebUI.click(findTestObject('SAP/z_sd_punto_arranque/btn_seleccion_multiple'))
 //WebUI.delay(2)
@@ -43,18 +41,40 @@ def listPedidoSap89_101_106 = []
 def sortListPedidoSap89_101_106 = []
 
 for (int i = 1; i <= nRows; i++) {
-    listPedidoSap89_101_106.add(findTestData('DGScenarios').getValue(41, i))
+	
+	pedidoSap89 = findTestData('DGScenarios').getValue('strNumPedidoSap89', i)
+	
+	if (pedidoSap89 != '') {
+	
+    listPedidoSap89_101_106.add(pedidoSap89)
+	}
 }
 
 for (int i = 1; i <= nRows; i++) {
-    listPedidoSap89_101_106.add(findTestData('DGScenarios').getValue(42, i))
+	
+	pedidoSap101 = findTestData('DGScenarios').getValue('strNumPedidoSap101', i)
+	
+	if (pedidoSap101 != '') {
+	
+    listPedidoSap89_101_106.add(pedidoSap101)
+	}
 }
 
 for (int i = 1; i <= nRows; i++) {
-    listPedidoSap89_101_106.add(findTestData('DGScenarios').getValue(43, i))
+	
+	pedidoSap106 = findTestData('DGScenarios').getValue('strNumPedidoSap106', i)
+	
+	if (pedidoSap106 != '') {
+	
+    listPedidoSap89_101_106.add(pedidoSap106)
+	}
 }
 
 sortListPedidoSap89_101_106 = listPedidoSap89_101_106.sort()
+
+println(sortListPedidoSap89_101_106.size())
+
+println('******** menor: ' + sortListPedidoSap89_101_106.get(0))
 
 WebUI.sendKeys(findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_pedidosap'), sortListPedidoSap89_101_106.get(
         0))
@@ -62,6 +82,8 @@ WebUI.sendKeys(findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_p
 mayor = sortListPedidoSap89_101_106.size() - 1
 
 WebUI.delay(1)
+
+println('******** mayor:' + sortListPedidoSap89_101_106.get(mayor))
 
 WebUI.sendKeys(findTestObject('SAP/z_sd_punto_arranque/txt_nro_doc_comercial_n_pedidosap_to'), sortListPedidoSap89_101_106.get(mayor))
 

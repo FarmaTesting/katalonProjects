@@ -32,14 +32,26 @@ def listPedidoSap89_101 = []
 def sortListPedidoSap89_101 = []
 
 for (int i = 1; i <= nRows; i++) {
-    listPedidoSap89_101.add(findTestData('DGScenarios').getValue(41, i))
+    pedidoSap89 = findTestData('DGScenarios').getValue('strNumPedidoSap89', i)
+
+    if (pedidoSap89 != '') {
+        listPedidoSap89_101.add(pedidoSap89)
+    }
 }
 
 for (int i = 1; i <= nRows; i++) {
-    listPedidoSap89_101.add(findTestData('DGScenarios').getValue(42, i))
+    pedidoSap101 = findTestData('DGScenarios').getValue('strNumPedidoSap101', i)
+
+    if (pedidoSap101 != '') {
+        listPedidoSap89_101.add(pedidoSap101)
+    }
 }
 
 sortListPedidoSap89_101 = listPedidoSap89_101.sort()
+
+println(sortListPedidoSap89_101.size())
+
+println('******** menor: ' + sortListPedidoSap89_101.get(0))
 
 //ingresar el pedido con numero bajo
 WebUI.setText(findTestObject('SAP/z_sd_libera_pedidos/txt_n_pedido_a_buscar'), sortListPedidoSap89_101.get(0))
@@ -47,6 +59,8 @@ WebUI.setText(findTestObject('SAP/z_sd_libera_pedidos/txt_n_pedido_a_buscar'), s
 mayor = (sortListPedidoSap89_101.size() - 1)
 
 WebUI.delay(1)
+
+println('******* mayor: ' + sortListPedidoSap89_101.get(mayor))
 
 //ingresar el pedido con numero alto
 WebUI.setText(findTestObject('SAP/z_sd_libera_pedidos/txt_n_pedido_a_buscar_to'), sortListPedidoSap89_101.get(mayor))

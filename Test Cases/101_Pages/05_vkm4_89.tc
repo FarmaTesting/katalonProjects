@@ -12,11 +12,4 @@
       <masked>false</masked>
       <name>trx</name>
    </variable>
-   <variable>
-      <defaultValue>41</defaultValue>
-      <description></description>
-      <id>8ef531fa-1f31-4b16-88b2-4fd7884331fb</id>
-      <masked>false</masked>
-      <name>strNumPedidoSap</name>
-   </variable>
 </TestCaseEntity>

@@ -15,7 +15,36 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
+nRows = findTestData('DGScenarios').getRowNumbers()
 
-nc_generado = 'Documento 92005189 grabado.'
+def listPedidoSap89_101 = []
 
-println (nc_generado.substring(10, 18))
+def sortListPedidoSap89_101 = []
+
+for (int i = 1; i <= nRows; i++) {
+	
+	pedidoSap89 = findTestData('DGScenarios').getValue('strNumPedidoSap89', i)
+	
+	if(pedidoSap89 != ''){
+		listPedidoSap89_101.add(pedidoSap89)
+	}
+	
+}
+
+for (int i = 1; i <= nRows; i++) {
+	
+	pedidoSap101 = findTestData('DGScenarios').getValue('strNumPedidoSap101', i)
+	
+	if (pedidoSap101 != '') {
+	
+		listPedidoSap89_101.add(pedidoSap101)
+	
+	}
+}
+
+sortListPedidoSap89_101 = listPedidoSap89_101.sort()
+
+println (sortListPedidoSap89_101.size())
+
+println (sortListPedidoSap89_101)
+
