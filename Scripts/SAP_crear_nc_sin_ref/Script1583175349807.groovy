@@ -33,7 +33,7 @@ CustomKeywords.'utilities.Tools.espera'(2000)
 
 CustomKeywords.'utilities.Sap.typeEnter'()
 
-WebUI.callTestCase(findTestCase('100 _SAP/Login_Sap'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('100 _SAP/Login_Sap_client'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('100 _SAP/Z_SD_CARGA_NC'), [('programa') : 'Z_SD_CARGA_NC'], FailureHandling.STOP_ON_FAILURE)
 

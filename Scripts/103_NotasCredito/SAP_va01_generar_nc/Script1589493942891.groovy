@@ -42,14 +42,21 @@ for (int i = 1; i <= row_control; i++) {
         WebUI.delay(1)
 
         WebUI.sendKeys(findTestObject('SAP/nva01/txt_n_factura'), Keys.chord(Keys.F5))
+		
+		WebUI.delay(1)
 
         popup_msg = WebUI.verifyElementVisible(findTestObject('SAP/nva01/ppup_informacion'), FailureHandling.OPTIONAL)
 		
 		clickable_popup_msg = WebUI.verifyElementClickable(findTestObject('SAP/nva01/btn_ppup_continuar'), FailureHandling.OPTIONAL)
 
-        if (popup_msg == clickable_popup_msg) {
+        if (popup_msg == true && clickable_popup_msg == true) {
+			
+			WebUI.delay(1)
+			
             WebUI.click(findTestObject('SAP/nva01/btn_ppup_continuar'))
         }
+		
+		WebUI.delay(1)
         
         cabecera = WebUI.verifyElementVisible(findTestObject('SAP/nva01/btn_cabecera'), FailureHandling.OPTIONAL)
 
@@ -126,9 +133,14 @@ for (int i = 1; i <= row_control; i++) {
 		
 		clickable_popup_msg = WebUI.verifyElementClickable(findTestObject('SAP/nva01/btn_ppup_continuar'), FailureHandling.OPTIONAL)
 
-        if (popup_msg == clickable_popup_msg) {
+        if (popup_msg == true && clickable_popup_msg == true) {
+			
+			WebUI.delay(1)
+			
             WebUI.click(findTestObject('SAP/nva01/btn_ppup_continuar'))
         }
+		
+		WebUI.delay(1)
         
         cabecera = WebUI.verifyElementVisible(findTestObject('SAP/nva01/btn_cabecera'), FailureHandling.OPTIONAL)
 

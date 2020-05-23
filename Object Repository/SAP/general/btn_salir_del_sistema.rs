@@ -6,6 +6,10 @@
    <elementGuidId>3d7695a7-90fc-464b-bb25-650a6185eb94</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>BASIC</key>
+         <value>//a[(text() = 'Salir del sistema' or . = 'Salir del sistema')]</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
          <value>//a[@id='__AGIM0:D:0::15_btn']/span</value>
       </entry>
@@ -27,18 +31,25 @@
       <value>urBtnCntTxt</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
       <value>Salir del sistema</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;__AGIM0:D:0::15_btn&quot;)/span[@class=&quot;urBtnCntTxt&quot;]</value>
+      <value>//a[(text() = 'Salir del sistema' or . = 'Salir del sistema')]</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ref_element</name>
+      <type>Main</type>
+      <value>Object Repository/SAP/general/iframe_contenedor_todo_web</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

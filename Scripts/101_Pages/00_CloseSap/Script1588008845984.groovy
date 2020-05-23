@@ -14,7 +14,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.delay(2)
+WebUI.delay(1)
 
 WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
 
@@ -23,6 +23,14 @@ WebUI.delay(1)
 WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
 WebUI.delay(2)
+
+WebUI.click(findTestObject('SAP/general/btn_salir_del_sistema'))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('SAP/general/btn_salir_sistema_si'))
+
+WebUI.delay(1)
 
 WebUI.closeBrowser()
 

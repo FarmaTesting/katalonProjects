@@ -15,36 +15,27 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-nRows = findTestData('DGScenarios').getRowNumbers()
+WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
 
-def listPedidoSap89_101 = []
+WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : '/nva01'], FailureHandling.STOP_ON_FAILURE)
 
-def sortListPedidoSap89_101 = []
+WebUI.delay(2)
 
-for (int i = 1; i <= nRows; i++) {
-	
-	pedidoSap89 = findTestData('DGScenarios').getValue('strNumPedidoSap89', i)
-	
-	if(pedidoSap89 != ''){
-		listPedidoSap89_101.add(pedidoSap89)
-	}
-	
-}
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
 
-for (int i = 1; i <= nRows; i++) {
-	
-	pedidoSap101 = findTestData('DGScenarios').getValue('strNumPedidoSap101', i)
-	
-	if (pedidoSap101 != '') {
-	
-		listPedidoSap89_101.add(pedidoSap101)
-	
-	}
-}
+WebUI.delay(1)
 
-sortListPedidoSap89_101 = listPedidoSap89_101.sort()
+WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
 
-println (sortListPedidoSap89_101.size())
+WebUI.delay(2)
 
-println (sortListPedidoSap89_101)
+WebUI.click(findTestObject('SAP/general/btn_salir_del_sistema'))
+
+WebUI.delay(2)
+
+WebUI.click(findTestObject('SAP/general/btn_salir_sistema_si'))
+
+WebUI.delay(1)
+
+WebUI.closeBrowser()
 
