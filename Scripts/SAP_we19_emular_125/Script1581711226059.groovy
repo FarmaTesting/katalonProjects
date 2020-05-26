@@ -130,7 +130,7 @@ for (int i = 1; i <= row_control; i++) {
 
             WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok'))
 
-            WebUI.delay(10)
+            WebUI.delay(15)
 
             WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), 10)
 
@@ -138,7 +138,7 @@ for (int i = 1; i <= row_control; i++) {
 
             WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'))
 
-            WebUI.delay(3)
+            WebUI.delay(4)
 
             WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/txt_info_cabecera'), 10)
 
@@ -170,7 +170,7 @@ for (int i = 1; i <= row_control; i++) {
 
             WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok'))
 
-            WebUI.delay(10)
+            WebUI.delay(15)
 
             WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), 10)
 
@@ -178,7 +178,7 @@ for (int i = 1; i <= row_control; i++) {
 
             WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'))
 
-            WebUI.delay(3)
+            WebUI.delay(4)
 
             WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/txt_info_cabecera'), 10)
 
@@ -202,7 +202,7 @@ for (int i = 1; i <= row_control; i++) {
 
             WebUI.sendKeys(findTestObject('Object Repository/SAP/se19_ws_125/txt_info_cabecera'), Keys.chord(Keys.F8))
 
-            WebUI.delay(10)
+            WebUI.delay(2)
 
             WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok'), 10)
 
@@ -223,8 +223,6 @@ for (int i = 1; i <= row_control; i++) {
             CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BA', 
                 nRowEnEjecucion, 'SI')
         }
-		
-		WebUI.delay(1)
         
         CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'J', i, 'true')
 		
