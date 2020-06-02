@@ -15,27 +15,5 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : '/nva01'], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.delay(2)
-
-WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
-
-WebUI.delay(1)
-
-WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
-
-WebUI.delay(2)
-
-WebUI.click(findTestObject('SAP/general/btn_salir_del_sistema'))
-
-WebUI.delay(2)
-
-WebUI.click(findTestObject('SAP/general/btn_salir_sistema_si'))
-
-WebUI.delay(1)
-
-WebUI.closeBrowser()
+WebUI.callTestCase(findTestCase('099 - Tests/Test - Select Case'), [('variable') : var2, ('variable_0') : 1], FailureHandling.STOP_ON_FAILURE)
 

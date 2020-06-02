@@ -14,12 +14,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.util.KeywordUtil
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-CustomKeywords.'utilities.Tools.espera'(3000)
+println (variable + '' + variable_0)
 
-//CustomKeywords.'utilities.Sikuli.type'('C:\\FarmaTesting\\katalonProjects\\Resources\\NC_ROMAN_QAS.csv')
 
-//CustomKeywords.'utilities.Sikuli.type'('C\\a')
 
-CustomKeywords.'utilities.Sikuli.paste'('C:\\FarmaTesting\\katalonProjects\\Resources\\NC_ROMAN_QAS.csv')

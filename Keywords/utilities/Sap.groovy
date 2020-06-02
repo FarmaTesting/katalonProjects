@@ -85,13 +85,13 @@ public class Sap {
 		h.espera(500)
 		r.type(Key.F8)
 	}
-	
+
 	@Keyword
 	def typeRutaNC() throws FindFailed {
-		
+
 		String ruta = System.getProperty("user.dir") + "\\Resources\\" + "NC_ROMAN_QAS.csv"
 		KeywordUtil.logInfo(ruta)
-		
+
 		h.espera(500)
 		r.type(ruta)
 	}

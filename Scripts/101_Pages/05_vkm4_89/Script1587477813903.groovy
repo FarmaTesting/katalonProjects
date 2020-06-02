@@ -25,6 +25,8 @@ WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : trx], F
 //******************Completar seleccion *******************************//
 nRows = findTestData('DGScenarios').getRowNumbers()
 
+List ped_menor_mayor = CustomKeywords.'utilities.Tools.pedidosSap89_101'(nRows, 'DGScenarios')
+
 /*for (int i = 1; i <= nRows; i++) {
 	pedidoSap = findTestData('DGScenarios').getValue(strNumPedidoSap, i)
 	xpath = (('//td[contains(@id,"[' + i) + ',2]")]/div/span/input')
@@ -35,7 +37,7 @@ nRows = findTestData('DGScenarios').getRowNumbers()
 	WebUI.delay(2)
 }*/
 //WebUI.sendKeys(findTestObject('SAP/vkm4/txt_ppup_selec_mult_celda'), Keys.chord(Keys.F8))
-def listPedidoSap89_101 = []
+/*def listPedidoSap89_101 = []
 
 def sortListPedidoSap89_101 = []
 
@@ -59,24 +61,23 @@ sortListPedidoSap89_101 = listPedidoSap89_101.sort()
 
 println(sortListPedidoSap89_101.size())
 
-println('******** menor: ' + sortListPedidoSap89_101.get(0))
+println('******** menor: ' + sortListPedidoSap89_101.get(0))*/
+WebUI.delay(5)
 
-WebUI.sendKeys(findTestObject('SAP/vkm4/txt_doc_comercial_n_pedido_sap'), sortListPedidoSap89_101.get(0))
+WebUI.sendKeys(findTestObject('SAP/vkm4/txt_doc_comercial_n_pedido_sap'), ped_menor_mayor.get(0))
 
-mayor = (sortListPedidoSap89_101.size() - 1)
-
+//mayor = (sortListPedidoSap89_101.size() - 1)
 WebUI.delay(1)
 
-println('******* mayor: ' + sortListPedidoSap89_101.get(mayor))
-
-WebUI.sendKeys(findTestObject('SAP/vkm4/txt_doc_comercial_n_pedido_sap_to'), sortListPedidoSap89_101.get(mayor))
+//println('******* mayor: ' + sortListPedidoSap89_101.get(mayor))
+WebUI.sendKeys(findTestObject('SAP/vkm4/txt_doc_comercial_n_pedido_sap_to'), ped_menor_mayor.get(1))
 
 //**********************************************************************//
 WebUI.delay(1)
 
 WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
 
-WebUI.delay(2)
+WebUI.delay(3)
 
 def msj_no_registro = WebUI.verifyElementVisible(findTestObject('SAP/vkm4/txt_no_encontro_registro'), FailureHandling.OPTIONAL)
 
@@ -91,8 +92,7 @@ if (msj_no_registro) {
 
     WebUI.delay(2)
 
-    WebUI.closeBrowser( //WebUI.click(findTestObject('SAP/vkm4/chk_seleccion_pedido'))
-        )
+    WebUI.closeBrowser()
 } else {
     WebUI.delay(1)
 
@@ -116,15 +116,18 @@ if (msj_no_registro) {
 
     WebUI.click(findTestObject('SAP/vkm4/btn_si_finalizar_lista'))
 
-    WebUI.delay(2)
+    WebUI.delay(3)
+	
+	WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
+	
+	WebUI.delay(1)
+	
+	WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
+	
+	WebUI.delay(2)
+	
+	WebUI.closeBrowser()
 }
 
-WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), '/n')
 
-WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.ENTER))
-
-WebUI.delay(2)
-
-WebUI.closeBrowser()
