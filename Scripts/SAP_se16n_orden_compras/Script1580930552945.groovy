@@ -61,15 +61,19 @@ for (int i = 1; i <= row_control; i++) {
 
         WebUI.click(findTestObject('SAP/se16n/btn_ok'))
 
-        def refExternaRemito = WebUI.concatenate(findTestData('DGScenarios').getValue('param_comitente', nRowEnEjecucion), 
-            '00000000', findTestData('DGScenarios').getValue('out_n_remito', nRowEnEjecucion))
-
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AW', nRowEnEjecucion, 
-            refExternaRemito)
+        //def refExternaRemito = WebUI.concatenate(findTestData('DGScenarios').getValue('param_comitente', nRowEnEjecucion), 
+        //    '00000000', findTestData('DGScenarios').getValue('out_n_remito', nRowEnEjecucion))
+		
+		def refExternaRemito = (findTestData('DGScenarios').getValue('out_rem_elect_i141',nRowEnEjecucion)).split(';')
+		
+		String arraySplited = refExternaRemito[0]		
+		
+		CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AW', nRowEnEjecucion, 
+        arraySplited)
 
         WebUI.delay(1)
 
-        WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'), refExternaRemito)
+        WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'), arraySplited)
 
         WebUI.delay(1)
 
