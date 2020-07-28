@@ -10,5 +10,5 @@ set Sec=%dt:~12,2%
 set stamp=%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%
 
 copy "C:\FarmaTesting\katalonProjects\Resources\db_farmanet_escenarios_Andreani.xlsx" "C:\FarmaTesting\katalonProjects\Resources\procesados\db_farmanet_escenarios_Andreani- %stamp%.xlsx"
-
+ftp -s:ftp_upload.txt
 copy "C:\FarmaTesting\katalonProjects\Resources\backup\db_farmanet_escenarios_Andreani.xlsx" "C:\FarmaTesting\katalonProjects\Resources\db_farmanet_escenarios_Andreani.xlsx"

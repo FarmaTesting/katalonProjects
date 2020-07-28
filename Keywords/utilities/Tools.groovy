@@ -140,48 +140,48 @@ class Tools {
 		KeywordUtil.logInfo(title + " " + var)
 
 	}
-	
-	
+
+
 	@Keyword
 	def List pedidosSap89_101 (int nRows, String dataFile) {
-		
+
 		def listPedidoSap89_101 = []
-		
+
 		def sortListPedidoSap89_101 = []
-		
+
 		for (int i = 1; i <= nRows; i++) {
 			String pedidoSap89 = findTestData(dataFile).getValue('strNumPedidoSap89', i)
-		
+
 			if (pedidoSap89 != '') {
 				listPedidoSap89_101.add(pedidoSap89)
 			}
 		}
-		
+
 		for (int i = 1; i <= nRows; i++) {
 			String pedidoSap101 = findTestData(dataFile).getValue('strNumPedidoSap101', i)
-		
+
 			if (pedidoSap101 != '') {
 				listPedidoSap89_101.add(pedidoSap101)
 			}
 		}
-		
+
 		sortListPedidoSap89_101 = listPedidoSap89_101.sort()
-		
+
 		String menor = sortListPedidoSap89_101.get(0)
-		
+
 		println('******** menor: ' + menor)
-		
+
 		String mayor = sortListPedidoSap89_101.get(sortListPedidoSap89_101.size() - 1)
-		
+
 		println('******* mayor: ' + mayor)
-		
+
 		def menor_mayor = []
-		
+
 		menor_mayor.add(menor)
 		menor_mayor.add(mayor)
-		
+
 		return menor_mayor
-		
+
 	}
 
 

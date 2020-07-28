@@ -1,0 +1,6 @@
+open "sftp.farmanet.net"
+"FTPQ_ANDREANI"
+"Ftpq_and2017"
+cd out/AutomatizacionTesting
+put C:\FarmaTesting\katalonProjects\Resources\db_farmanet_escenarios_Andreani.xlsx
+bye
