@@ -1084,3 +1084,48 @@
 [0702/094731.252:ERROR:process_info.cc(556)] ReadMemoryInfo failed
 [0702/094731.252:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
 [0702/094731.252:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Se intentó obtener acceso a un proceso que está cerrándose. (0xc000010a)
+[0731/171722.959:ERROR:process_info.cc(329)] VirtualQueryEx: Acceso denegado. (0x5)
+[0731/171722.967:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0731/171722.967:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0731/171722.968:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Se intentó obtener acceso a un proceso que está cerrándose. (0xc000010a)
+[0731/172251.367:ERROR:process_info.cc(329)] VirtualQueryEx: Acceso denegado. (0x5)
+[0731/172251.371:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0731/172251.372:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0731/172251.372:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Se intentó obtener acceso a un proceso que está cerrándose. (0xc000010a)
+[0731/174848.149:ERROR:process_info.cc(329)] VirtualQueryEx: Acceso denegado. (0x5)
+[0731/174848.153:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0731/174848.153:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0731/174848.154:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Se intentó obtener acceso a un proceso que está cerrándose. (0xc000010a)
+[0731/180004.936:ERROR:process_info.cc(329)] VirtualQueryEx: Acceso denegado. (0x5)
+[0731/180004.939:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0731/180004.940:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0731/180004.940:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Se intentó obtener acceso a un proceso que está cerrándose. (0xc000010a)
+[0803/110905.365:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.375:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.375:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.375:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.375:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.376:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.376:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.376:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.376:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.376:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.377:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.377:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.377:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.377:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.377:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.378:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.378:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0803/110905.378:ERROR:exception_snapshot_win.cc(98)] thread ID 51884 not found in process
+[0805/162306.406:ERROR:process_info.cc(329)] VirtualQueryEx: Acceso denegado. (0x5)
+[0805/162306.411:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0805/162306.411:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0805/162306.412:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Se intentó obtener acceso a un proceso que está cerrándose. (0xc000010a)
+[0805/173939.070:ERROR:process_info.cc(329)] VirtualQueryEx: Acceso denegado. (0x5)
+[0805/173939.074:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0805/173939.074:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0805/173939.075:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Se intentó obtener acceso a un proceso que está cerrándose. (0xc000010a)
+[0805/192015.265:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0805/192015.271:ERROR:exception_snapshot_win.cc(98)] thread ID 28164 not found in process
+[0805/192015.271:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Se intentó obtener acceso a un proceso que está cerrándose. (0xc000010a)

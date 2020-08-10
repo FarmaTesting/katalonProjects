@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Poscondiciones-img</name>
+   <name>boton_documento</name>
    <tag></tag>
-   <elementGuidId>f3484caa-4583-4324-a839-3408106e48ec</elementGuidId>
+   <elementGuidId>599fc332-5218-41c5-b2d0-828aee9a7db9</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id = 'M0:46:2:3B256:2:2::0:34-img' and @src = '/sap/public/icmandir/its/lsgui/themes/legacy/images/icons/ltr/s_xprice.gif' and @ref_element = 'Object Repository/SAP/nva01/iframe']</value>
+         <value>//*[@id = 'wnd[0]/sbar_msg-icon' and @ref_element = 'Object Repository/SAP/nva01/iframe_Copyright19962013SAPAG AllRightsReserved_itsframe1_202008051923438826350']</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//img[@id='M0:46:2:3B256:2:2::0:34-img']</value>
+         <value>//td[@id='wnd[0]/sbar_msg-icon']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -21,49 +21,35 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>img</value>
+      <value>td</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>border</name>
+      <name>valign</name>
       <type>Main</type>
-      <value>0</value>
+      <value>top</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>M0:46:2:3B256:2:2::0:34-img</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>src</name>
-      <type>Main</type>
-      <value>/sap/public/icmandir/its/lsgui/themes/legacy/images/icons/ltr/s_xprice.gif</value>
+      <value>wnd[0]/sbar_msg-icon</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>urImgBtn lsButton__image</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>align</name>
-      <type>Main</type>
-      <value>absmiddle</value>
+      <value>lsMsgBarIcn lsMsgBarIconOk</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;M0:46:2:3B256:2:2::0:34-img&quot;)</value>
+      <value>id(&quot;wnd[0]/sbar_msg-icon&quot;)</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -77,48 +63,48 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//img[@id='M0:46:2:3B256:2:2::0:34-img']</value>
+      <value>//td[@id='wnd[0]/sbar_msg-icon']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//a[@id='M0:46:2:3B256:2:2::0:34']/img</value>
+      <value>//div[@id='wnd[0]/sbar_msg']/table/tbody/tr/td</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Bloqueo reclam.'])[1]/following::img[11]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Bloqueo reclam.'])[1]/following::td[2880]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Clave de reclamación'])[1]/following::img[11]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Clave de reclamación'])[1]/following::td[2882]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='FEQ (200)'])[1]/preceding::img[7]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sol. NC Ajuste Imp. 61142641 se ha grabado'])[1]/preceding::td[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='FSAPFEQ00'])[1]/preceding::img[11]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='FEQ (200)'])[1]/preceding::td[5]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[10]/div/a/img</value>
+      <value>//td/table/tbody/tr/td/div/table/tbody/tr/td</value>
    </webElementXpaths>
 </WebElementEntity>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>CICd_Tabla_23</name>
+   <name>ClCd</name>
    <tag></tag>
-   <elementGuidId>334c9669-a66d-4ec8-ba07-c08bbd0e7fc6</elementGuidId>
+   <elementGuidId>84cc6cc8-a428-4c53-aed5-63d9d8ae1903</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//td[@id='tbl893[23,2]']</value>
+         <key>BASIC</key>
+         <value>//input[contains(@id, '[22,2]_c')][count(. | //*[@ref_element = 'Object Repository/SAP/general/iframe_contenedor_todo_web']) = count(//*[@ref_element = 'Object Repository/SAP/general/iframe_contenedor_todo_web'])]</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@id = 'tbl893[23,2]' and @ref_element = 'Object Repository/SAP/general/iframe_contenedor_todo_web']</value>
+         <key>XPATH</key>
+         <value>//input[@id='tbl59401[14,2]_c']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -21,84 +21,63 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>td</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>id</name>
-      <type>Main</type>
-      <value>tbl893[23,2]</value>
+      <value>input</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>subct</name>
+      <name>ct</name>
       <type>Main</type>
-      <value>STC</value>
+      <value>CBS</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>lsdata</name>
+      <name>type</name>
       <type>Main</type>
-      <value>{2:'EDIT',7:{SID:'wnd[0]/usr/tabsTAXI_TABSTRIP_ITEM/tabpT\\06/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN/ctxtKOMV-KSCHL[1,22]',Type:'SAPTABLECSCELL'}}</value>
+      <value>text</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>ctv</name>
+      <name>autocomplete</name>
       <type>Main</type>
-      <value>C</value>
+      <value>off</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>lsmatrixrowindex</name>
+      <name>maxlength</name>
       <type>Main</type>
-      <value>23</value>
+      <value>4</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>lsmatrixcolindex</name>
+      <name>tabindex</name>
       <type>Main</type>
-      <value>2</value>
+      <value>0</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>acf</name>
+      <name>ti</name>
       <type>Main</type>
-      <value>CSEL</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ut</name>
-      <type>Main</type>
-      <value>3</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>align</name>
-      <type>Main</type>
-      <value>left</value>
+      <value>0</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>urSTC urST5HasContentDiv urST5L urST3TDIn urCursorClickable urStd urST3Cl urST4CellActive</value>
+      <value>lsField__input</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;tbl893[23,2]&quot;)</value>
+      <value>//input[contains(@id, '[22,2]_c')]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -112,34 +91,34 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//td[@id='tbl893[23,2]']</value>
+      <value>//input[@id='tbl59401[14,2]_c']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//table[@id='M0:46:2:3B261:2-mrss-cont-left-content']/tbody/tr[23]/td[3]</value>
+      <value>//span[@id='tbl59401[14,2]_c-r']/input</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Est.'])[1]/following::td[72]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Est.'])[1]/following::input[14]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='MonCd'])[1]/following::td[74]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='MonCd'])[1]/following::input[14]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//tr[23]/td[3]</value>
+      <value>//tr[14]/td[3]/div/span/input</value>
    </webElementXpaths>
 </WebElementEntity>

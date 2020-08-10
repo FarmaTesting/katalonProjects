@@ -20,10 +20,12 @@ println(('******************* CANTIDAD DE REGISTROS: ' + row_control) + ' ******
 
 for (int i = 1; i <= row_control; i++) {
     SAP_va01_generar_nc = findTestData('control_jobs').getValue('SAP_va01_generar_nc', i)
+	descuento_89 = findTestData('DGScenarios').getValue('descuento_89', i)
+	descuento_101 = findTestData('DGScenarios').getValue('descuento_101', i)
 
     println(('****************** REGISTRO N: ' + i) + ' ********************')
 
-    if (SAP_va01_generar_nc == '') {
+    if (SAP_va01_generar_nc == '' && descuento_89 !='' && descuento_101 !='') {
         WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
 
         WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : '/nva01'], FailureHandling.STOP_ON_FAILURE)

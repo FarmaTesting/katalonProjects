@@ -3,15 +3,15 @@
    <description></description>
    <name>Posicion</name>
    <tag></tag>
-   <elementGuidId>2542a10e-40f7-4134-965e-28608251c436</elementGuidId>
+   <elementGuidId>5b2998e2-a32d-452b-a31e-c49223cfd3ac</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id = 'tbl33239[1,1]_c' and @type = 'text' and @name = 'tbl33239[1,1]_c' and @ref_element = 'Object Repository/SAP/nva01/iframe_Copyright19962013SAPAG AllRightsReserved_itsframe1_202007222001358356390']</value>
+         <value>//input[contains(@id, '[1,1]_c')][count(. | //*[@type = 'text']) = count(//*[@type = 'text'])]</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='tbl33239[1,1]_c']</value>
+         <value>//input[contains(@id, '[1,1]_c')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -24,25 +24,11 @@
       <value>input</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>id</name>
-      <type>Main</type>
-      <value>tbl33239[1,1]_c</value>
-   </webElementProperties>
-   <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ct</name>
       <type>Main</type>
       <value>CBS</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>lsdata</name>
-      <type>Main</type>
-      <value>{0:'FREETEXT',4:'10',6:true,14:'SERVER',16:false,19:false,20:{SID:'wnd[0]/usr/tabsTAXI_TABSTRIP_OVERVIEW/tabpT\\01/ssubSUBSCREEN_BODY:SAPMV45A:4414/subSUBSCREEN_TC:SAPMV45A:4902/tblSAPMV45ATCTRL_U_ERF_GUTLAST/txtVBAP-POSNR[0,0]',Type:'GuiTextField',focusable:'X',maxlen:'6'},24:'FILL_FIXED_LAYOUT'}</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -110,16 +96,9 @@
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>name</name>
-      <type>Main</type>
-      <value>tbl33239[1,1]_c</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;tbl33239[1,1]_c&quot;)</value>
+      <value>//input[contains(@id, '[1,1]_c')]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -133,14 +112,14 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@id='tbl33239[1,1]_c']</value>
+      <value>//input[@id='tbl1453[1,1]_c']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//span[@id='tbl33239[1,1]_c-r']/input</value>
+      <value>//span[@id='tbl1453[1,1]_c-r']/input</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -161,14 +140,14 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='FEQ (200)'])[1]/preceding::input[1250]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='FEQ (200)'])[1]/preceding::input[860]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='FSAPFEQ00'])[1]/preceding::input[1250]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='FSAPFEQ00'])[1]/preceding::input[860]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>

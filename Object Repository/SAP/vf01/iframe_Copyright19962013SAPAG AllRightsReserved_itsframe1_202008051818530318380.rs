@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Table_Importe_4Column</name>
+   <name>iframe_Copyright19962013SAPAG AllRightsReserved_itsframe1_202008051818530318380</name>
    <tag></tag>
-   <elementGuidId>34c89e55-67cf-4d86-be60-9687e8e609a7</elementGuidId>
+   <elementGuidId>bb7240be-8019-47c1-b289-2cfe22898680</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//td[@id='tbl86145[1,4]']</value>
+         <value>//iframe[@id='ITSFRAME1']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -17,125 +17,97 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>td</value>
+      <value>iframe</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>tbl86145[1,4]</value>
+      <value>ITSFRAME1</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>subct</name>
+      <name>name</name>
       <type>Main</type>
-      <value>STC</value>
+      <value>itsframe1_20200805181853.0318380 </value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>lsdata</name>
-      <type>Main</type>
-      <value>{2:'EDIT',7:{SID:'wnd[0]/usr/tabsTAXI_TABSTRIP_ITEM/tabpT\\06/ssubSUBSCREEN_BODY:SAPLV69A:6201/tblSAPLV69ATCTRL_KONDITIONEN/txtKOMV-KBETR[3,0]',Type:'SAPTABLECSCELL'}}</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ctv</name>
-      <type>Main</type>
-      <value>C</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>lsmatrixrowindex</name>
+      <name>noresize</name>
       <type>Main</type>
       <value>1</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>lsmatrixcolindex</name>
+      <name>frameborder</name>
       <type>Main</type>
-      <value>4</value>
+      <value>0</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>acf</name>
+      <name>framespacing</name>
       <type>Main</type>
-      <value>CSEL</value>
+      <value>0</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>ut</name>
+      <name>border</name>
       <type>Main</type>
-      <value>3</value>
+      <value>0</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>align</name>
+      <name>src</name>
       <type>Main</type>
-      <value>left</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>class</name>
-      <type>Main</type>
-      <value>urSTC urST5HasContentDiv urST5L urST3TDIn urCursorClickable urStd urST3Cl urST4CellActive</value>
+      <value>about:blank</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;tbl86145[1,4]&quot;)</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ref_element</name>
-      <type>Main</type>
-      <value>Object Repository/SAP/general/iframe_contenedor_todo_web</value>
+      <value>id(&quot;ITSFRAME1&quot;)</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//td[@id='tbl86145[1,4]']</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:idRelative</name>
-      <type>Main</type>
-      <value>//table[@id='M0:46:2:3B261:2-mrss-cont-none-content']/tbody/tr/td[2]</value>
+      <value>//iframe[@id='ITSFRAME1']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Est.'])[1]/following::td[81]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Copyright © 1996–2013 SAP AG. All Rights Reserved'])[1]/following::iframe[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='MonCd'])[1]/following::td[83]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Capture object:'])[1]/preceding::iframe[2]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Alt'])[1]/preceding::iframe[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//td[2]/div/div/table/tbody/tr/td[2]</value>
+      <value>//iframe[2]</value>
    </webElementXpaths>
 </WebElementEntity>
