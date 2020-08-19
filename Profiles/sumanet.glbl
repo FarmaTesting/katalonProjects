@@ -11,7 +11,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Sumanet User</description>
-      <initValue>'tester'</initValue>
+      <initValue>'testerfnet'</initValue>
       <name>user</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

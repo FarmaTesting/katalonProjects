@@ -10,6 +10,7 @@ set stamp=%YYYY%-%MM%-%DD%_%HH%-%Min%
 
 cd C:\FarmaTesting\katalonProjects\Resources
 copy "C:\FarmaTesting\katalonProjects\Resources\db_farmanet_escenarios_Andreani.xlsx" "C:\FarmaTesting\katalonProjects\Resources\procesados\db_farmanet_escenarios_Andreani- %stamp%.xlsx"
-ftp -s:ftp_upload.txt
+copy "C:\FarmaTesting\katalonProjects\Resources\db_farmanet_escenarios_Andreani.xlsx" "\\fsrvfs1hq\FNETFTPQ03\out\AutomatizacionTesting\db_farmanet_escenarios_Andreani- %stamp%.xlsx"
+rem ftp -s:ftp_upload.txt
 copy "C:\FarmaTesting\katalonProjects\Resources\backup\db_farmanet_escenarios_Andreani.xlsx" "C:\FarmaTesting\katalonProjects\Resources\db_farmanet_escenarios_Andreani.xlsx"
-pause
+
