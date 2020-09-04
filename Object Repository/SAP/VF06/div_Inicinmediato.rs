@@ -1,75 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>ui_menu_Lote</name>
+   <name>div_Inicinmediato</name>
    <tag></tag>
-   <elementGuidId>c7a1da27-e47a-43cd-b5b9-92911152e364</elementGuidId>
+   <elementGuidId>e236d9d7-863e-4ee5-a93f-f923d17d8aea</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>/html/body/ul[2]/li/a[contains(@id, 'ui-id-')]</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
-         <value>//ul[@id='ui-id-10']/li</value>
+         <value>//div[@id='rli12330']/div</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>li</value>
+      <value>div</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>ui-menu-item</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>role</name>
-      <type>Main</type>
-      <value>presentation</value>
+      <value>lsRLILayoutPadless</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Inic.inmediato</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>/html/body/ul[2]/li/a[contains(@id, 'ui-id-')]</value>
+      <value>id(&quot;rli12330&quot;)/div[@class=&quot;lsRLILayoutPadless&quot;]</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ref_element</name>
+      <type>Main</type>
+      <value>Object Repository/SAP/general/iframe_contenedor_todo_web</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//ul[@id='ui-id-10']/li</value>
+      <value>//div[@id='rli12330']/div</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', 'ui-id-10', '&quot;', ')/li[@class=', '&quot;', 'ui-menu-item', '&quot;', ']')])[1]/following::li[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Hota inic.'])[1]/following::div[4]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='`'])[1]/following::li[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Test'])[1]/preceding::div[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//ul[2]/li</value>
+      <value>//div[4]/div/table/tbody/tr[2]/td/table/tbody/tr/td/div/div/div/div[5]/div</value>
    </webElementXpaths>
 </WebElementEntity>

@@ -6,12 +6,13 @@
    <elementGuidId>9ef0bb70-53a1-4d2e-aba3-943c96366601</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//ul[@id='ui-id-9']/li</value>
+         <key>BASIC</key>
+         <value>/html/body/ul[1]/li/a[contains(@id, 'ui-id-')]
+</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>id(&quot;ui-id-9&quot;)/li[@class=&quot;ui-menu-item&quot;]</value>
+         <key>XPATH</key>
+         <value>//ul[@id='ui-id-9']/li</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -42,7 +43,8 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;ui-id-9&quot;)/li[@class=&quot;ui-menu-item&quot;]</value>
+      <value>/html/body/ul[1]/li/a[contains(@id, 'ui-id-')]
+</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

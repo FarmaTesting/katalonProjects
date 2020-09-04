@@ -23,11 +23,12 @@ for (int i = 1; i <= row_control; i++) {
 	SUMANET_liberacion_calidad = findTestData('control_jobs').getValue('SUMANET_liberacion_calidad', i)
 	comitente = findTestData('DGScenarios').getValue('param_comitente', i)
 	param_materiales = findTestData('DGScenarios').getValue('param_materiales', i)
+	param_ingresa_cuarentena = findTestData('DGScenarios').getValue('param_ingresa_cuarentena', i)
 	lote = findTestData('DGScenarios').getValue('out_lote', i) 
 
 	println(('****************** REGISTRO N: ' + i) + ' ********************')
 
-	if (SUMANET_liberacion_calidad == '' && comitente !='' && param_materiales !='') {		
+	if (SUMANET_liberacion_calidad == '' && comitente !='' && param_materiales !='' && param_ingresa_cuarentena == 'ON') {		
 		
 		WebUI.openBrowser('')
 		
@@ -70,26 +71,34 @@ for (int i = 1; i <= row_control; i++) {
 		WebUI.mouseOver(findTestObject('Sumanet/ui_menu_producto'))
 		
 		WebUI.click(findTestObject('Sumanet/ui_menu_producto'))
+				
+		WebUI.delay(1)
 		
-		subLote = lote.substring(4,9)
-		
-		println(subLote)
-		
-		WebUI.sendKeys(findTestObject('Sumanet/input_Lote'), subLote)
+		WebUI.sendKeys(findTestObject('Sumanet/input_Lote'), lote)
 		
 		WebUI.mouseOver(findTestObject('Sumanet/ui_menu_Lote'))
 		
 		WebUI.click(findTestObject('Sumanet/ui_menu_Lote'))
 		
+		WebUI.delay(1)
 		
+		WebUI.click(findTestObject('Sumanet/input_btn_Liberar'))
 		
+		WebUI.delay(1)
 		
+		//WebUI.takeScreenshot()
 		
+		CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'O', i, 'true')
 		
+		WebUI.closeBrowser()
 		
+	} else if ((SUMANET_liberacion_calidad == 'true') && (i == row_control)) {
 		
-		
-		
+		println('<<<<<<<<<<<<<< FIN >>>>>>>>>>>>>>>')
+
+		assert true
+
+		break
 	}
 }
 

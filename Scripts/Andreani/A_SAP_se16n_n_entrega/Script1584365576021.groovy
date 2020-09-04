@@ -79,11 +79,13 @@ WebUI.waitForElementVisible(findTestObject('SAP/se16n/txt_se16n_buscador_tablas'
 
         if (WebUI.verifyElementPresent(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 5, FailureHandling.OPTIONAL)) {
             def nEntrega1 = WebUI.getAttribute(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 'value')
+			
+			cero = '00'
 
             println('Num entrega 089: ' + nEntrega1)
 
             CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios_Andreani.xlsx', 'generador_datos', 
-                'AR', i, nEntrega1)
+                'AR', i, cero+nEntrega1)
 
             WebUI.delay(1)
 
@@ -110,9 +112,11 @@ WebUI.waitForElementVisible(findTestObject('SAP/se16n/txt_se16n_buscador_tablas'
 
         if (WebUI.verifyElementPresent(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 5, FailureHandling.OPTIONAL)) {
             def nEntrega2 = WebUI.getAttribute(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 'value')
+			
+			cero = '00'
 
             CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios_Andreani.xlsx', 'generador_datos', 
-                'AX', i, nEntrega2)
+                'AX', i, cero+nEntrega2)
 
             println('Num entrega 101: ' + nEntrega2)
 
@@ -141,9 +145,10 @@ WebUI.waitForElementVisible(findTestObject('SAP/se16n/txt_se16n_buscador_tablas'
 
         if (WebUI.verifyElementPresent(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 5, FailureHandling.OPTIONAL)) {
             def nEntrega3 = WebUI.getAttribute(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 'value')
+			cero = '00'
 
             CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios_Andreani.xlsx', 'generador_datos', 
-                'AY', i, nEntrega3)
+                'AY', i, cero+nEntrega3)
 
             println('Num entrega 106: ' + nEntrega3)
 

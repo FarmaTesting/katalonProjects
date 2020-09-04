@@ -21,10 +21,12 @@ println(('******************* CANTIDAD DE REGISTROS: ' + row_control) + ' ******
 for (int i = 1; i <= row_control; i++) {
     importe_nc = findTestData('DGScenarios').getValue('importe_nc', i)
 	SAP_va01_generar_nc = findTestData('control_jobs').getValue('SAP_va01_generar_nc', i)
+	nFactura089 = findTestData('DGScenarios').getValue('out_n_factura_089', i)
+	nFactura101 = findTestData('DGScenarios').getValue('out_n_factura_101', i)
 
     println(('****************** REGISTRO N: ' + i) + ' ********************')
 
-    if (importe_nc != '' && SAP_va01_generar_nc == '') {
+    if (importe_nc != '' && SAP_va01_generar_nc == '' && nFactura089.length() < 8 && nFactura101.length() < 8) {
         WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
 
         WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : '/nva01'], FailureHandling.STOP_ON_FAILURE)

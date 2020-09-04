@@ -14,32 +14,47 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
-row_control = findTestData('DGScenarios').getRowNumbers()
+WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
 
-println(('******************* CANTIDAD DE REGISTROS: ' + row_control) + ' ********************')
+WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : '/nZ_SD_ENTRADA_NC_OOS'], FailureHandling.STOP_ON_FAILURE)
 
-for (int i = 1; i <= row_control; i++) {
-    SAP_va01_generar_nc = findTestData('control_jobs').getValue('SAP_va01_generar_nc', i)
-	descuento_89 = findTestData('DGScenarios').getValue('descuento_89', i)
-	descuento_101 = findTestData('DGScenarios').getValue('descuento_101', i)
-	nFactura089 = findTestData('DGScenarios').getValue('out_n_factura_089', i)
-	nFactura101 = findTestData('DGScenarios').getValue('out_n_factura_101', i)
+WebUI.sendKeys(findTestObject('SAP/Z_SD_ENTRADA_NC_OOS/input_Cdigo de Convenio_en_FNET'), '818')
 
-    println(('****************** REGISTRO N: ' + i) + ' ********************')
+WebUI.delay(1)
 
-    if (SAP_va01_generar_nc == '' && descuento_89 !='' && descuento_101 !='' && nFactura089.length() < 8 && nFactura101.length() < 8) {
-        WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.sendKeys(findTestObject('SAP/Z_SD_ENTRADA_NC_OOS/input_Mandataria'), '1') 
 
-        WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : '/nva01'], FailureHandling.STOP_ON_FAILURE)
+WebUI.delay(1)
 
-        WebUI.sendKeys(findTestObject('SAP/nva01/txt_tipo_pedido'), 'ZNC9')
+WebUI.sendKeys(findTestObject('SAP/Z_SD_ENTRADA_NC_OOS/input_Mandataria'), Keys.chord(Keys.F8)) 
 
-        WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
+//Se deben visualizar Resumende Novedades Recibidas - Cabecera - Detalle
 
-        WebUI.delay(1)
+WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : '/nZ_PROC_LIQ_OOSS'], FailureHandling.STOP_ON_FAILURE)
 
-        //**************************Genera nota credito 89*******************************//
-        nFactura089 = findTestData('DGScenarios').getValue('out_n_factura_089', i)
+WebUI.sendKeys(findTestObject('SAP/Z_PROC_LIQ_OOSS/input_Convenio'), '818')
+
+WebUI.delay(1)
+
+WebUI.sendKeys(findTestObject('SAP/Z_PROC_LIQ_OOSS/input_Ao Liquidacion'), '2020')
+
+WebUI.delay(1)
+
+WebUI.sendKeys(findTestObject('SAP/Z_PROC_LIQ_OOSS/input_Mes Liquidacion'), '7')
+
+WebUI.delay(1)
+
+WebUI.sendKeys(findTestObject('SAP/Z_PROC_LIQ_OOSS/input_Periodo_Liquidacion'), '1')
+
+WebUI.delay(1)
+
+WebUI.click(findTestObject('SAP/Z_PROC_LIQ_OOSS/span_Procesar Liq Pendientes'))
+
+
+
+
+
+/*nFactura089 = findTestData('DGScenarios').getValue('out_n_factura_089', i)
 
         WebUI.sendKeys(findTestObject('SAP/nva01/txt_n_factura'), nFactura089)
 
@@ -140,7 +155,7 @@ for (int i = 1; i <= row_control; i++) {
 		
 		WebUI.delay(1)
 
-        //***************************Genera nota credito 101*******************************//
+        //
         nFactura101 = findTestData('DGScenarios').getValue('out_n_factura_101', i)
 
         WebUI.sendKeys(findTestObject('SAP/nva01/txt_n_factura'), nFactura101)
@@ -243,4 +258,4 @@ for (int i = 1; i <= row_control; i++) {
 
         break
     }
-}
+}*/

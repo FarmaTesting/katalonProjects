@@ -113,6 +113,28 @@ switch (trx) {
 
 		break
 		
+	case '/nZ_SD_ENTRADA_NC_OOS':
+		KeywordUtil.logInfo('/nZ_SD_ENTRADA_NC_OOS')
+
+		WebUI.callTestCase(findTestCase('101_Pages/00_Wait'), [('attributeName') : 'id', ('toObject') : findTestObject('SAP/Z_SD_ENTRADA_NC_OOS/input_Cdigo de Convenio_en_FNET')
+				, ('timeOut') : 5], FailureHandling.STOP_ON_FAILURE)
+
+		WebUI.delay(1)
+
+		break
+		
+	case '/nZ_PROC_LIQ_OOSS':
+		KeywordUtil.logInfo('/nZ_SD_ENTRADA_NC_OOS')
+
+		WebUI.callTestCase(findTestCase('101_Pages/00_Wait'), [('attributeName') : 'id', ('toObject') : findTestObject('SAP/Z_SD_ENTRADA_NC_OOS/input_Cdigo de Convenio_en_FNET')
+				, ('timeOut') : 5], FailureHandling.STOP_ON_FAILURE)
+
+		WebUI.delay(1)
+
+		break
+		
+		
+		
     default:
         KeywordUtil.logInfo('trx desconocido')
 

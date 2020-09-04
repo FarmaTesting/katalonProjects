@@ -21,6 +21,7 @@ println(('***************** CANTIDAD DE REGISTROS: ' + row_control) + ' ********
 
 for (int i = 1; i <= row_control; i++) {
     SAP_05_se37_WS_123 = findTestData('control_jobs').getValue('SAP_05_se37_WS_123', i)
+	liberacion_calidad = findTestData('DGScenarios').getValue('param_ingresa_cuarentena', i)
 
     println(('***************** REGISTRO N: ' + i) + ' *****************')
 
@@ -173,14 +174,29 @@ for (int i = 1; i <= row_control; i++) {
             WebUI.sendKeys(findTestObject('SAP/se37_ws_123/txt_pos_mov'), pMov)
 
             WebUI.delay(1)
-
-            def pStckType = '1'
-
-            WebUI.clearText(findTestObject('SAP/se37_ws_123/txt_pos_s'))
-
-            WebUI.delay(1)
-
-            WebUI.sendKeys(findTestObject('SAP/se37_ws_123/txt_pos_s'), pStckType)
+			
+			// si ingresa en calidad va 2 si no en 1
+			if(liberacion_calidad == 'ON' ){
+				
+				def pStckType = '2'
+				
+				WebUI.clearText(findTestObject('SAP/se37_ws_123/txt_pos_s'))
+				
+				WebUI.delay(1)
+			
+				WebUI.sendKeys(findTestObject('SAP/se37_ws_123/txt_pos_s'), pStckType)
+				
+			}else{
+					
+				def pStckType = '1'
+				
+				WebUI.clearText(findTestObject('SAP/se37_ws_123/txt_pos_s'))
+				
+				WebUI.delay(1)
+			
+				WebUI.sendKeys(findTestObject('SAP/se37_ws_123/txt_pos_s'), pStckType)
+				
+			}
 
             WebUI.delay(1)
 
