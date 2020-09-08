@@ -22,15 +22,23 @@ WebUI.sendKeys(findTestObject('SAP/Z_SD_ENTRADA_NC_OOS/input_Cdigo de Convenio_e
 
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/Z_SD_ENTRADA_NC_OOS/input_Mandataria'), '1') 
+WebUI.sendKeys(findTestObject('SAP/Z_SD_ENTRADA_NC_OOS/input_Mandataria'), '1')
 
 WebUI.delay(1)
 
-WebUI.sendKeys(findTestObject('SAP/Z_SD_ENTRADA_NC_OOS/input_Mandataria'), Keys.chord(Keys.F8)) 
+WebUI.sendKeys(findTestObject('SAP/Z_SD_ENTRADA_NC_OOS/input_Mandataria'), Keys.chord(Keys.F8))
+
+findTestObject('SAP/Z_SD_ENTRADA_NC_OOS/input_Cdigo de Convenio_en_FNET')
+
+assert  !(WebUI.verifyElementHasAttribute(findTestObject('SAP/Z_SD_ENTRADA_NC_OOS/img_Error_archivo'), 'src', 5))
 
 //Se deben visualizar Resumende Novedades Recibidas - Cabecera - Detalle
-
+//Falta agregar click en el boton aceptar
 WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : '/nZ_PROC_LIQ_OOSS'], FailureHandling.STOP_ON_FAILURE)
+
+actualDate = new Date().format('dd.MM.yyyy')
+
+println(actualDate)
 
 WebUI.sendKeys(findTestObject('SAP/Z_PROC_LIQ_OOSS/input_Convenio'), '818')
 
@@ -50,212 +58,30 @@ WebUI.delay(1)
 
 WebUI.click(findTestObject('SAP/Z_PROC_LIQ_OOSS/span_Procesar Liq Pendientes'))
 
+// Falta agregar click en boton si para desear continuar
+//Falta agregar obtener el numero de pedido generado 0061143437
+// Ingressamos a la VF06
+WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : '/nVF06'], FailureHandling.STOP_ON_FAILURE)
 
+WebUI.sendKeys(findTestObject('SAP/VF06/input_Organizacin de ventas'), 'FNET')
 
+WebUI.delay(1)
 
+WebUI.sendKeys(findTestObject('SAP/VF06/input_Canal de distribucin'), '10')
 
-/*nFactura089 = findTestData('DGScenarios').getValue('out_n_factura_089', i)
+WebUI.delay(1)
 
-        WebUI.sendKeys(findTestObject('SAP/nva01/txt_n_factura'), nFactura089)
+WebUI.sendKeys(findTestObject('SAP/VF06/input_Sector'), '36')
 
-        WebUI.delay(1)
+WebUI.delay(1)
 
-        WebUI.sendKeys(findTestObject('SAP/nva01/txt_n_factura'), Keys.chord(Keys.F5))
-		
-		WebUI.delay(1)
+WebUI.sendKeys(findTestObject('SAP/VF06/input_Clase de factura'), 'ZNC1')
 
-        popup_msg = WebUI.verifyElementVisible(findTestObject('SAP/nva01/ppup_informacion'), FailureHandling.OPTIONAL)
-		
-		WebUI.delay(1)
-		
-		if (popup_msg) {
-			
-			WebUI.delay(2)
-			
-			clickable_popup_msg = WebUI.verifyElementClickable(findTestObject('SAP/nva01/btn_ppup_continuar'), FailureHandling.OPTIONAL)
-			
-			while(popup_msg && clickable_popup_msg){
-				
-				WebUI.delay(2)
-			
-				WebUI.click(findTestObject('SAP/nva01/btn_ppup_continuar'))
-				
-				WebUI.delay(5)
-				
-				popup_msg = WebUI.verifyElementVisible(findTestObject('SAP/nva01/ppup_informacion'), FailureHandling.OPTIONAL)
-				
-				WebUI.delay(5)
-				
-				clickable_popup_msg = WebUI.verifyElementClickable(findTestObject('SAP/nva01/btn_ppup_continuar'), FailureHandling.OPTIONAL)
-			}
-			
-		}
-		
-		WebUI.delay(1)
-        
-        cabecera = WebUI.verifyElementVisible(findTestObject('SAP/nva01/btn_cabecera'), FailureHandling.OPTIONAL)
+WebUI.delay(1)
 
-        if (cabecera) {
-            WebUI.click(findTestObject('SAP/nva01/btn_cabecera'))
+WebUI.sendKeys(findTestObject('SAP/VF06/input_Solicitante'), solicitante)
 
-            WebUI.waitForElementVisible(findTestObject('SAP/nva01/txt_motivoPedido'), 10)
+WebUI.delay(1)
 
-            WebUI.sendKeys(findTestObject('SAP/nva01/txt_motivoPedido'), 'AJUSTE DESCUENTO CON PRODUCTO')
+WebUI.click(findTestObject('SAP/Z_PROC_LIQ_OOSS/span_Procesar Liq Pendientes'))
 
-            WebUI.delay(1)
-
-            WebUI.click(findTestObject('SAP/nva01/tab_Condiciones'))
-
-            WebUI.delay(1)
-
-            WebUI.click(findTestObject('SAP/nva01/btn_InsertarLinea'))
-
-            WebUI.delay(1)
-
-            WebUI.sendKeys(findTestObject('SAP/nva01/txt_campo_condicion'), 'znc9')
-
-            WebUI.delay(1)
-
-            descuento89 = findTestData('DGScenarios').getValue('descuento_89', i)
-
-            WebUI.sendKeys(findTestObject('SAP/nva01/txt_importe'), descuento89)
-
-            WebUI.delay(1)
-
-            netoAntes = WebUI.getAttribute(findTestObject('SAP/nva01/txt_neto'), 'value')
-
-            WebUI.delay(1)
-
-            WebUI.click(findTestObject('SAP/nva01/btn_activar'))
-
-            WebUI.delay(1)
-
-            netoDespues = WebUI.getAttribute(findTestObject('SAP/nva01/txt_neto'), 'value')
-
-            WebUI.delay(1)
-
-            WebUI.click(findTestObject('SAP/general/btn_guardar'))
-
-            WebUI.delay(2)
-
-            nc_generado = WebUI.getText(findTestObject('SAP/nva01/span_msg_notacredito'))
-
-            //NC Financiera por % 61140071 se ha grabado
-            out_n_pedido_sol_nc_089 = nc_generado.substring(20, 28)
-
-            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BI', 
-                i, out_n_pedido_sol_nc_089)
-        }
-        
-        WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
-
-        WebUI.delay(1)
-		
-		WebUI.clearText(findTestObject('SAP/nva01/txt_n_factura'))
-		
-		WebUI.delay(1)
-
-        //
-        nFactura101 = findTestData('DGScenarios').getValue('out_n_factura_101', i)
-
-        WebUI.sendKeys(findTestObject('SAP/nva01/txt_n_factura'), nFactura101)
-
-        WebUI.delay(1)
-
-        WebUI.sendKeys(findTestObject('SAP/nva01/txt_n_factura'), Keys.chord(Keys.F5))
-		
-		WebUI.delay(1)
-		
-        popup_msg = WebUI.verifyElementVisible(findTestObject('SAP/nva01/ppup_informacion'), FailureHandling.OPTIONAL)
-			
-        if (popup_msg) {
-			
-			WebUI.delay(2)
-			
-			clickable_popup_msg = WebUI.verifyElementClickable(findTestObject('SAP/nva01/btn_ppup_continuar'), FailureHandling.OPTIONAL)
-			
-			while(popup_msg && clickable_popup_msg){
-				
-				WebUI.delay(2)
-			
-				WebUI.click(findTestObject('SAP/nva01/btn_ppup_continuar'))
-				
-				WebUI.delay(5)
-				
-				popup_msg = WebUI.verifyElementVisible(findTestObject('SAP/nva01/ppup_informacion'), FailureHandling.OPTIONAL)
-				
-				WebUI.delay(5)
-				
-				clickable_popup_msg = WebUI.verifyElementClickable(findTestObject('SAP/nva01/btn_ppup_continuar'), FailureHandling.OPTIONAL)
-			}
-			
-		}
-		
-		WebUI.delay(1)
-        
-        cabecera = WebUI.verifyElementVisible(findTestObject('SAP/nva01/btn_cabecera'), FailureHandling.OPTIONAL)
-
-        if (cabecera) {
-            WebUI.click(findTestObject('SAP/nva01/btn_cabecera'))
-
-            WebUI.waitForElementVisible(findTestObject('SAP/nva01/txt_motivoPedido'), 10)
-
-            WebUI.sendKeys(findTestObject('SAP/nva01/txt_motivoPedido'), 'AJUSTE DESCUENTO CON PRODUCTO')
-
-            WebUI.delay(1)
-
-            WebUI.click(findTestObject('SAP/nva01/tab_Condiciones'))
-
-            WebUI.delay(1)
-
-            WebUI.click(findTestObject('SAP/nva01/btn_InsertarLinea'))
-
-            WebUI.delay(1)
-
-            WebUI.sendKeys(findTestObject('SAP/nva01/txt_campo_condicion'), 'znc9')
-
-            WebUI.delay(1)
-
-            descuento101 = findTestData('DGScenarios').getValue('descuento_101', i)
-
-            WebUI.sendKeys(findTestObject('SAP/nva01/txt_importe'), descuento101)
-
-            WebUI.delay(1)
-
-            netoAntes = WebUI.getAttribute(findTestObject('SAP/nva01/txt_neto'), 'value')
-
-            WebUI.delay(1)
-
-            WebUI.click(findTestObject('SAP/nva01/btn_activar'))
-
-            WebUI.delay(1)
-
-            netoDespues = WebUI.getAttribute(findTestObject('SAP/nva01/txt_neto'), 'value')
-
-            WebUI.delay(1)
-
-            WebUI.click(findTestObject('SAP/general/btn_guardar'))
-
-            WebUI.delay(2)
-
-            nc_generado = WebUI.getText(findTestObject('SAP/nva01/span_msg_notacredito'))
-
-            //NC Financiera por % 61140071 se ha grabado
-            out_n_pedido_sol_nc_101 = nc_generado.substring(20, 28)
-
-            CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'BJ', 
-                i, out_n_pedido_sol_nc_101)
-        }
-        
-        CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'control_jobs', 'M', i, 
-            'true')
-		
-		WebUI.callTestCase(findTestCase('101_Pages/00_CloseSap'), [:], FailureHandling.STOP_ON_FAILURE)
-    } else if ((SAP_va01_generar_nc == 'true') && (i == row_control)) {
-        println('<<<<<<<<<<<<<< FIN >>>>>>>>>>>>>>>')
-
-        assert true
-
-        break
-    }
-}*/
