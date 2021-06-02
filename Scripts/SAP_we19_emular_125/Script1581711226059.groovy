@@ -29,7 +29,7 @@ for (int i = 1; i <= row_control; i++) {
 
         WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : '/nwe19'], FailureHandling.STOP_ON_FAILURE)
 
-        WebUI.sendKeys(findTestObject('Object Repository/SAP/se19_ws_125/txt_idoc_a_buscar'), '11029547')
+        WebUI.sendKeys(findTestObject('Object Repository/SAP/se19_ws_125/txt_idoc_a_buscar'), '21015998')
 
         WebUI.delay(1)
 
@@ -130,17 +130,34 @@ for (int i = 1; i <= row_control; i++) {
 
             WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok'))
 
-            WebUI.delay(15)
-
-            WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), 10)
-
-            WebUI.delay(1)
-
-            WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'))
-
-            WebUI.delay(4)
-
-            WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/txt_info_cabecera'), 10)
+            WebUI.delay(20)
+			
+			clickable_popup_msg = true 
+			
+			pop_up = true 
+			
+			while (clickable_popup_msg && pop_up ){
+				
+				WebUI.delay(5)				
+				
+				clickable_popup_msg = WebUI.verifyElementClickable(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), FailureHandling.OPTIONAL)
+				
+				pop_up = WebUI.verifyElementVisible(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), FailureHandling.OPTIONAL)
+				
+				println("Primer boton para confirmar el proceso")
+				
+				if(clickable_popup_msg & pop_up){
+					
+					WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'))
+					
+					WebUI.delay(2)
+					
+					break
+				}				
+									
+			}				
+            
+			WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/txt_info_cabecera'), 10)
 
             WebUI.delay(1)
 
@@ -170,13 +187,31 @@ for (int i = 1; i <= row_control; i++) {
 
             WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok'))
 
-            WebUI.delay(15)
+            WebUI.delay(20)
 
-            WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), 10)
+            WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), 20)
 
-            WebUI.delay(1)
-
-            WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'))
+            WebUI.delay(20)
+			
+			clickable_popup_msg = WebUI.verifyElementClickable(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), FailureHandling.OPTIONAL)
+			
+			pop_up = WebUI.verifyElementVisible(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), FailureHandling.OPTIONAL) 
+			
+			while (clickable_popup_msg && pop_up ){
+				
+				WebUI.delay(5)
+				
+				println("Second button")
+						
+				WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'))
+				
+				clickable_popup_msg = WebUI.verifyElementClickable(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), FailureHandling.OPTIONAL)
+				
+				WebUI.delay(5)	
+				
+				pop_up = WebUI.verifyElementVisible(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), FailureHandling.OPTIONAL)
+						
+			}					
 
             WebUI.delay(4)
 
@@ -212,11 +247,29 @@ for (int i = 1; i <= row_control; i++) {
 
             WebUI.delay(15)
 
-            WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), 10)
+            WebUI.waitForElementPresent(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), 20)
 
-            WebUI.delay(1)
-
-            WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'))
+            WebUI.delay(20)
+			
+			clickable_popup_msg = WebUI.verifyElementClickable(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), FailureHandling.OPTIONAL)
+			
+			pop_up = WebUI.verifyElementVisible(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), FailureHandling.OPTIONAL) 
+			
+			while (clickable_popup_msg && pop_up ){
+				
+				WebUI.delay(5)
+				
+				println("Third button")
+						
+				WebUI.click(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'))
+				
+				clickable_popup_msg = WebUI.verifyElementClickable(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), FailureHandling.OPTIONAL)
+				
+				WebUI.delay(5)		
+				
+				pop_up = WebUI.verifyElementVisible(findTestObject('Object Repository/SAP/se19_ws_125/btn_ok_confirmar_proceso'), FailureHandling.OPTIONAL)
+						
+			}					
 
             WebUI.delay(1)
 

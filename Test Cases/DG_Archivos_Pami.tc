@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Generador de archivos para Notas de credito 818 PAMI</description>
+   <name>DG_Archivos_Pami</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f0555387-00cb-443a-a7eb-e7f4dd8b62d4</testCaseGuid>
+</TestCaseEntity>

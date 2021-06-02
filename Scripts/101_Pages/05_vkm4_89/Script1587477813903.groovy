@@ -27,6 +27,7 @@ nRows = findTestData('DGScenarios').getRowNumbers()
 
 List ped_menor_mayor = CustomKeywords.'utilities.Tools.pedidosSap89_101'(nRows, 'DGScenarios')
 
+println(ped_menor_mayor)
 /*for (int i = 1; i <= nRows; i++) {
 	pedidoSap = findTestData('DGScenarios').getValue(strNumPedidoSap, i)
 	xpath = (('//td[contains(@id,"[' + i) + ',2]")]/div/span/input')
@@ -94,7 +95,7 @@ if (msj_no_registro) {
 
     WebUI.closeBrowser()
 } else {
-    WebUI.delay(1)
+    WebUI.delay(10)
 
     WebUI.waitForElementVisible(findTestObject('SAP/vkm4/chk_seleccion_pedido'), 10)
 

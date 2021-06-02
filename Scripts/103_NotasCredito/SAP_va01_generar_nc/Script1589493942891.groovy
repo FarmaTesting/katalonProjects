@@ -27,7 +27,7 @@ for (int i = 1; i <= row_control; i++) {
 
     println(('****************** REGISTRO N: ' + i) + ' ********************')
 
-    if (SAP_va01_generar_nc == '' && descuento_89 !='' && descuento_101 !='' && nFactura089.length() < 8 && nFactura101.length() < 8) {
+    if (SAP_va01_generar_nc == '' && descuento_89 !='' && descuento_101 !='' && nFactura089 !='' && nFactura101 != '' && nFactura089 !='No existen valores' && nFactura089 !='No existen valores') {
         WebUI.callTestCase(findTestCase('Login_SAP'), [:], FailureHandling.STOP_ON_FAILURE)
 
         WebUI.callTestCase(findTestCase('101_Pages/01_Buscador_Trx'), [('trx') : '/nva01'], FailureHandling.STOP_ON_FAILURE)
@@ -134,7 +134,7 @@ for (int i = 1; i <= row_control; i++) {
         
         WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F8))
 
-        WebUI.delay(1)
+        WebUI.delay(5)
 		
 		WebUI.clearText(findTestObject('SAP/nva01/txt_n_factura'))
 		
@@ -198,12 +198,20 @@ for (int i = 1; i <= row_control; i++) {
             WebUI.delay(1)
 
             WebUI.sendKeys(findTestObject('SAP/nva01/txt_campo_condicion'), 'znc9')
+			
+			WebUI.delay(1)
+
+            //WebUI.sendKeys(findTestObject('SAP/nva01/txt_campo_condicion'), Keys.chord(Keys.ENTER))
 
             WebUI.delay(1)
 
             descuento101 = findTestData('DGScenarios').getValue('descuento_101', i)
 
             WebUI.sendKeys(findTestObject('SAP/nva01/txt_importe'), descuento101)
+			
+			WebUI.delay(1)
+			
+			//WebUI.sendKeys(findTestObject('SAP/nva01/txt_importe'), Keys.chord(Keys.ENTER))
 
             WebUI.delay(1)
 

@@ -6,12 +6,12 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description>Sumanet URL</description>
-      <initValue>'https://qa.farmanet.com.ar/sumaqa/'</initValue>
+      <initValue>'https://qa.farmanet.com.ar/sumaqa/Aplicativos.aspx'</initValue>
       <name>url</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Sumanet User</description>
-      <initValue>'testerfnet'</initValue>
+      <initValue>'tester'</initValue>
       <name>user</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

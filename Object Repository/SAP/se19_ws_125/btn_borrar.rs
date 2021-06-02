@@ -6,15 +6,15 @@
    <elementGuidId>6f74aece-b75c-4b91-9ab3-9d3c912ae4f9</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//a[@id='__AGIM0:D:6::14_btn']/span</value>
+         <key>BASIC</key>
+         <value>//*[contains(@id,'M0:37::btn[14]') and contains(@title,'Borrar')][count(. | //*[@ref_element = 'Object Repository/SAP/general/iframe_contenedor_todo_web']) = count(//*[@ref_element = 'Object Repository/SAP/general/iframe_contenedor_todo_web'])]</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>//*[contains(@id,'M0:37::btn[14]') and contains(@title,'Borrar')]</value>
+         <key>XPATH</key>
+         <value>//span[12]/a/span</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

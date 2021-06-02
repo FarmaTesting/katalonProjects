@@ -6,8 +6,12 @@
    <elementGuidId>4e0c21c9-0f52-4c1b-9f04-850420d61ed0</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>BASIC</key>
-         <value>//*[contains(@title,&quot;(F5)&quot;)]</value>
+         <value>//*[contains(@title,&quot;(F5)&quot;)][count(. | //*[@ref_element = 'Object Repository/SAP/general/iframe_contenedor_todo_web']) = count(//*[@ref_element = 'Object Repository/SAP/general/iframe_contenedor_todo_web'])]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>

@@ -35,7 +35,7 @@ for (int i = 1; i <= row_control; i++) {
         WebUI.delay(1)
 
         WebUI.sendKeys(findTestObject('SAP/se37_ws_123/txt_modulo_funciones'), Keys.chord(Keys.F8))
-
+		println("Se ingreso a z_mm_andr_recepcion")
         WebUI.delay(1)
 
         def nRowEnEjecucion = i

@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='login-menu-principal']/div/div/div[2]/div[5]/a</value>
+         <value>//a[contains(text(),'INGRESAR') and @class='login-button btnIngresar']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

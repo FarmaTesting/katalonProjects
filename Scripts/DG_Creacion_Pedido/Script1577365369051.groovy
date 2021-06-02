@@ -49,8 +49,11 @@ for (int i = 1; i <= row_control; i++) {
         def nFilaEnEjecucion = i
 
         fechacorrido = findTestData('DGScenarios').getValue('strFechaCreado', nFilaEnEjecucion)
+		println(fechacorrido)
+		
 
         actualDate = new Date().format('dd.MM.yyyy')
+		println(actualDate)
 
         if (fechacorrido != actualDate) {
             println('Fila en ejecucion: ' + nFilaEnEjecucion)
@@ -88,6 +91,7 @@ for (int i = 1; i <= row_control; i++) {
             }
             
             if ((filtrar = findTestData('DGScenarios').getValue('filtrar', nFilaEnEjecucion)) == 'SI') {
+				WebUI.delay(6)
                 WebUI.click(findTestObject('GeneradorDatos_Page/btn_filtrar'))
             }
             
@@ -118,11 +122,18 @@ for (int i = 1; i <= row_control; i++) {
             }
             
             if ((generar = findTestData('DGScenarios').getValue('generar', nFilaEnEjecucion)) == 'SI') {
+				WebUI.delay(6)
+				
                 WebUI.click(findTestObject('GeneradorDatos_Page/btn_generar'))
+				println("Se presiono el boton de generar")
             }
-            
+			
+			def datesap = CustomKeywords.'utilities.Tools.dateSap'()
+			
+			println(datesap)
+			
             CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AU', 
-                nFilaEnEjecucion, CustomKeywords.'utilities.Tools.dateSap'())
+                nFilaEnEjecucion, datesap)
 
             CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AV', 
                 nFilaEnEjecucion, new Date().format('HH:mm'))

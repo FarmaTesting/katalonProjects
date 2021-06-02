@@ -6,11 +6,85 @@
    <elementGuidId>832fdca0-dd1b-4c61-ba8e-a186ff45f07c</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>BASIC</key>
+         <value>//*[@name = 'ctl00$_ContenidoPrincipalPlaceHolder$ddlComitentes' and @id = 'ddlComitentes' and (text() = '
+		
+		02 - BOEHRINGER INGELHEIM
+		03 - CASASCO
+		04 - ELISIUM
+		05 - GADOR S.A.
+		06 - NOVARTIS ARG.
+		07 - NOVARTIS C.HEAL
+		08 - NOVARTIS VAC.
+		09 - JOHNSON
+		10 - TAKEDA
+		11 - ALCON
+		12 - BAUSCH
+		13 - FORTBENTON
+		14 - ANDROMACO
+		16 - NAF
+		17 - GALDERMA
+		18 - VALUGE S.A.
+		19 - WAICON
+		20 - LDA
+		21 - INGENS
+		22 - NAOS ARGENTINA SA
+		24 - CINETIC
+		26 - JORGEHANE
+		27 - VALUGE OXA
+		28 - ABBOTT LAB. S.A.
+		29 - MERZ ARG.SA.
+		30 - ABBOTT ONCOLOGY
+		31 - BISA CONSUMER
+		32 - SANOFI CHC
+		33 - SANDOZ S.A.
+		34 - LAB. VANNIER SA
+		35 - SANOFI-GEM
+		36 - SANOFI PASTEUR
+
+	' or . = '
+		
+		02 - BOEHRINGER INGELHEIM
+		03 - CASASCO
+		04 - ELISIUM
+		05 - GADOR S.A.
+		06 - NOVARTIS ARG.
+		07 - NOVARTIS C.HEAL
+		08 - NOVARTIS VAC.
+		09 - JOHNSON
+		10 - TAKEDA
+		11 - ALCON
+		12 - BAUSCH
+		13 - FORTBENTON
+		14 - ANDROMACO
+		16 - NAF
+		17 - GALDERMA
+		18 - VALUGE S.A.
+		19 - WAICON
+		20 - LDA
+		21 - INGENS
+		22 - NAOS ARGENTINA SA
+		24 - CINETIC
+		26 - JORGEHANE
+		27 - VALUGE OXA
+		28 - ABBOTT LAB. S.A.
+		29 - MERZ ARG.SA.
+		30 - ABBOTT ONCOLOGY
+		31 - BISA CONSUMER
+		32 - SANOFI CHC
+		33 - SANDOZ S.A.
+		34 - LAB. VANNIER SA
+		35 - SANOFI-GEM
+		36 - SANOFI PASTEUR
+
+	')]</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
          <value>//select[@id='ddlComitentes']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

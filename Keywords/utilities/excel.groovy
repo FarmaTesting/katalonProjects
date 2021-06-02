@@ -89,9 +89,10 @@ public class excel {
 	 * @return
 	 */
 	@Keyword
+	//\\FSRVFS1HQ\recursos_automatizaciones
 	def setValueToCellInExcel(String excelFile, String sheet, String column, int row, String value){
-		String pathUserDir = System.getProperty("user.dir")
-		String pathExcels = pathUserDir + '\\Resources\\'
+		//String pathUserDir = System.getProperty("user.dir")
+		String pathExcels = '\\'+'\\FSRVFS1HQ\\recursos_automatizaciones\\'
 		String excelFile01 = pathExcels + excelFile
 
 		KeywordUtil.logInfo(excelFile01)
@@ -103,11 +104,10 @@ public class excel {
 		boolean fileExists = file1.exists()
 		KeywordUtil.logInfo("Exist: " + fileExists + " || Read: " + fileRead + " || Write: " + fileWrite)
 
-		assert fileExists == true
+		//assert fileExists == true
 
 		Workbook workbook01 = ExcelKeywords.getWorkbook(excelFile01)
 		Sheet sheet01 = ExcelKeywords.getExcelSheet(workbook01, sheet)
-
 
 		int rowIndex = row + 1
 		String cell = column + rowIndex

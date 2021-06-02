@@ -6,12 +6,13 @@
    <elementGuidId>70d100e2-1b8d-499a-afdb-92d83b902a3c</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@id='input#__AGIM0:U:::9:34']</value>
+         <key>BASIC</key>
+         <value>//*[contains(@name,'M0:46:::9:34')][count(. | //*[@title = 'Número de documento comercial' and @ref_element = 'Object Repository/SAP/general/iframe_contenedor_todo_web']) = count(//*[@title = 'Número de documento comercial' and @ref_element = 'Object Repository/SAP/general/iframe_contenedor_todo_web'])]</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>//*[contains(@name,'M0:46:::9:34')]</value>
+         <key>XPATH</key>
+         <value>
+</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -38,7 +39,7 @@
       <value>0</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>title</name>
       <type>Main</type>

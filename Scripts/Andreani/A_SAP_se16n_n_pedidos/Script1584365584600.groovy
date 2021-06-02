@@ -108,17 +108,20 @@ for (int i = 1; i <= nRowsEncontradas; i++) {*/
             CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios_Andreani.xlsx', 'generador_datos', 
                 'AO', nRowEnEjecucion, WebUI.concatenate('000', WebUI.getAttribute(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 
                         'value')))
+			WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
         }
         
-        WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
+        //WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
 
         WebUI.delay(2)
 
         WebUI.waitForElementPresent(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'), 20)
 
-        WebUI.clearText(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'))
+        //WebUI.clearText(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'))
+		WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
 
-        //    WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'), '198')
+        WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.CONTROL, Keys.F1))
+		
         WebUI.delay(8)
 
         WebUI.waitForElementPresent(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'), 20)
@@ -137,15 +140,20 @@ for (int i = 1; i <= nRowsEncontradas; i++) {*/
             CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios_Andreani.xlsx', 'generador_datos', 
                 'AP', nRowEnEjecucion, WebUI.concatenate('000', WebUI.getAttribute(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 
                         'value')))
+			WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
         }
         
-        WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
+        //WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.F3))
 
         WebUI.delay(2)
 
         WebUI.waitForElementPresent(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'), 20)
 
-        WebUI.clearText(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'))
+       //WebUI.clearText(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'))
+		WebUI.click(findTestObject('SAP/general/txt_buscador_trx'))
+		WebUI.sendKeys(findTestObject('SAP/general/txt_buscador_trx'), Keys.chord(Keys.CONTROL, Keys.F1))
+				
+		
 
         //    WebUI.sendKeys(findTestObject('SAP/se16n/txt_se16n_1_1_3_primer_celda_filtro'), '139')
         WebUI.delay(8)

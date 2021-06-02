@@ -15,6 +15,7 @@ import com.kms.katalon.keyword.excel.ExcelKeywords as ExcelKeywords
 import org.openqa.selenium.Keys as Keys
 import internal.GlobalVariable as GlobalVariable
 
+
 row_control = findTestData('control_jobs_Andreani').getRowNumbers()
 
 println(('****************** CANTIDAD DE REGISTROS: ' + row_control) + ' *******************')

@@ -6,7 +6,7 @@
    <containsHeaders>true</containsHeaders>
    <csvSeperator></csvSeperator>
    <dataFileGUID>2b79a433-08be-4dff-bad6-bd9e4a3ff316</dataFileGUID>
-   <dataSourceUrl>Resources/db_farmanet_escenarios.xlsx</dataSourceUrl>
+   <dataSourceUrl>\\FSRVFS1HQ\recursos_automatizaciones\db_farmanet_escenarios.xlsx</dataSourceUrl>
    <driver>ExcelFile</driver>
    <isInternalPath>true</isInternalPath>
    <query></query>

@@ -70,9 +70,11 @@ for (int i = 1; i <= row_control; i++) {
 
         if (WebUI.verifyElementPresent(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 5, FailureHandling.OPTIONAL)) {
             def nEntrega1 = WebUI.getAttribute(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 'value')
+			
+			def nEntrega1_1 = '00' + nEntrega1
 
             CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AR', 
-                i, nEntrega1)
+                i, nEntrega1_1)
 
             WebUI.delay(1)
 
@@ -105,9 +107,11 @@ for (int i = 1; i <= row_control; i++) {
 
         if (WebUI.verifyElementPresent(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 5, FailureHandling.OPTIONAL)) {
             def nEntrega2 = WebUI.getAttribute(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 'value')
+			
+			def nEntrega2_1 = '00' + nEntrega2
 
             CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AX', 
-                i, nEntrega2)
+                i, nEntrega2_1)
 
             WebUI.delay(1)
 
@@ -140,9 +144,11 @@ for (int i = 1; i <= row_control; i++) {
 
         if (WebUI.verifyElementPresent(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 5, FailureHandling.OPTIONAL)) {
             def nEntrega3 = WebUI.getAttribute(findTestObject('SAP/se16n/txt_se16n_tabla_1ra_row'), 'value')
+			
+			def nEntrega3_1 = '00' + nEntrega3
 
             CustomKeywords.'utilities.excel.setValueToCellInExcel'('db_farmanet_escenarios.xlsx', 'generador_datos', 'AY', 
-                i, nEntrega3)
+                i, nEntrega3_1)
 
             WebUI.delay(1)
 
